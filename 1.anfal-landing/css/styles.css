@@ -1,0 +1,403 @@
+body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: Velocity;
+    src: url(fonts/velocity-font.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Myriad Pro";
+    src: url(fonts/MyriadPro-Regular.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Bold.ttf);
+    font-weight: bolder;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Medium.ttf);
+    font-weight: medium;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Light.ttf);
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Regular.ttf);
+    font-weight: normal;
+}
+
+
+.logo {
+    font-family: Velocity, Calibri;
+    font-weight: normal;
+    font-size: 48px;
+    color: #10ac84;
+    text-align: center;
+    padding-top: 24px;
+    margin: 0;
+}
+
+.main-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.main-headline h2 {
+    font-family: Montserrat, Calibri;
+    font-weight: bold;
+    font-size: 32px;
+    color: #000;
+}
+
+.main-headline p {
+    font-family: "Myriad Pro";
+    font-weight: normal;
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 15%;
+}
+
+.register {
+    max-width: 230px;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: medium;
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #10ac84;
+    border-radius: 5px;
+    background-color: #10ac84;
+    padding: 20px 36px 20px 36px;
+    margin-right: 5%;
+}
+
+.discover {
+    max-width: 230px;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: medium;
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #6a7079;
+    border-radius: 5px;
+    background-color: #6a7079;
+    padding: 20px 16px 20px 16px;
+}
+
+.tel-img {
+    margin-top: 4%;
+}
+
+.tel-img img {
+    max-width: 460px;
+}
+
+.problems {
+    background-color: #f4f4f5;
+    height: 900px;
+    margin-top: 15%;
+}
+
+.left-blocks {
+    margin-top: 8%;
+}
+
+.right-blocks {
+    margin-top: 8%;
+}
+
+.problems h2 {
+    font-family: Montserrat;
+    font-weight: lighter;
+    font-size: 42px;
+    color: #26272d;
+    text-align: center;
+    margin: 0;
+    padding-top: 6%;
+}
+
+.line {
+    padding-top: 2%;
+}
+
+.line:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #04b386;
+}
+
+.pdf-block img {
+    width: 55px;
+}
+
+.pdf-block-headline {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 24px;
+    color: #26272d;
+}
+
+
+.pdf-block-text {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 18px;
+    color: #8c8f94;
+}
+
+.book-block img {
+    width: 55px;
+}
+
+
+.book-block-headline {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 24px;
+    color: #26272d;
+}
+
+
+.book-block-text {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 18px;
+    color: #8c8f94;
+}
+
+.time-block img {
+    width: 52px;
+}
+
+
+.time-block-headline {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 24px;
+    color: #26272d;
+}
+
+
+.time-block-text {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 18px;
+    color: #8c8f94;
+}
+
+.money-block img {
+    width: 55px;
+}
+
+
+.money-block-headline {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 24px;
+    color: #26272d;
+}
+
+
+.money-block-text {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 18px;
+    color: #8c8f94;
+}
+
+.offer h2 {
+    font-family: Montserrat;
+    font-weight: lighter;
+    font-size: 42px;
+    color: #26272d;
+    text-align: center;
+    margin: 10% 0 0 0;
+}
+
+
+.offer-text {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 24px;
+    color: #282528;
+    text-align: center;
+    margin-top: 8%;
+}
+
+.features {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 6%;
+}
+
+.features img {
+    width: 36px;
+}
+
+.features h3 {
+    font-family: Montserrat;
+    font-weight: bolder;
+    font-size: 18px;
+    color: #282528;
+}
+
+.features p {
+    display: inline-block;
+    font-family: Montserrat;
+    font-weight: medium;
+    font-size: 14px;
+    color: #282528;
+}
+
+.features-iphone img {
+    width: 100%;
+}
+
+
+.features-block {
+    margin: 10% 0 0 20%;
+}
+
+.left-side-features img, .right-side-features img {
+    float: left;
+    margin: 11% 0 0 9%;
+}
+
+.interface {
+    background-color: #f4f4f5;
+    height: 1000px;
+    margin: 5% 0 0 0;
+}
+
+.interface h2 {
+    font-family: Montserrat;
+    font-weight: lighter;
+    font-size: 42px;
+    color: #26272d;
+    text-align: center;
+    margin: 12% 0 0 0;
+    padding-top: 5%;
+}
+
+.interface-screen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.interface-screen img {
+    width: 20%;
+}
+
+.interface-button {
+    margin: 10% 0 0 40%;
+}
+
+.questions {
+    height: 750px;
+}
+
+.questions h2 {
+    font-family: Montserrat;
+    font-weight: lighter;
+    font-size: 42px;
+    color: #26272d;
+    text-align: center;
+    margin: 12% 0 0 0;
+}
+
+.form-questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6%;
+}
+
+.form-questions input, .form-questions textarea {
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 1px solid #26292c;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    width: 41%;
+    font-family: Montserrat;
+    font-weight: lighter;
+    font-size: 15px;
+    color: #26292c;
+    resize: none;
+}
+
+.form-questions input:active, :hover, :focus, .form-questions textarea:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.questions-button {
+    margin-top: 5%;
+}
+
+.questions-button a {
+    max-width: 230px;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: medium;
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #10ac84;
+    border-radius: 5px;
+    background-color: #10ac84;
+    padding: 19px 54px 19px 54px;
+    margin-left: 43%;
+}
+
+.line-footer span {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    width: 1170px;
+    margin: 0 0 0 5%;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 0 2% 4%;
+
+}
+
+.socials img {
+    padding-right: 2%;
+}
