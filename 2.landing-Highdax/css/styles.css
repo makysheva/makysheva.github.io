@@ -1,0 +1,280 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+        background-color: #313236;
+        height: 1250px;
+        width: 100%;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Bold.ttf);
+    font-weight: bolder;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Light.ttf);
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Medium.ttf);
+    font-weight: medium;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/SourceSansPro-Bold.otf);
+    font-weight: bolder;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../fonts/OpenSans-Light.ttf);
+    font-weight: lighter;
+}
+
+@media (min-width: 1920px) {
+
+    .menu_logo {
+        max-width: 1463px;
+        margin: 0 auto;
+    }
+
+    .logo-1 {
+        color: #fff;
+        display: inline-block;
+        font-family: Roboto;
+        font-size: 40px;
+        font-weight: bolder;
+        margin-top: 65px;
+        text-transform: uppercase;
+
+    }
+
+    .logo-2 {
+        background-color: #f9812b;
+        border-radius: 5px;
+        color: #fff;
+        display: inline-block;
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: medium;
+        margin-left: 18px;
+        margin-top: 72px;
+        padding: 7px 15px;
+        text-transform: uppercase;
+        vertical-align: top;
+    }
+
+    .menu {
+        display: inline-flex;
+        flex-direction: row;
+        list-style-type: none;
+        font-family: Roboto;
+        font-size: 22px;
+        font-weight: medium;
+        margin-top: 72px;
+        text-transform: uppercase;
+        width: 78%;
+    }
+
+    .menu li {
+        padding-left: 72px;
+    }
+
+    .menu li:first-child {
+        padding-left: 0;
+    }
+
+    .menu a {
+        color: #fff;
+        text-decoration: none;
+        padding: 13px 18px;
+    }
+
+    .menu a:active, .menu a:visited {
+        color: #fff;
+    }
+
+    .menu a:hover {
+        background-color: #f9812b;
+        border-radius: 10px;
+    }
+
+    .sliders {
+        flex-direction: row;
+        margin-top: 324px;
+        justify-content: center;
+    }
+
+
+    .slide-1, .slide-2, .slide-3, .slide-4, .slide-5 {
+        width: 1466px;
+        height: 792px;
+        text-align: center;
+    }
+
+    .slide-1 h1, .slide-2 h1, .slide-3 h1, .slide-4 h1, .slide-5 h1 {
+        display: inline-flex;
+        border: 1px solid #fff;
+        color: #fff;
+        font-family: Roboto;
+        font-weight: bolder;
+        font-size: 60px;
+        margin-bottom: 100px;
+        padding: 16px 26px;
+        text-transform: uppercase;
+    }
+
+    .slide-1 p, .slide-2 p, .slide-3 p, .slide-4 p, .slide-5 p {
+        color: #fff;
+        font-family: Roboto;
+        font-weight: lighter;
+        font-size: 30px;
+        margin-bottom: 100px;
+    }
+
+    .get-started-button {
+        background-color: #f9812b;
+        color: #fff;
+        font-family: 'Source Sans Pro';
+        font-weight: bolder;
+        font-size: 20px;
+        margin-right: 27px;
+        padding: 20px 40px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .get-started-button:focus {
+        color: #fff;
+    }
+
+    .learn-more-button {
+        background-color: #020405;
+        color: #fff;
+        font-family: 'Source Sans Pro';
+        font-weight: bolder;
+        font-size: 20px;
+        padding: 20px 40px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: -120px;
+    }
+
+    .navigation-1, .navigation-2, .navigation-3, .navigation-4, .navigation-5 {
+        background-color: #020405;
+        border-radius: 50%;
+        height: 18px;
+        margin-right: 15px;
+        width: 18px;
+    }
+
+    .portfolio {
+        height: 1200px;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .portfolio h2 {
+        color: #454545;
+        font-family: 'Open Sans';
+        font-weight: lighter;
+        font-size: 50px;
+        padding-top: 170px;
+    }
+
+    .portfolio p {
+        color: #c0c0c0;
+        font-family: 'Open Sans';
+        font-weight: lighter;
+        font-size: 30px;
+        margin-bottom: 145px;
+    }
+
+    .portfolio-slider {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .get-for-free-btn {
+        background-color: #f9812b;
+        color: #fff;
+        font-family: Roboto;
+        font-weight: medium;
+        font-size: 17px;
+        margin-right: 23px;
+        padding: 26px 60px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .learn-more-btn {
+        background-color: #020405;
+        color: #fff;
+        font-family: Roboto;
+        font-weight: normal;
+        font-size: 17px;
+        margin-right: 23px;
+        padding: 26px 60px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .portfolio-navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 120px;
+    }
+
+    .portfolio-navigation-1, .portfolio-navigation-2, .portfolio-navigation-3, .portfolio-navigation-4, .portfolio-navigation-5 {
+        background-color: #A9A9AA;
+        border-radius: 50%;
+        height: 18px;
+        margin-right: 15px;
+        width: 18px;
+    }
+
+    .navigation-left-arrow, .navigation-right-arrow {
+        background-color: #F3F3F3;
+        height: 72px;
+        margin-right: 15px;
+        width: 100px;
+    }
+
+    .navigation-left-arrow object, .navigation-right-arrow object{
+        padding-top: 20px;
+    }
+
+    .about-us {
+        background: #44444a url("../images/about-us.png");
+        background-blend-mode: multiply;
+        height: 610px;
+    }
+
+    .about-us h2 {
+        color: #fff;
+        font-family: Roboto;
+        font-weight: lighter;
+        font-size: 50px;
+        text-align: center;
+    }
+
+
+
+}
