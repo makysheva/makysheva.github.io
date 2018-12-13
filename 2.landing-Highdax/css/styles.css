@@ -313,7 +313,7 @@ header {
     }
 
     .services {
-        height: 1080px;
+        height: 1070px;
     }
 
     .services h2 {
@@ -364,9 +364,136 @@ header {
 
     .services-view-up img, .services-view-down img {
         padding-right: 18px;
-        position: relative;
-        top: -45px;
     }
 
+    .get-started {
+        background-color: #313236;
+        height: 350px;
+        text-align: center;
+    }
+
+    .get-started h3 {
+        color: #fff;
+        font-family: "Open Sans";
+        font-weight: bolder;
+        font-size: 30px;
+        padding-top: 72px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .get-started p {
+        color: #fff;
+        font-family: "Open Sans";
+        font-weight: lighter;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .get-started a {
+        border: 2px solid #fff;
+        color: #fff;
+        display: flex;
+        font-family: Roboto;
+        font-weight: medium;
+        font-size: 17px;
+        margin: auto;
+        padding: 14px 40px;
+        justify-content: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 190px;
+    }
+
+    .macbook {
+        height: 1140px;
+        margin: 0 auto;
+        width: 1463px;
+    }
+
+    .macbook h3 {
+        color: #454545;
+        font-family: "Open Sans";
+        font-weight: lighter;
+        font-size: 50px;
+        padding-top: 130px;
+        text-align: center;
+    }
+
+    .macbook p {
+        color: #c0c0c0;
+        font-family: "Open Sans";
+        font-weight: lighter;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .macbook-content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .macbook-img object {
+        margin-top: 126px;
+    }
+
+    .macbook-text {
+        display: flex;
+        flex-direction: column;
+        margin-top: 145px;
+    }
+
+    .macbook-text p {
+        color: #020405;
+        font-family: Roboto;
+        font-weight: lighter;
+        font-size: 20px;
+        text-align: left;
+        padding-bottom: 40px;
+    }
+
+    .tick-img {
+        margin-top: 77px;
+    }
+
+    .tick-img img {
+        margin-top: 97px;
+    }
+
+    footer {
+        background-color: #313236;
+        height: 306px;
+    }
+
+    .contact {
+        position: relative;
+        top: -55px;
+    }
+
+    .contact p {
+        background-color: #F9812B;
+        margin: 0 auto;
+        width: 1004px;
+        color: #fff;
+        font-family: "Open Sans";
+        font-weight: lighter;
+        font-size: 30px;
+        text-align: center;
+        padding: 35px 154px;
+    }
+
+    .icons-footer {
+        text-align: center;
+        padding-top: 24px;
+    }
+
+    .icons-footer p {
+        color: #fff;
+        font-family: "Open Sans";
+        font-weight: lighter;
+        font-size: 20px;
+        text-align: center;
+        padding-top: 40px;
+    }
 
 }
