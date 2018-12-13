@@ -13,31 +13,31 @@ header {
 @font-face {
     font-family: Roboto;
     src: url(../fonts/Roboto-Bold.ttf);
-    font-weight: bolder;
+    font-weight: 900;
 }
 
 @font-face {
     font-family: Roboto;
     src: url(../fonts/Roboto-Light.ttf);
-    font-weight: lighter;
+    font-weight: 300;
 }
 
 @font-face {
     font-family: Roboto;
     src: url(../fonts/Roboto-Medium.ttf);
-    font-weight: medium;
+    font-weight: 500;
 }
 
 @font-face {
     font-family: Roboto;
     src: url(../fonts/SourceSansPro-Bold.otf);
-    font-weight: bolder;
+    font-weight: 900;
 }
 
 @font-face {
     font-family: 'Open Sans';
     src: url(../fonts/OpenSans-Light.ttf);
-    font-weight: lighter;
+    font-weight: 300;
 }
 
 @media (min-width: 1920px) {
@@ -272,9 +272,101 @@ header {
         font-family: Roboto;
         font-weight: lighter;
         font-size: 50px;
+        padding-bottom: 11px;
+        padding-top: 100px;
         text-align: center;
     }
 
+    .circle-numbers {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .circle-1, .circle-2, .circle-3, .circle-4 {
+        border: 1px solid #524F52;
+        border-radius: 50%;
+        height: 300px;
+        margin: 47px;
+        text-align: center;
+        width: 300px;
+
+    }
+
+    .circle-1 span, .circle-2 span, .circle-3 span, .circle-4 span {
+        color: #fff;
+        display: block;
+        font-family: Roboto;
+        font-weight: medium;
+        font-size: 73px;
+        padding-top: 65px;
+        text-align: center;
+    }
+
+    .circle-1 p, .circle-2 p, .circle-3 p, .circle-4 p {
+        color: #fff;
+        font-family: Roboto;
+        font-weight: lighter;
+        font-size: 25px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .services {
+        height: 1080px;
+    }
+
+    .services h2 {
+        color: #454545;
+        font-family: "Open Sans";
+        font-weight: lighter;
+        font-size: 50px;
+        padding-top: 145px;
+        text-align: center;
+    }
+
+    .services p {
+        color: #c0c0c0;
+        font-family: "Open Sans";
+        font-weight: lighter;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .services-view {
+        margin: auto;
+        padding-top: 160px;
+        width: 1463px;
+    }
+
+    .services-view h3 {
+        color: #454545;
+        font-family: Roboto;
+        font-weight: medium;
+        font-size: 17px;
+        text-transform: uppercase;
+    }
+
+    .services-view p {
+        color: #aaa;
+        font-family: Roboto;
+        font-weight: lighter;
+        font-size: 16px;
+        padding-right: 72px;
+        text-align: justify;
+    }
+
+    .services-view-up, .services-view-down {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .services-view-up img, .services-view-down img {
+        padding-right: 18px;
+        position: relative;
+        top: -45px;
+    }
 
 
 }
