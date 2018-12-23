@@ -29,29 +29,30 @@
 }
 
 body {
-    font-size: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: rgb(0,5,65);
 }
 
 header {
     background-color: #313236;
     height: 1160px;
-    width: 100%;
 }
 
 .container {
+  max-width: 1140px;
+  margin: auto;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .menu_logo {
-    max-width: 1140px;
-    margin: 0 auto;
+    margin: auto;
+}
+
+.logo {
+    display: inline-block;
 }
 
 
@@ -122,7 +123,6 @@ header {
 }
 
 .slide-1, .slide-2, .slide-3, .slide-4, .slide-5 {
-    width: 1140px;
     height: 640px;
     text-align: center;
 }
@@ -217,10 +217,14 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: auto;
+    max-width: 1140px;
+    width: 100%;
 }
 
-.portfolio-slider-1 img, .portfolio-slider-2 img {
-    width: 510px;
+.portfolio-slider-1 object, .portfolio-slider-2 object {
+    max-width: 510px;
+    width: 100%;
 }
 
 .get-for-free-btn {
@@ -266,18 +270,22 @@ header {
 
 .navigation-left-arrow, .navigation-right-arrow {
     background-color: #F3F3F3;
-    height: 72px;
-    margin-right: 15px;
+    height: 100%;
+    max-height: 72px;
     width: 70px;
 }
 
-.navigation-left-arrow object, .navigation-right-arrow object{
+.navigation-left-arrow {
+    margin-left: 10px;
+}
+
+.navigation-left-arrow object, .navigation-right-arrow object {
     padding-top: 20px;
 }
 
 
 .about-us {
-    background: #44444a url("../images/about-us.png");
+    background: #44444a url("../images/about-us.png") center/cover;
     background-blend-mode: multiply;
     height: 610px;
 }
@@ -296,22 +304,20 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 1140px;
+    margin-top: 70px;
 }
 
 
 .circle-1, .circle-2, .circle-3, .circle-4 {
     border: 1px solid #524F52;
     border-radius: 50%;
-    height: 235px;
+    height: 240px;
+    max-width: 240px;
     margin: 20px;
     text-align: center;
-    width: 235px;
+    width: 100%;
 }
 
-.circle-1:first-child {
-    margin-left: 135px;
-}
 
 .circle-1 span, .circle-2 span, .circle-3 span, .circle-4 span {
     color: #fff;
@@ -332,11 +338,16 @@ header {
     text-transform: uppercase;
 }
 
+.circle-first-row, .circle-second-row {
+    display: inherit;
+    flex-basis: 100%;
+}
+
 
 .services {
+    background-color: #fff;
     height: 940px;
     margin: auto;
-    width: 1140px;
 }
 
 .services h2 {
@@ -359,7 +370,6 @@ header {
 .services-view {
     margin: auto;
     padding-top: 160px;
-    width: 1140px;
 }
 
 
@@ -434,9 +444,9 @@ header {
 }
 
 .macbook {
+    background-color: #fff;
     height: 1060px;
     margin: 0 auto;
-    width: 1140px;
 }
 
 
@@ -507,13 +517,14 @@ footer {
 .contact p {
     background-color: #F9812B;
     margin: 0 auto;
-    width: 860px;
+    max-width: 860px;
     color: #fff;
     font-family: "Open Sans";
     font-weight: 300;
     font-size: 27px;
     text-align: center;
     padding: 13px 0;
+    width: 100%;
 }
 
 
@@ -533,33 +544,300 @@ footer {
 
 
 
+/*------------------------------------------ min-width: 576px;  --------------------------------------*/
 
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
+@media (min-width: 576px) and (max-width: 767px){
+    .container {
+        max-width: 540px;
+    }
+
+    .logo {
+        text-align: center;
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .slide-1 h1, .slide-2 h1, .slide-3 h1, .slide-4 h1, .slide-5 h1  {
+        font-size: 29px;
+        margin-bottom: 50px;
+    }
+
+    .sliders {
+        margin-top: 120px;
+    }
+
+    .slide-1 p, .slide-2 p, .slide-3 p, .slide-4 p, .slide-5 p {
+        font-size: 20px;
+    }
+
+    .slide-buttons, .portfolio-buttons {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .get-started-button {
+        margin-bottom: 20px;
+    }
+
+    .learn-more-button {
+        width: 214px;
+    }
+
+    .portfolio h2 {
+        font-size: 39px;
+    }
+
+    .portfolio p {
+        font-size: 19px;
+    }
+
+    .portfolio-slider-2, .navigation-left-arrow, .navigation-right-arrow {
+        display: none;
+    }
+
+    .get-for-free-btn {
+        margin-bottom: 16px;
+    }
+
+    .about-us {
+        height: 1320px;
+    }
+
+    .about-us h2 {
+        font-size: 32px;
+        padding-top: 54px;
+    }
+
+    .circle-numbers, .circle-first-row, .circle-second-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 68px;
+    }
+
+    .services {
+        height: 1280px;
+    }
+
+    .services h2 {
+        font-size: 32px;
+    }
+
+    .services p {
+        font-size: 16px;
+    }
+
+    .services-view {
+        padding-top: 28px;
+    }
+
+    .services-view-up, .services-view-down {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .get-started h3 {
+        font-size: 25px;
+        padding-top: 42px;
+    }
+
+    .get-started p {
+        font-size: 21px;
+        margin-bottom: 53px;
+    }
+
+    .get-started a {
+        font-size: 15px;
+        padding: 13px 0px;
+    }
+
+    .macbook {
+        height: 1100px;
+    }
+
+    .macbook h3 {
+        font-size: 34px;
+    }
+
+    .macbook p {
+        font-size: 17px;
+    }
+
+    .macbook-content {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .macbook-img object {
+        margin-top: 50px;
+        width: 580px;
+    }
+
+    .macbook-text {
+        margin-top: 0;
+    }
+
+    .contact p {
+        font-size: 23px;
+        padding: 13px 14px;
+    }
+
+
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
+/*------------------------------------------ min-width: 768px;  --------------------------------------*/
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .logo-1 {
+        font-size: 28px;
+    }
+
+    .logo-2 {
+        font-size: 8px;
+        padding: 4px 6px;
+    }
+
+    .menu  {
+        font-size: 14px;
+    }
+
+    .menu li {
+        padding-left: 8px;
+    }
+
+    .get-started-button, .learn-more-button {
+        font-size: 14px;
+        padding: 13px 25px;
+    }
+
+    .navigation-1, .navigation-2, .navigation-3, .navigation-4, .navigation-5 {
+        height: 15px;
+        width: 15px;
+    }
+
+
+    .learn-more-btn, .get-for-free-btn {
+        font-size: 12px;
+        padding: 14px 25px;
+    }
+
+    .portfolio-navigation {
+        margin-top: 115px;
+    }
+
+    .portfolio-slider-2 {
+        display: none;
+    }
+
+    .circle-numbers {
+        display: block;
+        margin-top: 0;
+    }
+
+    .circle-first-row, .circle-second-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .about-us {
+        height: 700px;
+    }
+
+    .about-us h2 {
+        margin: 0;
+        padding-top: 68px;
+    }
+
+    .services-view-up, .services-view-down {
+        display: block;
+    }
+
+    .services-view {
+        display: flex;
+        flex-direction: row;
+        flex-basis: 100%;
+        justify-content: center;
+        padding-top: 70px;
+    }
+
+    .services {
+        height: 1000px;
+    }
+
+    .macbook {
+        height: 1280px;
+    }
+
+    .macbook-content {
+        flex-direction: column;
+    }
+
+    .macbook-img object {
+        margin-top: 60px;
+    }
+
+    .macbook-text {
+        margin-top: 0;
+    }
+
+
+    .macbook-text p {
+        font-size: 21px;
+    }
+
+    .contact p {
+        font-size: 25px;
+        padding: 10px 0;
+    }
 }
 
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
+/*------------------------------------------ min-width: 992px;  --------------------------------------*/
 
-  .menu {
-    font-size: 14px;
-  }
+@media (min-width: 992px) and (max-width: 1999px) {
+    body {
+        width: 100%;
+    }
 
-  .menu li {
-    padding-left: 50px;
-  }
+    .container {
+        max-width: 960px;
+        margin: auto;
+        width: 100%;
+    }
+
+    .menu li {
+        padding-left: 36px;
+    }
+
+    .circle-1 span, .circle-2 span, .circle-3 span, .circle-4 span.circle-1 span, .circle-2 span, .circle-3 span, .circle-4 span {
+        font-size: 48px;
+    }
+
+    .circle-1 p, .circle-2 p, .circle-3 p, .circle-4 p {
+        font-size: 18px;
+    }
+
+    .macbook-img object {
+        max-width: 560px;
+    }
+
 }
+
+/*------------------------------------------ min-width: 1200px;  --------------------------------------*/
 
 @media (min-width: 1200px) {
   .container {
