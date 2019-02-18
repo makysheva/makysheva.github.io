@@ -4,6 +4,11 @@ body {
     padding: 0;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 @font-face {
     font-family: 'Lato Black';
     src: url(../fonts/Lato-Black.ttf);
@@ -191,19 +196,24 @@ header {
     width: 29px;
 }
 
-.social {
+.header .social {
     display: flex;
     justify-content: center;
     padding-top: 108px;
 }
 
-.social img {
+.header .social a {
+	text-decoration: none;
+	color: #88888A;
+}
+
+.header .social i {
     padding-left: 18px;
     opacity: 1;
 }
 
-.social a:hover {
-    opacity: 0.5;
+.header .social i:hover {
+    color: #fff;
 }
 
 .features {
@@ -450,12 +460,463 @@ header {
     border-radius: 10px;
 }
 
-.filter-img object {
+.portfolio .portfolio-items, .portfolio .portfolio-item {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.portfolio .portfolio-item {
+    display: inline-flex;
+    flex-direction: column;
+    overflow: hidden;
+	position: relative;
+    width: 300px;
+}
+
+.portfolio img {
+    display: block;
     max-width: 100%;
 }
 
-.filter-img object:hover {
-    background-color: #5A7FF9;
-    background-image: url('images/eye.svg');
-    background-size: 100%;
+.descr {
+    background-color: rgba(88, 124, 247, 0.5);
+    color: #fff;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    padding-top: 80px;
+    text-align: center;
+    top: 100%;
+    transition: all .5s;
+    opacity: 0;
+    width: 100%;
+}
+
+.portfolio .portfolio-item:hover .descr {
+    opacity: 1;
+    top: 0;
+}
+
+.team-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-title h2 {
+    color: #4c76ff;
+    font-family: 'Lato Black';
+	font-size: 28px;
+    margin: 0;
+    padding-top: 72px;
+    text-transform: uppercase;
+}
+
+.team-text {
+    color: #000;
+    font-family: 'Lato Thin';
+    font-size: 15px;
+    margin: auto;
+    max-width: 702px;
+    text-align: center;
+    padding-top: 36px;
+    width: 100%;
+}
+
+.team-cards {
+    padding-bottom: 100px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.team-cards-view {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.team-cards img {
+    max-width: 100%;
+    width: 225px;
+}
+
+.team-cards .team {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px 0 0;
+}
+
+.team-cards .team:last-child {
+    padding-right: 0;
+}
+
+.team-cards .team:hover {
+    background-color: #547CFE;
+}
+
+.team-name {
+    color: #062033;
+    font-family: 'Open Sans';
+    font-size: 15px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.team-position {
+    color: #062033;
+    font-family: 'Open Sans';
+    font-size: 11px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.facts {
+    background: url('../images/fun.png') no-repeat center center;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    width: 100%;
+}
+
+.facts:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #061C2E;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.facts-content{
+    position: relative;
+    color: white;
+    z-index: 2;
+}
+
+.facts-title h2 {
+    color: #4c76ff;
+    font-family: 'Lato Black';
+	font-size: 21px;
+    margin: 0;
+    padding-top: 72px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.facts-number {
+    color: #fff;
+    font-family: 'Open Sans';
+    font-size: 45px;
+    font-weight: 900;
+}
+
+.facts-text {
+    color: #fff;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.circles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 55px;
+}
+
+
+.circles img {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 50%;
+}
+
+.circles p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.discuss{
+    padding-bottom: 90px;
+}
+
+.discuss-contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.discuss-adress {
+    max-width: 230px;
+    width: 100%;
+}
+
+.discuss-title h2 {
+    color: #4c76ff;
+    font-family: 'Lato Black';
+	font-size: 28px;
+    margin: 0;
+    padding-top: 72px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.discuss-text {
+    color: #000;
+    font-family: 'Lato Thin';
+    font-size: 15px;
+    margin: auto;
+    max-width: 702px;
+    text-align: center;
+    padding-top: 36px;
+    padding-bottom: 80px;
+    width: 100%;
+}
+
+.discuss-adress h2 {
+    color: #062033;
+    font-family: 'Open Sans';
+    font-size: 19px;
+    font-weight: 500;
+    margin: 0;
+    max-width: 207px;
+    text-align: left;
+	padding: 0;
+	padding-bottom: 20px;
+    width: 100%;
+}
+
+.discuss-adress p {
+    color: #6a737b;
+    font-family: 'Open Sans';
+    font-size: 11px;
+    font-weight: 500;
+    margin: 0;
+    max-width: 150px;
+    text-align: left;
+    padding: 0 0 5px 0;
+    width: 100%;
+}
+
+.discuss-form {
+    max-width: 670px;
+    width: 100%;
+}
+
+.discuss-form input[type="text"] {
+    color: #5b646e;
+    font-family: 'Open Sans';
+    font-size: 11px;
+	font-weight: 500;
+	margin-right: 20px;
+}
+
+
+.discuss-form input {
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 1px solid #E0E0E0;
+    color: #000;
+	font-family: 'Open Sans';
+	font-size: 14px;
+    font-weight: 500;
+	max-width: 300px;
+	padding: 0 0 10px 0;
+    resize: none;
+    width: 100%;
+}
+
+.discuss-form textarea {
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 1px solid #E0E0E0;
+	color: #000;
+	font-family: 'Open Sans';
+    font-weight: 500;
+    font-size: 14px;
+	margin-bottom: 30px;
+    max-width: 630px;
+    padding-top: 36px;
+    resize: none;
+    width: 100%;
+}
+
+.discuss-form input:active, :hover, :focus, .discuss-form textarea:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.discuss-form h2 {
+    color: #062033;
+    font-family: 'Open Sans';
+    font-size: 21px;
+    font-weight: 900;
+    margin: 0;
+    max-width: 207px;
+    text-align: left;
+	padding: 0;
+	padding-bottom: 36px;
+    width: 100%;
+}
+
+.discuss-form button {
+	background-color: #fff;
+	border: 0;
+	color: #000;
+	cursor: pointer;
+	font-family: 'Open Sans';
+	font-size: 14px;
+	font-weight: 500;
+	left: 523px;
+	padding: 0;
+	position: relative;
+}
+
+.discuss-contacts .social {
+    display: flex;
+    flex-direction: column;
+    max-width: 20px;
+    width: 100%;
+}
+
+.discuss-contacts .social a {
+    color: #CDD2D6;
+    padding-bottom: 20px;
+}
+
+.discuss-contacts .social a:last-child {
+    padding-bottom: 0;
+}
+
+.fab {
+	font-size: 21px;
+}
+
+.fab:hover {
+	color: #9CA1A5;
+}
+
+.far {
+	color: #4c76ff;
+	font-size: 20px;
+}
+
+.map  {
+	width: 100%;
+	height: 180px;
+}
+
+.footer {
+	height: 252px;
+	background-color: #010305;
+	padding-top: 48px;
+}
+
+.footer-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.footer .logo {
+	padding-bottom: 18px;
+}
+
+.footer-descr .text {
+	color: #fff;
+	font-family: 'Lato Thin';
+	font-size: 13px;
+	font-weight: 500;
+	padding-top: 11px;
+	max-width: 248px;
+	width: 100%;
+}
+
+.subscribe {
+	max-width: 258px;
+	width: 100%;
+}
+
+.subscribe h3 {
+	color: #fff;
+    font-family: 'Lato Black';
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+	padding: 23px 0 36px 0;
+}
+
+.subscribe .text {
+	color: #fff;
+    font-family: 'Open Sans';
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
+	padding: 18px 0 36px 0;
+}
+
+.subscribe input {
+	background: none;
+	background: url(../images/arrow.png) no-repeat 94% center;
+	border: 2px solid #fff;
+	color: #fff;
+	font-family: 'Open Sans';
+	font-size: 12px;
+    padding: 7px;
+	width: 100%;
+}
+
+.explore {
+	max-width: 202px;
+	width: 100%;
+}
+
+.explore h3 {
+	color: #fff;
+    font-family: 'Lato Black';
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+	padding: 23px 0 30px 0;
+}
+
+.explore .links {
+	display: flex;
+	flex-direction: row;
+    margin: 0;
+	padding: 0;
+	padding-bottom: 36px;
+}
+
+.explore .links a  {
+	color: #fff;
+	font-family: 'Open Sans';
+    font-size: 12px;
+	font-weight: 500;
+	text-align: left;
+	text-decoration: none;
+	padding-bottom: 10px;
+}
+
+.explore .links a:last-child {
+	padding-bottom: 0;
+}
+
+.explore .left-links, .explore .right-links {
+	display: flex;
+	flex-direction: column;
+	padding-right: 36px;
+}
+
+.explore .right-links:last-child {
+	padding-right: 0;
 }
