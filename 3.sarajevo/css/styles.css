@@ -4,11 +4,6 @@ body {
     padding: 0;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 @font-face {
     font-family: 'Lato Black';
     src: url(../fonts/Lato-Black.ttf);
@@ -46,8 +41,9 @@ body {
 }
 
 header {
-    background-image: url('../images/header-img.png');
-    height: 700px;
+	background-image: url('../images/header-img.png');
+	background-size: contain;
+	height: 700px;
 }
 
 .logo {
@@ -358,7 +354,12 @@ header {
 }
 
 .iphone-img {
-    margin-top: 100px;
+	margin-top: 100px;
+}
+
+.iphone-img object {
+	max-width: 370px;
+	width: 100%;
 }
 
 .right-features{
@@ -643,7 +644,8 @@ header {
 }
 
 .discuss{
-    padding-bottom: 90px;
+	padding-bottom: 90px;
+	width: 100%;
 }
 
 .discuss-contacts {
@@ -709,6 +711,11 @@ header {
     width: 100%;
 }
 
+.discuss-form .form {
+	max-width: 636px;
+	width: 100%;
+}
+
 .discuss-form input[type="text"] {
     color: #5b646e;
     font-family: 'Open Sans';
@@ -725,7 +732,7 @@ header {
     border-bottom: 1px solid #E0E0E0;
     color: #000;
 	font-family: 'Open Sans';
-	font-size: 14px;
+	font-size: 11px;
     font-weight: 500;
 	max-width: 300px;
 	padding: 0 0 10px 0;
@@ -741,7 +748,7 @@ header {
 	color: #000;
 	font-family: 'Open Sans';
     font-weight: 500;
-    font-size: 14px;
+    font-size: 11px;
 	margin-bottom: 30px;
     max-width: 630px;
     padding-top: 36px;
@@ -775,9 +782,8 @@ header {
 	font-family: 'Open Sans';
 	font-size: 14px;
 	font-weight: 500;
-	left: 523px;
+	float: right;
 	padding: 0;
-	position: relative;
 }
 
 .discuss-contacts .social {
@@ -919,4 +925,230 @@ header {
 
 .explore .right-links:last-child {
 	padding-right: 0;
+}
+
+@media screen and (max-width: 1026px) {
+	.container {
+		max-width: 826px;
+	}
+
+	.features-view {
+		display: flex;
+	}
+
+	.left-features p, .right-features p {
+		font-size: 10px;
+	}
+
+	.left-features h2, .right-features h2 {
+		font-size: 13px;
+	}
+
+	.discuss-form input {
+		max-width: 240px;
+	}
+
+	.discuss-form textarea {
+		max-width: 500px;
+	}
+
+	.discuss-form .form {
+		max-width: 504px;
+	}
+}
+
+@media screen and (max-width: 860px) {
+	.container {
+		max-width: 700px;
+	}
+
+	.features-iphone {
+		flex-direction: column;
+	}
+
+	.left-features {
+		margin: auto;
+		margin-top: 70px;
+		max-width: 555px;
+		width: 100%;
+	}
+
+	.customize-content, .timer-content, .music-content, .support-content, .send-content, .camera-content  {
+		max-width: 555px;
+		width: 100%;
+	}
+
+	.music-content {
+		margin-bottom: 40px;
+	}
+
+	.iphone-img {
+		margin: auto;
+	}
+
+	.left-features p, .right-features p {
+		font-size: 13px;
+	}
+
+	.left-features h2, .right-features h2 {
+		font-size: 15px;
+	}
+
+	.right-features {
+		margin: auto;
+		max-width: 555px;
+		width: 100%;
+	}
+
+	.subscribe {
+		max-width: 150px;
+	}
+}
+
+@media screen and (max-width: 742px) {
+	.container {
+		max-width: 524px;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	header {
+		height: 350px;
+	}
+
+	.header-content-one {
+		padding-top: 46px;
+	}
+
+	.header-content-text {
+		font-size: 43px;
+	}
+
+	.header-content-dot {
+		height: 5px;
+		margin-top: 31px;
+		width: 5px;
+	}
+
+	.header-content-two-text {
+		font-size: 22px;
+		padding-top: 3px;
+	}
+
+	.header-content-three-text {
+		font-size: 14px;
+	}
+
+	.line-right:after, .line-left:after {
+		margin-top: 10px;
+		margin-left: 18px;
+		margin-right: 18px;
+		width: 29px;
+	}
+
+	.header .social {
+		padding-top: 54px;
+	}
+
+	.tag-line-text {
+		font-size: 11px;
+	}
+
+	.features-view {
+		flex-direction: column;
+		margin-top: 14px;
+	}
+
+	.features-group-one h2 {
+		padding-top: 43px;
+	}
+
+	.branding-title, .development-title, .consulting-title {
+		font-size: 11px;
+	}
+
+	.branding-content, .development-content, .consulting-content {
+		max-width: 100%;
+	}
+
+	.branding-img, .development-img, .consulting-img {
+		margin-right: 39px;
+	}
+
+	.team-cards-view {
+		flex-flow: wrap;
+		justify-content: center;
+	}
+
+	.discuss-contacts {
+		flex-direction: column;
+	}
+
+	.discuss-form h2 {
+		padding-top: 19px;
+	}
+
+	.discuss-form {
+		padding-bottom: 37px;
+	}
+
+	.discuss-contacts .social {
+		flex-direction: row;
+		margin-left: 195px;
+	}
+
+	.discuss-contacts .social a {
+		padding-bottom: 0;
+		padding-right: 16px;
+	}
+
+	.footer {
+		height: 552px;
+	}
+
+	.footer-content {
+		flex-direction: column;
+	}
+
+	.footer .logo {
+		padding-bottom: 0;
+	}
+
+	.footer-descr .text {
+		max-width: 100%;
+	}
+
+	.subscribe {
+		max-width: 100%;
+	}
+
+	.explore .left-links, .explore .right-links {
+		padding-right: 210px;
+	}
+
+	.subscribe  input {
+		width: 95%;
+	}
+}
+
+@media screen and (max-width: 550px)  {
+	.container {
+		max-width: 455px;
+		width: 100%;
+	}
+
+	.team-cards-view {
+		flex-direction: column;
+	}
+
+	.team-position {
+		font-size: 9px;
+	}
+
+	.discuss-form input {
+		max-width: 200px;
+	}
+	
 }
