@@ -480,6 +480,10 @@ header {
     max-width: 100%;
 }
 
+.portfolio-item_hidden {
+    display: none;
+}
+
 .descr {
     background-color: rgba(88, 124, 247, 0.5);
     color: #fff;

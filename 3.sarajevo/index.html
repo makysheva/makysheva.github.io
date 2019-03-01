@@ -224,21 +224,21 @@
                     </section>
                 </section>
                 <section class="filter">
-                    <ul class="filter-view">
+                    <ul class="filter-view work-types">
                         <li>
-                            <a href="#">All</a>
+                            <a href="#" class="work-type work-type_active" data-type="all">All</a>
                         </li>
                         <li>
-                            <a href="#">Branding</a>
+                            <a href="#" class="work-type" data-type="branding">Branding</a>
                         </li>
                         <li>
-                            <a href="#">Web</a>
+                            <a href="#" class="work-type" data-type="logo">Web</a>
                         </li>
                         <li>
-                            <a href="#">Logo Design</a>
+                            <a href="#" class="work-type" data-type="web">Logo Design</a>
                         </li>
                         <li>
-                            <a href="#">Photography</a>
+                            <a href="#" class="work-type" data-type="branding">Photography</a>
                         </li>
                     </ul>
                 </section>
@@ -246,19 +246,19 @@
 
                 <section class="portfolio">
                     <ul class="portfolio-items">
-                        <li class="portfolio-item">
+                        <li class="portfolio-item" data-type="branding">
                             <i class="far fa-eye descr"></i>
                             <span class="descr">Labore et dolore magnam</span>
                             <span class="descr">Photography</span>
                             <img src="images/foto-one.png" alt="foto-one">
                         </li>
-                        <li class="portfolio-item">
+                        <li class="portfolio-item" data-type="web">
                             <i class="far fa-eye descr"></i>
                             <span class="descr">Labore et dolore magnam</span>
                             <span class="descr">Photography</span>
                             <img src="images/foto-two.png" alt="foto-two">
                         </li>
-                        <li class="portfolio-item">
+                        <li class="portfolio-item" data-type="logo">
                             <i class="far fa-eye descr"></i>
                             <span class="descr">Labore et dolore magnam</span>
                             <span class="descr">Photography</span>
@@ -270,25 +270,25 @@
                             <span class="descr">Photography</span>
                             <img src="images/foto-four.png" alt="foto-four">
                         </li>
-                        <li class="portfolio-item">
+                        <li class="portfolio-item" data-type="logo">
                             <i class="far fa-eye descr"></i>
                             <span class="descr">Labore et dolore magnam</span>
                             <span class="descr">Photography</span>
                             <img src="images/foto-five.png" alt="foto-five">
                         </li>
-                        <li class="portfolio-item">
+                        <li class="portfolio-item" data-type="branding">
                             <i class="far fa-eye descr"></i>
                             <span class="descr">Labore et dolore magnam</span>
                             <span class="descr">Photography</span>
                             <img src="images/foto-six.png" alt="foto-six">
                         </li>
-                        <li class="portfolio-item">
+                        <li class="portfolio-item" data-type="web">
                             <i class="far fa-eye descr"></i>
                             <span class="descr">Labore et dolore magnam</span>
                             <span class="descr">Photography</span>
                             <img src="images/foto-seven.png" alt="foto-seven">
                         </li>
-                        <li class="portfolio-item">
+                        <li class="portfolio-item" data-type="branding">
                             <i class="far fa-eye descr"></i>
                             <span class="descr">Labore et dolore magnam</span>
                             <span class="descr">Photography</span>
@@ -481,6 +481,47 @@
 				map: map
 			});
 		}
+
+		// функция для фильтрации картинок в блоке works
+		(function () {
+			const portfolioItems = document.querySelectorAll('.portfolio-item')
+
+            const workTypeButtons = document.querySelectorAll('.work-type')
+			
+
+            workTypeButtons.forEach(function (button) {
+
+                button.addEventListener('click', function () {		
+
+					let attrDataTypeView = button.getAttribute('data-type')	
+
+					portfolioItems.forEach(function(portfolioItem){
+						let filterDataType = portfolioItem.getAttribute('data-type')
+
+						if(filterDataType === attrDataTypeView) {
+							portfolioItem.classList.add('portfolio-item_hidden');
+						} else {
+							portfolioItem.classList.remove('portfolio-item_hidden')
+						}
+					})
+                })
+			})
+		})();
+
+		// функция для отмены перехода по ссылке
+		(function () {
+			const filterView = document.querySelectorAll('.filter-view')
+
+			filterView.forEach(function(anchorItem) {
+				const anchorFilter = anchorItem.getElementsByTagName('a')
+
+				filterView.forEach(function(anchorFilterItem){
+					anchorFilterItem.addEventListener('click', function handler(event) {
+						event.preventDefault()
+					})
+				})
+			})
+		})();
 	</script>
 	<script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBum9x2pq8Xjj0VQr8KSdhK-t2aSVleJoU&callback=initMap">
