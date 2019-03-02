@@ -529,10 +529,10 @@
 			const filterView = document.querySelectorAll('.filter-view')
 
 			filterView.forEach(function(anchorItem) {
-				const anchorFilter = anchorItem.getElementsByTagName('a')
+				const anchorFilter = anchorItem.querySelectorAll('a')
 
-				filterView.forEach(function(anchorFilterItem){
-					anchorFilterItem.addEventListener('click', function handler(event) {
+				anchorFilter.forEach(function(anchorFilterItem){
+					anchorFilterItem.addEventListener('click', function (event) {
 						event.preventDefault()
 					})
 				})
