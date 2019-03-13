@@ -538,6 +538,20 @@
 				})
 			})
 		})();
+
+		// функция для hover на карточки работников
+		(function(){
+			const imgCards = document.querySelectorAll('.team img') 
+			
+			imgCards.forEach((item) => {
+				item.addEventListener('mouseover', () => {
+					item.parentElement.classList.add('')
+			})
+			})
+			
+			
+
+		})();
 	</script>
 	<script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBum9x2pq8Xjj0VQr8KSdhK-t2aSVleJoU&callback=initMap">

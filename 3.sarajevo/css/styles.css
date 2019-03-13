@@ -473,6 +473,7 @@ header {
 }
 
 .portfolio .portfolio-item  {
+	overflow: hidden;
 	position: relative;
 	width: 25%;
 }
