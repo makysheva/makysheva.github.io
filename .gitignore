@@ -1,0 +1,7 @@
+4.tinyone/node_modules/
+.vscode
+# Windows thumbnail cache files
+Thumbs.db
+
+# Folder config file
+[Dd]esktop.ini
