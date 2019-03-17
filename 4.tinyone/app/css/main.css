@@ -494,18 +494,18 @@ main {
   flex-wrap: wrap;
 }
 
-.contact__list-item__icon {
+.contact-item__icon {
   padding-bottom: 18px;
 }
 
-.contact__list-item__title {
+.contact-item__title {
   font-family: 'SourceSansPro';
   font-size: 24px;
   font-weight: 400;
   color: #010101;
 }
 
-.contact__list-item__descr {
+.contact-item__descr {
   max-width: 170px;
   width: 100%;
   font-family: 'SourceSansPro';
