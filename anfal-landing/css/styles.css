@@ -1,0 +1,1542 @@
+body {
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Velocity;
+    src: url(fonts/velocity-font.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Myriad Pro";
+    src: url(fonts/MyriadPro-Regular.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Bold.ttf);
+    font-weight: bolder;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Medium.ttf);
+    font-weight: medium;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Light.ttf);
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Regular.ttf);
+    font-weight: normal;
+}
+
+
+.logo {
+    font-family: Velocity, Calibri;
+    font-weight: normal;
+    font-size: 48px;
+    color: #10ac84;
+    text-align: center;
+    padding-top: 24px;
+    margin: 0;
+}
+
+.main-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.main-headline h2 {
+    font-family: Montserrat, Calibri;
+    font-weight: bold;
+    font-size: 32px;
+    color: #000;
+}
+
+.main-headline p {
+    font-family: "Myriad Pro";
+    font-weight: normal;
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 15%;
+}
+
+.register {
+    max-width: 230px;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: medium;
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #10ac84;
+    padding: 20px 36px 20px 36px;
+    margin-right: 5%;
+}
+
+.discover {
+    max-width: 230px;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: medium;
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #6a7079;
+    padding: 20px 16px 20px 16px;
+}
+
+.tel-img {
+    margin-top: 4%;
+}
+
+.tel-img img {
+    max-width: 460px;
+}
+
+.problems {
+    background-color: #f4f4f5;
+    height: 900px;
+    margin-top: 15%;
+    min-width: 100%;
+}
+
+.left-blocks {
+    margin-top: 8%;
+}
+
+.right-blocks {
+    margin-top: 12%;
+}
+
+.problems h2 {
+    font-family: Montserrat;
+    font-weight: lighter;
+    font-size: 42px;
+    color: #26272d;
+    text-align: center;
+    margin: 0;
+    padding-top: 6%;
+}
+
+.line {
+    padding-top: 2%;
+}
+
+.line:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #04b386;
+}
+
+.pdf-block img {
+    width: 55px;
+}
+
+.pdf-block-headline {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 24px;
+    color: #26272d;
+}
+
+
+.pdf-block-text {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 18px;
+    color: #8c8f94;
+}
+
+.book-block img {
+    width: 55px;
+}
+
+
+.book-block-headline {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 24px;
+    color: #26272d;
+}
+
+
+.book-block-text {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 18px;
+    color: #8c8f94;
+}
+
+.time-block img {
+    width: 52px;
+}
+
+
+.time-block-headline {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 24px;
+    color: #26272d;
+}
+
+
+.time-block-text {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 18px;
+    color: #8c8f94;
+}
+
+.money-block img {
+    width: 55px;
+}
+
+
+.money-block-headline {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 24px;
+    color: #26272d;
+}
+
+
+.money-block-text {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 18px;
+    color: #8c8f94;
+}
+
+.offer h2 {
+    font-family: Montserrat;
+    font-weight: lighter;
+    font-size: 42px;
+    color: #26272d;
+    text-align: center;
+    margin: 10% 0 0 0;
+}
+
+
+.offer-text {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 24px;
+    color: #282528;
+    text-align: center;
+    margin-top: 8%;
+}
+
+.features {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 6%;
+}
+
+.features img {
+    width: 36px;
+}
+
+.features h3 {
+    font-family: Montserrat;
+    font-weight: bolder;
+    font-size: 18px;
+    color: #282528;
+}
+
+.features p {
+    display: inline-block;
+    font-family: Montserrat;
+    font-weight: medium;
+    font-size: 14px;
+    color: #282528;
+}
+
+.features-iphone img {
+    width: 100%;
+}
+
+
+.features-block {
+    margin: 10% 0 0 20%;
+}
+
+.left-side-features img, .right-side-features img {
+    float: left;
+    margin: 11% 0 0 9%;
+}
+
+.interface {
+    background-color: #f4f4f5;
+    height: 1300px;
+    margin: 5% 0 0 0;
+}
+
+.interface h2 {
+    font-family: Montserrat;
+    font-weight: lighter;
+    font-size: 42px;
+    color: #26272d;
+    text-align: center;
+    margin: 12% 0 0 0;
+    padding-top: 5%;
+}
+
+.interface-screen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.interface-screen img {
+    width: 20%;
+}
+
+.interface-button {
+    margin: 10% 0 0 40%;
+}
+
+.questions {
+    height: 750px;
+}
+
+.questions h2 {
+    font-family: Montserrat;
+    font-weight: lighter;
+    font-size: 42px;
+    color: #26272d;
+    text-align: center;
+    margin: 12% 0 0 0;
+}
+
+.form-questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6%;
+}
+
+.form-questions input, .form-questions textarea {
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 1px solid #26292c;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    width: 41%;
+    font-family: Montserrat;
+    font-weight: lighter;
+    font-size: 15px;
+    color: #26292c;
+    resize: none;
+}
+
+.form-questions input:active, :hover, :focus, .form-questions textarea:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.questions-button {
+    margin-top: 5%;
+}
+
+.questions-button a {
+    max-width: 230px;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: medium;
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #10ac84;
+    border-radius: 5px;
+    background-color: #10ac84;
+    padding: 19px 54px 19px 54px;
+    margin-left: 40%;
+}
+
+.line-footer {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    width: 100%;
+    margin: 0 0 0 5%;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 0 2% 4%;
+
+}
+
+.socials img {
+    padding-right: 2%;
+}
+
+
+/*------------------------------max-width: 350px; -------------------------*/
+
+@media (max-width: 350px) {
+    body {
+        width: 100%;
+        margin: 0;
+    }
+
+    .logo {
+        padding-top: 9%;
+        letter-spacing: 2px;
+    }
+
+    .main-flex-min {
+        flex-direction: column;
+        flex-flow: column-reverse;
+    }
+
+    .tel-img img {
+        width: 96%;
+        padding-left: 5%;
+    }
+
+    .main-headline h2 {
+        font-size: 19px;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .main-headline p {
+        font-size: 19px;
+        text-align: center;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .main-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-buttons .register {
+        margin-right: 0;
+        margin-left: 19%;
+        margin-bottom: 10%;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+    .discover {
+        margin-left: 19%;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+    .problems .main-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .problems {
+        height: 1160px;
+        width: 100%;
+    }
+
+    .problems h2 {
+        font-size: 25px;
+
+    }
+
+    .pdf-block img, .book-block img, .time-block img, .money-block img {
+        width: 39px;
+    }
+
+    .pdf-block-headline, .book-block-headline, .time-block-headline, .money-block-headline {
+       font-size: 20px;
+    }
+
+    .pdf-block-text, .book-block-text, .time-block-text, .money-block-text {
+        font-size: 15px;
+    }
+
+    .money-block img {
+        margin-top: 6%;
+    }
+
+    .left-blocks {
+        padding: 20px;
+    }
+
+    .right-blocks {
+        margin-top: 0;
+        padding: 20px;
+    }
+
+    .offer h2 {
+        font-size: 25px;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .offer-text {
+        font-size: 14px;
+        text-align: center;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .features-iphone {
+        order: -1;
+        width: 50%;
+        padding-left: 2%;
+    }
+
+
+    .features-block h3 {
+        margin: 0;
+        font-size: 17px;
+    }
+
+    .features-block p {
+        font-size: 15px;
+        padding-right: 2%;
+    }
+
+    .left-side-features img {
+        margin-left: 7%;
+    }
+
+    .interface {
+        height: 700px;
+    }
+
+    .interface h2 {
+        font-size: 22px;
+        padding-top: 10%;
+    }
+
+    .interface-screen {
+        width: 100%;
+    }
+
+    .screen-1, .screen-2, .screen-4, .screen-5 {
+        display: none;
+    }
+
+    .screen-3 {
+        margin: 0 auto;
+        min-width: 80%;
+        padding-left: 8%;
+    }
+
+    .interface-button {
+        margin-left: 31%;
+    }
+
+    .interface-button .register {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .questions {
+        height: 520px;
+    }
+
+    .questions h2 {
+        font-size: 26px;
+    }
+
+    .form-questions input, .form-questions textarea {
+        width: 90%;
+        padding-bottom: 5%;
+    }
+
+    .form-questions {
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+
+    .questions-button {
+        margin-top: 20%;
+    }
+
+    .questions-button a {
+        padding: 10px 15px 10px 15px;
+        margin-left: 31%;
+        font-size: 15px;
+    }
+
+    .line-footer {
+        width: 89%;
+    }
+
+    .socials {
+        margin: 4% 0px 4% 2%;
+    }
+
+    .socials img {
+        padding-right: 5%;
+    }
+}
+
+/*---------------------------------------------------- 350 == 560px -----------------------------------------*/
+
+
+@media (min-width: 350px) and (max-width: 560px) {
+    body {
+        width: 100%;
+        margin: 0;
+    }
+
+    .logo {
+        padding-top: 9%;
+        letter-spacing: 2px;
+    }
+
+    .main-flex-min {
+        flex-direction: column;
+        flex-flow: column-reverse;
+    }
+
+    .tel-img img {
+        width: 96%;
+        padding-left: 4%;
+    }
+
+    .main-headline h2 {
+        font-size: 19px;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .main-headline p {
+        font-size: 19px;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .main-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-buttons .register {
+        margin-right: 0;
+        margin-left: 27%;
+        margin-bottom: 10%;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+    .discover {
+        margin-left: 27%;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+    .problems .main-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .problems {
+        height: 1030px;
+        width: 100%;
+    }
+
+    .problems h2 {
+        font-size: 26px;
+
+    }
+
+    .pdf-block img, .book-block img, .time-block img, .money-block img {
+        width: 39px;
+    }
+
+    .pdf-block-headline, .book-block-headline, .time-block-headline, .money-block-headline {
+       font-size: 20px;
+    }
+
+    .pdf-block-text, .book-block-text, .time-block-text, .money-block-text {
+        font-size: 15px;
+    }
+
+    .money-block img {
+        margin-top: 6%;
+    }
+
+    .left-blocks {
+        padding: 15px 24px 0 27px;
+    }
+
+    .right-blocks {
+        margin-top: 0;
+        padding: 15px 24px 0 27px;
+    }
+
+    .offer h2 {
+        font-size: 26px;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .offer-text {
+        font-size: 15px;
+        text-align: center;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .features-iphone {
+        order: -1;
+        width: 50%;
+        padding-left: 2%;
+    }
+
+
+    .features-block h3 {
+        margin: 0;
+        font-size: 17px;
+    }
+
+    .features-block p {
+        font-size: 15px;
+        padding-right: 5%;
+    }
+
+    .left-side-features img {
+        margin-left: 7%;
+    }
+
+    .interface {
+        max-height: 1100px;
+    }
+
+    .interface h2 {
+        font-size: 22px;
+        padding-top: 10%;
+    }
+
+    .interface-screen {
+        width: 100%;
+    }
+
+    .screen-1, .screen-2, .screen-4, .screen-5 {
+        display: none;
+    }
+
+    .screen-3 {
+        margin: 0 auto;
+        min-width: 80%;
+        padding-left: 8%;
+    }
+
+    .interface-button {
+        margin-left: 35%;
+    }
+
+    .interface-button .register {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .questions {
+        height: 800px;
+    }
+
+    .questions h2 {
+        font-size: 26px;
+    }
+
+    .form-questions input, .form-questions textarea {
+        width: 90%;
+        padding-bottom: 5%;
+    }
+
+    .questions-button {
+        margin-top: 16%;
+        margin-left: 6%;
+    }
+
+    .questions-button a {
+        padding: 10px 15px 10px 15px;
+        margin-left: 31%;
+        font-size: 15px;
+    }
+
+    .line-footer {
+        width: 91%;
+    }
+
+    .socials {
+        margin: 4% 0px 4% 2%;
+    }
+
+    .socials img {
+        padding-right: 5%;
+    }
+}
+
+/*---------------------------------------------------- 561 == 768px -----------------------------------------*/
+
+@media (min-width: 561px) and (max-width: 768px) {
+    body {
+    max-width: 100%;
+    }
+
+    .main-flex {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logo {
+        padding-top: 3%;
+        font-size: 50px;
+    }
+
+    .tel-img img {
+        max-width: 230px;
+    }
+
+    .main-headline h2 {
+        text-align: left;
+        padding-top: 5%;
+        padding-left: 6%;
+        font-size: 23px;
+    }
+
+    .main-headline p {
+        text-align: left;
+        padding-left: 6%;
+        font-size: 17px;
+    }
+
+    .main-buttons {
+        flex-direction: row;
+    }
+
+    .main-buttons .register {
+        margin-right: 0;
+        margin-left: 7%;
+        margin-bottom: 0;
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+
+    .discover {
+        padding: 8px 8px;
+        margin-left: 2%;
+        font-size: 12px;
+    }
+
+    .problems {
+        height: 1030px;
+        width: 100%;
+    }
+
+    .problems h2 {
+        font-size: 37px;
+    }
+
+
+    .problems .main-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .problems {
+        height: 1030px;
+        width: 100%;
+    }
+
+    .problems h2 {
+        font-size: 26px;
+
+    }
+
+    .pdf-block img, .book-block img, .time-block img, .money-block img {
+        width: 39px;
+    }
+
+    .pdf-block-headline, .book-block-headline, .time-block-headline, .money-block-headline {
+       font-size: 20px;
+    }
+
+    .pdf-block-text, .book-block-text, .time-block-text, .money-block-text {
+        font-size: 15px;
+    }
+
+    .money-block img {
+        margin-top: 6%;
+    }
+
+    .left-blocks {
+        padding: 0 24px 0 27px;
+    }
+
+    .right-blocks {
+        margin-top: 0;
+        padding: 15px 24px 0 27px;
+    }
+
+    .offer h2 {
+        font-size: 26px;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .offer-text {
+        font-size: 17px;
+        text-align: center;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .features-iphone {
+        order: -1;
+        width: 50%;
+        padding-left: 2%;
+    }
+
+
+    .features-block h3 {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .features-block p {
+        font-size: 17px;
+        padding-right: 5%;
+    }
+
+    .left-side-features img {
+        margin-left: 7%;
+    }
+
+    .interface {
+        max-height: 1100px;
+    }
+
+    .interface h2 {
+        font-size: 24px;
+        padding-top: 10%;
+    }
+
+    .interface-screen {
+        width: 100%;
+    }
+
+    .screen-1, .screen-2, .screen-4, .screen-5 {
+        display: none;
+    }
+
+    .screen-3 {
+        margin: 0 auto;
+        min-width: 65%;
+        padding-left: 8%;
+    }
+
+    .interface-button {
+        margin-left: 39%;
+        margin-top: -6%;
+    }
+
+    .interface-button .register {
+        padding: 13px;
+        font-size: 12px;
+    }
+
+    .questions {
+        height: 800px;
+    }
+
+    .questions h2 {
+        font-size: 26px;
+    }
+
+    .form-questions input, .form-questions textarea {
+        width: 90%;
+        padding-bottom: 5%;
+    }
+
+    .questions-button {
+        margin-top: 12%;
+        margin-left: 6%;
+    }
+
+    .questions-button a {
+        padding: 11px 17px 11px 17px;
+        margin-left: 36%;
+        font-size: 16px;
+    }
+
+    .line-footer {
+        width: 91%;
+    }
+
+    .socials {
+        margin: 4% 0px 4% 2%;
+    }
+
+    .socials img {
+        padding-right: 5%;
+    }
+}
+
+/*---------------------------------------------------- 769 == 1024px -----------------------------------------*/
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .main-buttons .register {
+        padding: 10px 20px 10px 20px;
+        margin-right: 1%;
+        font-size: 15px;
+    }
+
+    .discover {
+        padding: 10px 5px 10px 5px;
+        font-size: 15px;
+    }
+
+    body {
+    max-width: 100%;
+    }
+
+    .main-flex {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logo {
+        padding-top: 3%;
+        font-size: 50px;
+    }
+
+    .tel-img img {
+        max-width: 290px;
+        padding-right: 14%;
+    }
+
+    .main-headline h2 {
+        text-align: left;
+        padding-top: 5%;
+        padding-left: 6%;
+        font-size: 23px;
+    }
+
+    .main-headline p {
+        text-align: left;
+        padding-left: 6%;
+        padding-right: 18%;
+        font-size: 17px;
+    }
+
+    .main-buttons {
+        flex-direction: row;
+    }
+
+    .main-buttons .register {
+        margin-right: 0;
+        margin-left: 7%;
+        margin-bottom: 0;
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+
+    .discover {
+        padding: 8px 8px;
+        margin-left: 2%;
+        font-size: 12px;
+    }
+
+    .problems {
+        height: 1030px;
+        width: 100%;
+    }
+
+    .problems h2 {
+        font-size: 37px;
+    }
+
+
+    .problems .main-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .problems {
+        height: 1030px;
+        width: 100%;
+    }
+
+    .problems h2 {
+        font-size: 26px;
+
+    }
+
+    .pdf-block img, .book-block img, .time-block img, .money-block img {
+        width: 39px;
+    }
+
+    .pdf-block-headline, .book-block-headline, .time-block-headline, .money-block-headline {
+       font-size: 20px;
+    }
+
+    .pdf-block-text, .book-block-text, .time-block-text, .money-block-text {
+        font-size: 15px;
+    }
+
+    .money-block img {
+        margin-top: 6%;
+    }
+
+    .left-blocks {
+        padding: 0 24px 0 27px;
+    }
+
+    .right-blocks {
+        margin-top: 0;
+        padding: 15px 24px 0 27px;
+    }
+
+    .offer h2 {
+        font-size: 26px;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .offer-text {
+        font-size: 17px;
+        text-align: center;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .features-iphone {
+        order: -1;
+        width: 50%;
+        padding-left: 2%;
+    }
+
+
+    .features-block h3 {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .features-block p {
+        font-size: 17px;
+        padding-right: 5%;
+    }
+
+    .left-side-features img {
+        margin-left: 7%;
+    }
+
+    .interface {
+        max-height: 1100px;
+    }
+
+    .interface h2 {
+        font-size: 24px;
+        padding-top: 10%;
+    }
+
+    .interface-screen {
+        width: 100%;
+    }
+
+    .screen-1, .screen-2, .screen-4, .screen-5 {
+        display: none;
+    }
+
+    .screen-3 {
+        margin: 0 auto;
+        min-width: 55%;
+        padding-left: 8%;
+    }
+
+    .interface-button {
+        margin-left: 43%;
+        margin-top: -4%;
+    }
+
+    .interface-button .register {
+        padding: 13px;
+        font-size: 12px;
+    }
+
+    .questions {
+        height: 800px;
+    }
+
+    .questions h2 {
+        font-size: 26px;
+    }
+
+    .form-questions input, .form-questions textarea {
+        width: 90%;
+        padding-bottom: 5%;
+    }
+
+    .questions-button {
+        margin-top: 12%;
+        margin-left: 6%;
+    }
+
+    .questions-button a {
+        padding: 11px 17px 11px 17px;
+        margin-left: 36%;
+        font-size: 16px;
+    }
+
+    .line-footer {
+        width: 91%;
+    }
+
+    .socials {
+        margin: 4% 0px 4% 2%;
+    }
+
+    .socials img {
+        padding-right: 5%;
+    }
+}
+
+/*---------------------------------------------------- 1025 == 1200px -----------------------------------------*/
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    body {
+        max-width: 993px;
+    }
+
+    .main-buttons .register {
+        padding: 10px 20px 10px 20px;
+        margin-right: 1%;
+        font-size: 15px;
+    }
+
+    .discover {
+        padding: 10px 5px 10px 5px;
+        font-size: 15px;
+    }
+
+    body {
+    max-width: 100%;
+    }
+
+    .main-flex {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logo {
+        padding-top: 3%;
+        font-size: 50px;
+    }
+
+    .tel-img img {
+        max-width: 335px;
+        padding-right: 14%;
+    }
+
+    .main-headline h2 {
+        text-align: left;
+        padding-top: 5%;
+        padding-left: 6%;
+        font-size: 27px;
+    }
+
+    .main-headline p {
+        text-align: left;
+        padding-left: 6%;
+        padding-right: 18%;
+        font-size: 18px;
+    }
+
+    .main-buttons {
+        flex-direction: row;
+    }
+
+    .main-buttons .register {
+        margin-right: 0;
+        margin-left: 7%;
+        margin-bottom: 0;
+        padding: 11px 12px;
+        font-size: 13px;
+    }
+
+    .discover {
+        padding: 11px 12px;
+        margin-left: 4%;
+        font-size: 13px;
+    }
+
+    .problems {
+        height: 1030px;
+        width: 100%;
+    }
+
+    .problems h2 {
+        font-size: 37px;
+    }
+
+
+    .problems .main-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .problems {
+        height: 1030px;
+        width: 100%;
+    }
+
+    .problems h2 {
+        font-size: 26px;
+
+    }
+
+    .pdf-block img, .book-block img, .time-block img, .money-block img {
+        width: 39px;
+    }
+
+    .pdf-block-headline, .book-block-headline, .time-block-headline, .money-block-headline {
+       font-size: 23px;
+    }
+
+    .pdf-block-text, .book-block-text, .time-block-text, .money-block-text {
+        font-size: 16px;
+    }
+
+    .money-block img {
+        margin-top: 6%;
+    }
+
+    .left-blocks {
+        padding: 0 24px 0 27px;
+    }
+
+    .right-blocks {
+        margin-top: 0;
+        padding: 15px 24px 0 27px;
+    }
+
+    .offer h2 {
+        font-size: 30px;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .offer-text {
+        font-size: 18px;
+        text-align: center;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .features-iphone {
+        order: -1;
+        width: 50%;
+        padding-left: 2%;
+    }
+
+
+    .features-block h3 {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .features-block p {
+        font-size: 17px;
+        padding-right: 5%;
+    }
+
+    .left-side-features img {
+        margin-left: 7%;
+    }
+
+    .interface {
+        max-height: 1100px;
+    }
+
+    .interface h2 {
+        font-size: 24px;
+        padding-top: 10%;
+    }
+
+    .interface-screen {
+        width: 100%;
+    }
+
+    .screen-1, .screen-2, .screen-4, .screen-5 {
+        display: none;
+    }
+
+    .screen-3 {
+        margin: 0 auto;
+        min-width: 40%;
+        padding-left: 4%;
+    }
+
+    .interface-button {
+        margin-left: 43%;
+        margin-top: -4%;
+    }
+
+    .interface-button .register {
+        padding: 13px;
+        font-size: 12px;
+    }
+
+    .questions {
+        height: 870px;
+    }
+
+    .questions h2 {
+        font-size: 26px;
+    }
+
+    .form-questions input, .form-questions textarea {
+        width: 77%;
+        padding-bottom: 5%;
+    }
+
+    .questions-button {
+        margin-top: 12%;
+        margin-left: 6%;
+    }
+
+    .questions-button a {
+        padding: 11px 17px 11px 17px;
+        margin-left: 40%;
+        font-size: 16px;
+    }
+
+    .line-footer {
+        width: 91%;
+    }
+
+    .socials {
+        margin: 4% 0px 4% 2%;
+    }
+
+    .socials img {
+        padding-right: 5%;
+    }
+}
+
+/*---------------------------------------------------- min-width: 1200px -----------------------------------------*/
+
+@media (min-width: 1200px) {
+    body {
+        max-width: 100%;
+    }
+
+    .main-headline h2 {
+        padding-left: 8%;
+    }
+
+    .main-headline p {
+        padding-left: 8%;
+    }
+
+    .discover {
+        padding: 20px 10px 20px 10px;
+    }
+
+    .main-buttons .register {
+        padding: 20px 15px 20px 15px;
+        margin-right: 5%;
+        margin-left: 8%;
+    }
+
+    .main-flex {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .line-footer {
+        width: 90%;
+    }
+}
+
