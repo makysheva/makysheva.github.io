@@ -261,6 +261,15 @@ div {
 
 .service {
   padding: 0;
+  cursor: pointer;
+}
+
+.service:hover .service__line {
+  color: #c7b299;
+}
+
+.service__img {
+  padding-bottom: 21px;
 }
 
 .service__title {
@@ -280,14 +289,14 @@ div {
   width: 100%;
 }
 
-.service__descr::after {
-  content: '';
+.service__line {
   display: block;
-  border: 1px solid #f1eee9;
+  border: 2px solid red;
   max-width: 72px;
   width: 100%;
   margin: auto;
   margin-top: 30px;
+  height: 1px;
 }
 
 .portfolio {

@@ -221,6 +221,16 @@ div
 
 .service
     padding: 0
+    cursor: pointer
+
+    &:hover 
+        .service__img
+        .service__title
+        .service__line
+            color: #c7b299
+
+    &__img
+        padding-bottom: 21px    
 
     &__title
         font-family: 'Raleway'
@@ -237,16 +247,17 @@ div
         max-width: 200px
         width: 100%
 
-        &::after
-            content: ''
-            display: block
-            border: 1px solid #f1eee9
-            max-width: 72px
-            width: 100%
-            margin: auto
-            margin-top: 30px
+    &__line
+        display: block
+        border: 2px solid red //#f1eee9
+        max-width: 72px
+        width: 100%
+        margin: auto
+        margin-top: 30px
+        height: 1px
     
 // .service_active
+//     color: #c7b299
 
 .portfolio
     background-color: #fbfaf8

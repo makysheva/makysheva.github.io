@@ -79,24 +79,28 @@
             <div class="container">
                 <div class="services" id="about">
                     <div class="service">
-                        <img src="img/web.png" alt="web" class="service__img">
+                        <i class="fas fa-pencil-alt fa-2x service__img"></i>
                         <h2 class="service__title">Web & App Design</h2>
                         <p class="service__descr">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
+                        <span class="service__line"></span>
                     </div>
                     <div class="service">
-                        <img src="img/develpoment.png" alt="develpoment" class="service__img">
+                        <i class="fas fa-database fa-2x service__img"></i>
                         <h2 class="service__title">Development</h2>
                         <p class="service__descr">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
+                        <span class="service__line"></span>
                     </div>
                     <div class="service">
-                        <img src="img/customization.png" alt="customization" class="service__img">
+                        <i class="fas fa-cog fa-2x service__img"></i>
                         <h2 class="service__title">Customization</h2>
                         <p class="service__descr">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
+                        <span class="service__line"></span>
                     </div>
                     <div class="service">
-                        <img src="img/marketing.png" alt="marketing" class="service__img">
+                        <i class="fas fa-briefcase fa-2x service__img"></i>
                         <h2 class="service__title">Marketing</h2>
                         <p class="service__descr">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
+                        <span class="service__line"></span>
                     </div>
                 </div>
             </div>
@@ -418,17 +422,22 @@
     </footer>
 
 <script>
+    // функция на блок services, при наведении мыши
     (function(){
-        const service = document.querySelectorAll('.service')
-        const serviceImg = document.querySelectorAll('.service__img')
-        const serviceTitle = document.querySelectorAll('.service__title')
-        const serviceDescr = document.querySelectorAll('.service__descr')
-        
-        service.forEach((itemService) => {
+        const serviceEls = document.querySelectorAll('.service')
 
-            itemService.addEventListener('mouseover', () => {
+        serviceEls.forEach((serviceEl) => {
 
-                itemService.children                             
+            serviceEl.addEventListener('mouseover', () => {
+                serviceEl.firstElementChild.classList.add('service_active')
+                serviceEl.firstElementChild.nextElementSibling.classList.add('service_active')                      
+                serviceEl.lastElementChild.classList.add('service_active') 
+            })
+
+            serviceEl.addEventListener('mouseout', () => {
+                serviceEl.firstElementChild.classList.remove('service_active')
+                serviceEl.firstElementChild.nextElementSibling.classList.remove('service_active')                      
+                serviceEl.lastElementChild.classList.remove('service_active') 
             })
         })
     })();
