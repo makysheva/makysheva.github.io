@@ -6,13 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Waxom</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="libs/OwlCarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/OwlCarousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <header class="header-section" id="home">
         <div class="container">
             <div class="header">
+                <div class="menu__mobile">
+                    <div class="menu__icon">
+                        <span class="menu__icon_item"></span>
+                        <span class="menu__icon_item"></span>
+                        <span class="menu__icon_item"></span>
+                        <span class="menu__icon_item"></span>
+                    </div>
+                    <div class="menu__phone">
+                        <div class="menu__links">
+                            <a class="menu__links_item">Item 1</a>
+                            <a class="menu__links_item">Item 2</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="logo">
                     <img class="logo__img" src="img/logos.png" alt="logo">
                     <h1 class="logo__brandname">Waxom</h1>
@@ -52,26 +69,29 @@
             </div>
         </div>
         <section class="slider-section">
-            <div class="arrow">
-                <i class="fas fa-chevron-left fa-3x arrow_left"></i>
-            </div>
-            <div class="slider">
-                <h2 class="slider__title">Unique and Modern Design</h2>
-                <h1 class="slider__headline">Portfolio PSD Template</h1>
-                <p class="slider__text">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-                <button class="slider__btn">get started</button>
-            </div>
-            <div class="arrow">
-                <i class="fas fa-chevron-right fa-3x arrow_right"></i>
+            <div class="container">
+                <div class="owl-carousel slider-header owl-theme">
+                    <div class="slider">
+                        <h2 class="slider__title">Unique and Modern Design</h2>
+                        <h1 class="slider__headline">Portfolio PSD Template</h1>
+                        <p class="slider__text">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+                        <button class="slider__btn">get started</button>
+                    </div>
+                    <div class="slider">
+                        <h2 class="slider__title">Unique and Modern Design</h2>
+                        <h1 class="slider__headline">Portfolio PSD Template</h1>
+                        <p class="slider__text">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+                        <button class="slider__btn">get started</button>
+                    </div>
+                    <div class="slider">
+                        <h2 class="slider__title">Unique and Modern Design</h2>
+                        <h1 class="slider__headline">Portfolio PSD Template</h1>
+                        <p class="slider__text">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+                        <button class="slider__btn">get started</button>
+                    </div>
+                </div>
             </div>
         </section>
-        <div class="control">
-            <div class="control__item"></div>
-            <div class="control__item control__item-active"></div>
-            <div class="control__item"></div>
-            <div class="control__item"></div>
-            <div class="control__item"></div>
-        </div>
     </header>
 
     <main>
@@ -131,7 +151,7 @@
             </div>
         </div>
 
-        <section class="projects-section">
+        <section class="projects-section" id="features">
             <div class="container">
                 <div class="project">
                     <h2 class="project__title">Our Latest Projects.</h2>
@@ -139,40 +159,52 @@
                     <div class="filters">
                         <ul class="filter">
                             <li class="filter__item">
-                                <a href="#" class="filter__link">All</a>
+                                <a href="#" class="filter__link" data-type="all">All</a>
                             </li>
                             <li class="filter__item">
-                                <a href="#" class="filter__link">Web Design</a>
+                                <a href="#" class="filter__link" data-type="design">Web Design</a>
                             </li>
                             <li class="filter__item">
-                                <a href="#" class="filter__link">Mobile App</a>
+                                <a href="#" class="filter__link" data-type="mobile">Mobile App</a>
                             </li>
                             <li class="filter__item">
-                                <a href="#" class="filter__link">Illustration</a>
+                                <a href="#" class="filter__link" data-type="illustration">Illustration</a>
                             </li>
                             <li class="filter__item">
-                                <a href="#" class="filter__link">Photography</a>
+                                <a href="#" class="filter__link" data-type="photo">Photography</a>
                             </li>  
                         </ul>
                     </div>
 
                     <div class="project__content">
-                        <div class="project__item">
+                        <div class="project__item" data-type="mobile">
                             <img class="project__img" src="img/project-01.png" alt="project-01">
+                            <div class="project__overlay">
+                                <img src="img/link.png" class="project__overlay_link" alt="link">
+                                <img src="img/lupa.png" class="project__overlay_lupa" alt="lupa">    
+                            </div>
                             <div class="project__description">
                                 <h2 class="project__headline">Claritas Etiam Processus</h2>
                                 <p class="project__text">Photography, Nature</p>
                             </div>
                         </div>
-                        <div class="project__item">
+                        <div class="project__item" data-type="design">
                             <img class="project__img" src="img/project-02.png" alt="project-02">
+                            <div class="project__overlay">
+                                <img src="img/link.png" class="project__overlay_link" alt="link">
+                                <img src="img/lupa.png" class="project__overlay_lupa" alt="lupa">    
+                            </div>
                             <div class="project__description">
                                 <h2 class="project__headline">Quam Nutamus Farum</h2>
                                 <p class="project__text">Graphic Design, Mock-Up</p>
                             </div>
                         </div>
-                        <div class="project__item">
+                        <div class="project__item" data-type="illustration">
                             <img class="project__img" src="img/project-03.png" alt="project-03">
+                            <div class="project__overlay">
+                                <img src="img/link.png" class="project__overlay_link" alt="link">
+                                <img src="img/lupa.png" class="project__overlay_lupa" alt="lupa">    
+                            </div>
                             <div class="project__description">
                                 <h2 class="project__headline">Usus Legentis Videntur</h2>
                                 <p class="project__text">Photography, Holiday</p>
@@ -180,20 +212,32 @@
                         </div>
                         <div class="project__item">
                             <img class="project__img" src="img/project-04.png" alt="project-04">
+                            <div class="project__overlay">
+                                <img src="img/link.png" class="project__overlay_link" alt="link">
+                                <img src="img/lupa.png" class="project__overlay_lupa" alt="lupa">    
+                            </div>
                             <div class="project__description">
                                 <h2 class="project__headline">Claritas Etiam Processus</h2>
                                 <p class="project__text">Photography, Nature</p>
                             </div>
                         </div>
-                        <div class="project__item">
+                        <div class="project__item" data-type="photo">
                             <img class="project__img" src="img/project-05.png" alt="project-05">
+                            <div class="project__overlay">
+                                <img src="img/link.png" class="project__overlay_link" alt="link">
+                                <img src="img/lupa.png" class="project__overlay_lupa" alt="lupa">    
+                            </div>
                             <div class="project__description">
                                 <h2 class="project__headline">Quam Nutamus Farum</h2>
                                 <p class="project__text">Graphic Design, Mock-Up</p>
                             </div>
                         </div>
-                        <div class="project__item">
+                        <div class="project__item" data-type="mobile">
                             <img class="project__img" src="img/project-06.png" alt="project-06">
+                            <div class="project__overlay">
+                                <img src="img/link.png" class="project__overlay_link" alt="link">
+                                <img src="img/lupa.png" class="project__overlay_lupa" alt="lupa">    
+                            </div>
                             <div class="project__description">
                                 <h2 class="project__headline">Usus Legentis Videntur</h2>
                                 <p class="project__text">Photography, Holiday</p>
@@ -205,11 +249,11 @@
             </div>
         </section>
 
-        <section class="video-section">
+        <section class="video-section" id="blog">
             <div class="video">
                 <div class="video__nav">
-                    <a href="#" class="video__link">
-                        <i class="fas fa-play fa-2x video__icon"></i>
+                    <a href="#popup" class="video__link popup-link">
+                        <i class="fas fa-play fa-2x video__icon video-btn"></i>
                     </a>
                 </div>
                 <h2 class="video__title">Waxom Video Presentation</h2>
@@ -250,7 +294,7 @@
             </div>
         </section>
 
-        <section class="counters-section">
+        <section class="counters-section" id="pricing">
             <div class="container">
                 <div class="counters">
                     <div class="counter">
@@ -290,48 +334,63 @@
                         <h2 class="posts__title">Recent Posts.</h2>
                         <p class="posts__descr">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
                     </div>
-                    <div class="post__list">
+                    <div class="post__list owl-slider owl-carousel owl-theme">  
                         <div class="post__item">
                             <img class="post__img" src="img/post-01.png" alt="post-01">
+                            <div class="post__overlay">
+                                <img src="img/lupa.png" class="post__overlay_lupa" alt="lupa"> 
+                            </div>
                             <div class="post__date">
                                 <span class="post__num">30</span>
                                 <span class="post__month">Sep.</span>
                             </div>
-                            <h3 class="post__title">Lorem ipsum dolor sit amet</h3>
-                            <p class="post__descr">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
-                            <a class="post__link" href="#">Read More
-                                <img class="post__arrow" src="img/arrow-link.png" alt="arrow-link">
-                            </a>
+                            <div class="post__content">
+                                <h3 class="post__title">Lorem ipsum dolor sit amet</h3>
+                                <p class="post__descr">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+                                <a class="post__link" href="#">Read More
+                                    <img class="post__arrow" src="img/arrow-link.png" alt="arrow-link">
+                                </a>
+                            </div>
                         </div>
                         <div class="post__item">
                             <img class="post__img" src="img/post-02.png" alt="post-02">
+                            <div class="post__overlay">
+                                <img src="img/lupa.png" class="post__overlay_lupa" alt="lupa"> 
+                            </div>
                             <div class="post__date">
                                 <span class="post__num">30</span>
                                 <span class="post__month">Sep.</span>
                             </div>
-                            <h3 class="post__title">Lorem ipsum dolor sit amet</h3>
-                            <p class="post__descr">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
-                            <a class="post__link" href="#">Read More
-                                <img class="post__arrow" src="img/arrow-link.png" alt="arrow-link">
-                            </a>
+                            <div class="post__content">
+                                <h3 class="post__title">Lorem ipsum dolor sit amet</h3>
+                                <p class="post__descr">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+                                <a class="post__link" href="#">Read More
+                                    <img class="post__arrow" src="img/arrow-link.png" alt="arrow-link">
+                                </a>
+                            </div>
                         </div>
                         <div class="post__item">
                             <img class="post__img" src="img/post-03.png" alt="post-03">
+                            <div class="post__overlay">
+                                <img src="img/lupa.png" class="post__overlay_lupa" alt="lupa"> 
+                            </div>
                             <div class="post__date">
                                 <span class="post__num">30</span>
                                 <span class="post__month">Sep.</span>
                             </div>
-                            <h3 class="post__title">Lorem ipsum dolor sit amet</h3>
-                            <p class="post__descr">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
-                            <a class="post__link" href="#">Read More
-                                <img class="post__arrow" src="img/arrow-link.png" alt="arrow-link">
-                            </a>
+                            <div class="post__content">
+                                <h3 class="post__title">Lorem ipsum dolor sit amet</h3>
+                                <p class="post__descr">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+                                <a class="post__link" href="#">Read More
+                                    <img class="post__arrow" src="img/arrow-link.png" alt="arrow-link">
+                                </a>
+                            </div>
                         </div>
                     </div>
 
                     <div class="navigation">
-                        <i class="fas fa-chevron-left navigation__icon"></i>
-                        <i class="fas fa-chevron-right navigation__icon"></i>
+                        <i class="fas fa-chevron-left navigation__icon" id="left"></i>
+                        <i class="fas fa-chevron-right navigation__icon" id="right"></i>
                     </div>
                 </div>
             </div>
@@ -340,10 +399,10 @@
         <section class="partners-section">
             <div class="container">
                 <div class="partners">
-                    <img src="img/partner-01.png" alt="partner">
-                    <img src="img/partner-02.png" alt="partner">
-                    <img src="img/partner-03.png" alt="partner">
-                    <img src="img/partner-04.png" alt="partner">
+                    <img class="partner" src="img/partner-01.png" alt="partner">
+                    <img class="partner" src="img/partner-02.png" alt="partner">
+                    <img class="partner" src="img/partner-03.png" alt="partner">
+                    <img class="partner" src="img/partner-04.png" alt="partner">
                 </div>
             </div>
         </section>
@@ -352,7 +411,7 @@
     <footer class="footer">
         <div class="container">
             <section class="footer-widget">
-                <div class="about">
+                <div class="about footer__item">
                     <div class="logo">
                         <img class="logo__img" src="img/logos.png" alt="logo">
                         <h1 class="logo__brandname">Waxom</h1>
@@ -362,7 +421,7 @@
                         <img class="about__arrow" src="img/arrow-link.png" alt="arrow-link">
                     </a>
                 </div>
-                <div class="recent-posts">
+                <div class="recent-posts footer__item">
                         <h3 class="recent-post__title">Recent Posts</h3>
                     <div class="recent-post">
                         <p class="recent-post__date">September 08, 2015</p>
@@ -378,7 +437,7 @@
                     </div>
                 </div>
                     
-                <div class="twitters">
+                <div class="twitters footer__item">
                     <h3 class="twitter__title">Our Twitter</h3>
                     <div class="twitter">
                         <p class="twitter__post"><a href="#" class="twitter_mark">@waxom</a> Cum soluta nobis eleifend option congue nihil imperdiet doming</p>
@@ -394,7 +453,7 @@
                     </div>
                 </div>
 
-                <div class="dribble">
+                <div class="dribble footer__item">
                     <h3 class="dribble__title">Dribbble Widget</h3>
                     <div class="dribble__list">
                         <a href="#"><img src="img/widget-01.png" alt="widget"></a>
@@ -420,27 +479,9 @@
               
         </div>
     </footer>
-
-<script>
-    // функция на блок services, при наведении мыши
-    (function(){
-        const serviceEls = document.querySelectorAll('.service')
-
-        serviceEls.forEach((serviceEl) => {
-
-            serviceEl.addEventListener('mouseover', () => {
-                serviceEl.firstElementChild.classList.add('service_active')
-                serviceEl.firstElementChild.nextElementSibling.classList.add('service_active')                      
-                serviceEl.lastElementChild.classList.add('service_active') 
-            })
-
-            serviceEl.addEventListener('mouseout', () => {
-                serviceEl.firstElementChild.classList.remove('service_active')
-                serviceEl.firstElementChild.nextElementSibling.classList.remove('service_active')                      
-                serviceEl.lastElementChild.classList.remove('service_active') 
-            })
-        })
-    })();
-</script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="libs/OwlCarousel/dist/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
