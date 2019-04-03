@@ -181,7 +181,7 @@ div {
 }
 
 .menu:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .menu__phone {
@@ -392,7 +392,7 @@ div {
 
 .portfolio__title {
   font-family: 'Raleway';
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   color: #555;
   padding-bottom: 18px;

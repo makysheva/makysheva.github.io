@@ -1,9 +1,10 @@
 tinyone/node_modules/
 waxom/node_modules/
-waxom/build/libs/OwlCarousel/package-lock.json
+waxom/build/libs/OwlCarousel/*
 .vscode
 # Windows thumbnail cache files
 Thumbs.db
 
 # Folder config file
 [Dd]esktop.ini
+waxom/build/libs/OwlCarousel/package-lock.json
