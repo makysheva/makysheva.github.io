@@ -117,18 +117,19 @@ $(document).ready(function(){
 
     // Показать меню при клике на иконку
     (function($){
-        $(function() {
-          $('.menu__icon').on('click', function() {
-            $(this).closest('.menu')
-              .toggleClass('menu_state_open');
-          });
-          
-          $('.menu__links_item').on('click', function() {
-            // do something
-      
-            $(this).closest('.menu__mobile')
-              .removeClass('menu_state_open');
-          });
-        });
+        $('#menu-toggle').click(function(){
+            $(this).toggleClass('open');
+        })
     })(jQuery);
+
+    (function() {
+        const hamburger = document.querySelectorAll('#hamburger');
+        const menuMobile = document.querySelectorAll('#menu__mobile');
+
+        hamburger.forEach((item) => {
+            item.addEventListener('click', () => {
+                console.log(item)
+            })
+        })
+    })();
 })
