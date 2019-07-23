@@ -208,11 +208,27 @@ div {
   padding-bottom: 20px;
 }
 
-.layout {
+.all {
   border: none;
   padding: 7px 13px;
   background-color: #eee;
   border-bottom-left-radius: 10px;
+  outline: none;
+  font-family: "Taurus", sans-serif;
+}
+
+.all:hover {
+  cursor: pointer;
+  background-color: #EE101B;
+}
+
+.layout {
+  border: none;
+  padding: 7px 13px;
+  background-color: #eee;
+  margin-left: -5px;
+  outline: none;
+  font-family: "Taurus", sans-serif;
 }
 
 .layout:hover {
@@ -226,6 +242,8 @@ div {
   padding: 7px 13px;
   border-bottom-right-radius: 10px;
   margin-left: -5px;
+  outline: none;
+  font-family: "Taurus", sans-serif;
 }
 
 .sites:hover {
@@ -259,7 +277,7 @@ div {
 .copyright-text {
   color: #fff;
   font-size: 20px;
-  font-family: taurus;
+  font-family: "Taurus", sans-serif;
 }
 
 .copyright-heart {
