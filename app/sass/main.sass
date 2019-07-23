@@ -1,0 +1,244 @@
+*, *:before, *:after
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  -o-box-sizing: border-box
+  -ms-box-sizing: border-box
+  box-sizing: border-box
+  transition: .25s ease-in-out
+
+  
+@font-face
+    font-family: 'Taurus'
+    src: url('../fonts/Taurus.ttf')
+
+html, body
+  height: 100%
+
+html
+  font-size: 100%
+  overflow-y: scroll
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+
+body
+  margin: 0
+  padding: 0
+  font-family: 'Taurus', sans-serif
+
+p, h2
+  margin: 0
+  padding: 0
+
+a
+  text-decoration: none
+
+a:hover, a:active, a:visited, a:focus, a:link
+  text-decoration: none
+
+a:hover, a:active
+  outline: 0
+  text-decoration: none
+
+ul
+  list-style-type: none
+
+div
+  margin: 0
+  padding: 0
+
+.container
+    max-width: 994px
+    margin: auto
+    width: 100%
+
+.header
+    background: url('../img/header.jpg') no-repeat
+    background-repeat: no-repeat
+    background-size: cover
+    height: 600px
+    width: 100%
+    background-color: rgba(0,0,0,.7)
+    background-blend-mode: darken
+
+    &-section
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        padding-top: 40px
+
+    &-title
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding-top: 192px
+        color: #EE101B
+        text-transform: uppercase
+        font-size: 20px
+        font-family: 'Taurus', sans-serif
+        font-weight: 500
+
+.logo
+    width: 46px
+
+.mobile-menu
+    display: none
+
+.menu-btn
+    width: 40px
+    height: 40px
+    display: block
+    background: #fff
+    border-radius: 50%
+    position: relative
+
+    &:hover
+        background: #EE101B
+
+    & span
+        display: block
+        width: 20px
+        height: 2px
+        background: #222
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-left: -10px
+
+        &:before
+            content: ''
+            display: block
+            width: 20px
+            height: 2px
+            background: #222  
+            transform: translateY(-7px) 
+            position: absolute
+            top: 50%
+            left: 50%
+            margin-left: -10px
+
+        &:after
+            content: ''
+            display: block
+            width: 20px
+            height: 2px
+            background: #222    
+            transform: translateY(5px)
+            position: absolute
+            top: 50%
+            left: 50%
+            margin-left: -10px
+
+
+.menu-item
+    text-decoration: none
+    color: #fff
+    font-size: 20px
+    font-family: 'Taurus', sans-serif
+    font-weight: 500
+    padding-right: 83px
+
+    &:hover
+        cursor: pointer
+        color: #EE101B
+
+.content-link
+    text-decoration: none
+    color: #000
+    font-size: 24px
+    font-family: 'Taurus', sans-serif
+    font-weight: 500
+
+    &:hover
+        color: #EE101B
+
+.img-screen
+    max-width: 300px
+    width: 100%
+
+.main-title
+    text-align: center
+    padding: 70px 0
+    font-size: 25px
+
+.portfolio-items
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+
+.portfolio-item
+    text-align: center
+    margin-bottom: 100px
+
+.footer
+    background: url(../img/footer.jpg)
+    width: 100%
+    background-repeat: no-repeat
+    background-origin: border-box
+    height: 150px
+    background-color: #231F20
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.social-items, .copyright
+    padding-top: 20px
+    max-width: 161px
+    width: 100%
+
+.social-item
+    margin-right: 20px
+
+.copyright-text
+    color: #fff
+    font-size: 20px
+    font-family: taurus
+
+.copyright-heart
+    color: #EE101B
+
+.icon
+    color: #fff
+
+    &:hover
+        color: #EE101B
+
+@media screen and (max-width: 992px)
+    .container
+        max-width: 700px
+
+    .menu-wrap
+        visibility: hidden
+        opacity: 0
+        position: fixed
+        left: 0
+        top: 0
+        background: #222
+        width: 100%
+        height: 100vh
+
+        &.menu-active
+            visibility: visible
+            opacity: 1
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            transition: all 0.4s linear
+
+    .menu-item
+        padding-bottom: 33px
+        padding-right: 0    
+
+    .mobile-menu
+        display: block
+        position: fixed
+        right: 40px
+        top: 40px
+
+    
+
+    
