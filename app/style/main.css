@@ -200,6 +200,39 @@ div {
   margin-bottom: 100px;
 }
 
+.portfolio-item_hidden {
+  display: none;
+}
+
+.toggle-btn {
+  padding-bottom: 20px;
+}
+
+.layout {
+  border: none;
+  padding: 7px 13px;
+  background-color: #eee;
+  border-bottom-left-radius: 10px;
+}
+
+.layout:hover {
+  cursor: pointer;
+  background-color: #EE101B;
+}
+
+.sites {
+  border: none;
+  background-color: #eee;
+  padding: 7px 13px;
+  border-bottom-right-radius: 10px;
+  margin-left: -5px;
+}
+
+.sites:hover {
+  cursor: pointer;
+  background-color: #EE101B;
+}
+
 .footer {
   background: url(../img/footer.jpg);
   width: 100%;
