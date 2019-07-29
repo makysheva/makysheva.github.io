@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: 'Taurus';
-  src: url("../fonts/Taurus.ttf");
+  src: url("../fonts/taurus-normal.ttf");
 }
 
 html, body {
@@ -202,6 +202,11 @@ div {
 
 .portfolio-item_hidden {
   display: none;
+}
+
+.closed {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .toggle-btn {
