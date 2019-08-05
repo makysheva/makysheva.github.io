@@ -31,8 +31,8 @@
         menuItem.addEventListener('click', () => {
             menuWrap.forEach((wrap) => {
 
-                if(wrap)
-                wrap.style.display = "none"
+                // if(wrap)
+                // wrap.style.display = "none"
                 
             })     
         })
