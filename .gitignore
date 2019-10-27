@@ -3,8 +3,11 @@ waxom/node_modules/
 waxom/build/libs/OwlCarousel/*
 waxom/package-lock.json
 tinyone/package-lock.json
+rizzoma/node_modules/
+rizzoma/package-lock.json
 .vscode
 node_modules/
+rizzoma/webpack-app/node_modules/
 # Windows thumbnail cache files
 Thumbs.db
 
