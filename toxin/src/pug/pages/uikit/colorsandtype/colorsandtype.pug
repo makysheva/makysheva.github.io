@@ -1,4 +1,5 @@
 extends ../../../base
+include ../../../../components/colorandtypes/mixins
 
 block title
     | Colors and Type
@@ -6,48 +7,18 @@ block main
     include ../../../../components/logo/logo-grey
 
 block rectangles-section
-    .rectangles
-        .rectangle.rectangle--dark
-        .rectangle-descr.rectangle-descr--dark
-            span Dark Shade 100% #1F2041  
+    +rectangleInfo('rectangle--dark', 'rectangle-descr--dark', 'Dark Shade 100% #1F2041')
+    +rectangleInfo('rectangle--dimgrey', 'rectangle-descr--dimgrey', 'Dark Shade 75% #1F2041')
+    +rectangleInfo('rectangle--silver', 'rectangle-descr--silver', 'Dark Shade 50% #1F2041')
+    +rectangleInfo('rectangle--lightgrey', 'rectangle-descr--lightgrey', 'Dark Shade 25% #1F2041')
+    +rectangleInfo('rectangle--smokywhite', 'rectangle-descr--smokywhite', 'Dark Shade 5% #1F2041')
+    +rectangleInfo('rectangle--purple', 'rectangle-descr--purple', 'Purple #BC9CFF')
+    +rectangleInfo('rectangle--green', 'rectangle-descr--green', 'Green #6FCF9')
 
-        .rectangle.rectangle--dimgrey
-        .rectangle-descr.rectangle-descr--dimgrey
-            span Dark Shade 75% #1F2041  
-
-        .rectangle.rectangle--silver
-        .rectangle-descr.rectangle-descr--silver
-            span Dark Shade 50% #1F2041  
-
-        .rectangle.rectangle--lightgrey
-        .rectangle-descr.rectangle-descr--lightgrey
-            span Dark Shade 25% #1F2041 
-
-        .rectangle.rectangle--smokywhite
-        .rectangle-descr.rectangle-descr--smokywhite
-            span Dark Shade 5% #1F2041 
-
-        .rectangle.rectangle--purple
-        .rectangle-descr.rectangle-descr--purple
-            span Purple #BC9CFF
-
-        .rectangle.rectangle--green
-        .rectangle-descr.rectangle-descr--green
-            span Green #6FCF9
-   
 block widgets-section
-    .widgets
-        .widget.widget-items.widget-title--h1 H1
-        .widget-item.widget-descr--h1 This one is the sub-section or widget title
-
-        .widget.widget-items.widget-title--h2 H2
-        .widget-item.widget-descr--h2 Next one is the item title inside widgets
-
-        .widget.widget-items.widget-title--h3 H3
-        .widget-item.widget-descr--h3 This is a label or CTA text
-
-        .widget.widget-items.widget-title--body Body
-        .widget-item.widget-descr--body This is the body text which is used for most of the design, like paragraphs, lists, etc.
-
-        
+    +widgetsInfo('widget-title--h1', 'H1', 'widget-descr--h1', 'This one is the sub-section or widget title')
+    +widgetsInfo('widget-title--h2', 'H2', 'widget-descr--h2', 'Next one is the item title inside widgets')
+    +widgetsInfo('widget-title--h3', 'H3', 'widget-descr--h3', 'This is a label or CTA text')
+    +widgetsInfo('widget-title--body', 'Body', 'widget-descr--body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
+      
 

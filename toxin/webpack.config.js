@@ -39,6 +39,11 @@ const common = merge([
                 filename: 'header.html',
                 chunks: ['header'],
                 template: PATHS.source + '/pug/pages/uikit/header/header.pug'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'test.html',
+                chunks: ['test'],
+                template: PATHS.source + '/pug/pages/uikit/test/test.pug'
             })
         ]
     },

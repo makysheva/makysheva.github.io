@@ -1,5 +1,11 @@
 extends ../../base
+include ../uikit/test/test
+
 block title
     | Index page
 block main
     h1 page index-pug 2
+
+    +list
+
+    +elements(red, 1)
