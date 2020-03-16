@@ -16,9 +16,10 @@ const PATHS = {
 const common = merge([
     {
         entry: {
-            'index': PATHS.source + '/pug/pages/index/index.js',
-            'colorsandtype': PATHS.source + '/pug/pages/uikit/colorsandtype/colorsandtype.js',
-            'header': PATHS.source + '/pug/pages/uikit/header/header.js'
+            'index': PATHS.source + '/pages/index/index.js',
+            'colors-type': PATHS.source + '/pages/colors-type/colors-type.js',
+            'header': PATHS.source + '/pages/header/header.js',
+            'form-elements': PATHS.source + '/pages/form-elements/form-elements.js'
         },
         output: {
             path: PATHS.build,
@@ -28,22 +29,22 @@ const common = merge([
             new HtmlWebpackPlugin({
                 filename: 'index.html',
                 chunks: ['index'],
-                template: PATHS.source + '/pug/pages/index/index.pug'
+                template: PATHS.source + '/pages/index/index.pug'
             }),
             new HtmlWebpackPlugin({
-                filename: 'colorsandtype.html',
-                chunks: ['colorsandtype'],
-                template: PATHS.source + '/pug/pages/uikit/colorsandtype/colorsandtype.pug'
+                filename: 'colors-type.html',
+                chunks: ['colors-type'],
+                template: PATHS.source + '/pages/colors-type/colors-type.pug'
             }),
             new HtmlWebpackPlugin({
                 filename: 'header.html',
                 chunks: ['header'],
-                template: PATHS.source + '/pug/pages/uikit/header/header.pug'
+                template: PATHS.source + '/pages/header/header.pug'
             }),
             new HtmlWebpackPlugin({
-                filename: 'test.html',
-                chunks: ['test'],
-                template: PATHS.source + '/pug/pages/uikit/test/test.pug'
+                filename: 'form-elements.html',
+                chunks: ['form-elements'],
+                template: PATHS.source + '/pages/form-elements/form-elements.pug'
             })
         ]
     },
