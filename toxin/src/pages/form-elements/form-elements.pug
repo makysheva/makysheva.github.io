@@ -8,14 +8,24 @@ block main
 
 block form-section
     .container
-        .form
-            .form---default
-                .form--descr
+        .form-elements
+            .form-elements-item--default
+                .form-elements__descr
                     span text field
-                .form--input
-                    input(type="email" placeholder="Email")
-            .form--hover
-                .form--descr
+                .form-elements__input
+                    input(class="text-field" type="email" placeholder="Email")
+            .form-elements-item--hover
+                .form-elements__descr
                     span text field
-                .form--input
-                    input(type="email" placeholder="Email")
+                .form-elements__input
+                    input(class="text-field" type="email" placeholder="Email")
+
+            .form-elements-item
+                .form-elements__dropdown
+                    .form-elements__descr
+                        span dropdown
+                    .dropdown
+                        input(class="dropdown" type="text") 
+                        i(class="material-icons") keyboard_arrow_down
+                    
+
