@@ -8,7 +8,7 @@ block main
 
 block form-section
     .container
-        .form-elements
+        .form-elements.form-elements--left
             .form-elements-item--default
                 .form-elements__descr
                     span text field
@@ -24,8 +24,34 @@ block form-section
                 .form-elements__dropdown
                     .form-elements__descr
                         span dropdown
-                    .dropdown
-                        input(class="dropdown" type="text") 
-                        i(class="material-icons") keyboard_arrow_down
-                    
+                    .form-elements__input--dropdown
+                        input(class="text-field--dropdown" placeholder="Сколько гостей" readonly="readonly")
 
+                        i(class="material-icons") expand_more
+                        div(class="dropdown__menu")
+                            div(class="dropdown__menu-option" data-id="item1") 
+                                div(class="dropdown__item") Взрослые
+                                div(class="dropdown__controls")
+                                    div(class="dropdown__minus") -
+                                    div(class="dropdown__count") 0
+                                    div(class="dropdown__plus") +
+                            
+                            div(class="dropdown__menu-option" data-id="item2") 
+                                div(class="dropdown__item") Дети
+                                div(class="dropdown__controls")
+                                    div(class="dropdown__minus") -
+                                    div(class="dropdown__count") 0
+                                    div(class="dropdown__plus") +
+
+                            div(class="dropdown__menu-option" data-id="item3") 
+                                div(class="dropdown__item") Младенцы
+                                div(class="dropdown__controls")
+                                    div(class="dropdown__minus") -
+                                    div(class="dropdown__count") 0
+                                    div(class="dropdown__plus") +
+
+                            div(class="dropdown__buttons" data-id="item-btn") 
+                                button(class="clear-btn") Очистить
+                                button(class="apply-btn") Применить
+                            
+                        
