@@ -8,50 +8,56 @@ block main
 
 block form-section
     .container
-        .form-elements.form-elements--left
-            .form-elements-item--default
-                .form-elements__descr
-                    span text field
-                .form-elements__input
-                    input(class="text-field" type="email" placeholder="Email")
-            .form-elements-item--hover
-                .form-elements__descr
-                    span text field
-                .form-elements__input
-                    input(class="text-field" type="email" placeholder="Email")
-
-            .form-elements-item
-                .form-elements__dropdown
+        form(action="")
+            .form-elements.form-elements--left
+                .form-elements-item--default
                     .form-elements__descr
-                        span dropdown
-                    .form-elements__input--dropdown
-                        input(class="text-field--dropdown" placeholder="Сколько гостей" readonly="readonly")
+                        label(for="text-field-default") text field
+                    .form-elements__input
+                        input(class="text-field" id="text-field-default" type="email" placeholder="Email")
+                .form-elements-item--hover
+                    .form-elements__descr
+                        label(for="text-field-hover") text field
+                    .form-elements__input
+                        input(class="text-field" id="text-field-hover"  type="email" placeholder="Email")
 
-                        i(class="material-icons") expand_more
-                        div(class="dropdown__menu")
-                            div(class="dropdown__menu-option" data-id="item1") 
-                                div(class="dropdown__item") Взрослые
-                                div(class="dropdown__controls")
-                                    div(class="dropdown__minus") -
-                                    div(class="dropdown__count") 0
-                                    div(class="dropdown__plus") +
-                            
-                            div(class="dropdown__menu-option" data-id="item2") 
-                                div(class="dropdown__item") Дети
-                                div(class="dropdown__controls")
-                                    div(class="dropdown__minus") -
-                                    div(class="dropdown__count") 0
-                                    div(class="dropdown__plus") +
+                .form-elements-item
+                    .form-elements__dropdown
+                        .form-elements__descr
+                            span dropdown
+                        .form-elements__input--dropdown
+                            input(class="text-field--dropdown" placeholder="Сколько гостей" readonly="readonly")
 
-                            div(class="dropdown__menu-option" data-id="item3") 
-                                div(class="dropdown__item") Младенцы
-                                div(class="dropdown__controls")
-                                    div(class="dropdown__minus") -
-                                    div(class="dropdown__count") 0
-                                    div(class="dropdown__plus") +
+                            i(class="material-icons") expand_more
+                            div(class="dropdown__menu")
+                                div(class="dropdown__menu-option" data-id="item-adult") 
+                                    div(class="dropdown__item") Взрослые
+                                    div(class="dropdown__controls")
+                                        div(class="dropdown__minus") -
+                                        div(class="dropdown__count") 0
+                                        div(class="dropdown__plus") +
+                                
+                                div(class="dropdown__menu-option" data-id="item-children") 
+                                    div(class="dropdown__item") Дети
+                                    div(class="dropdown__controls")
+                                        div(class="dropdown__minus") -
+                                        div(class="dropdown__count") 0
+                                        div(class="dropdown__plus") +
 
-                            div(class="dropdown__buttons" data-id="item-btn") 
-                                button(class="clear-btn") Очистить
-                                button(class="apply-btn") Применить
-                            
-                        
+                                div(class="dropdown__menu-option" data-id="item-babies") 
+                                    div(class="dropdown__item") Младенцы
+                                    div(class="dropdown__controls")
+                                        div(class="dropdown__minus") -
+                                        div(class="dropdown__count") 0
+                                        div(class="dropdown__plus") +
+
+                                div(class="dropdown__buttons" data-id="item-btn") 
+                                    button(class="clear-btn") Очистить
+                                    button(class="apply-btn") Применить
+                                
+                .form-elements-item
+                    .form-elements__dropdown
+                        .form-elements__descr
+                            span  masked text field
+                        .form-elements__input--masked     
+                            input(class="text-field" type="text" placeholder="ДД.ММ.ГГГГ")       

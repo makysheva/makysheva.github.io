@@ -80,6 +80,7 @@ html, body {
     width: 320px;
     height: 44px;
     cursor: pointer;
+    margin-bottom: 42px;
 }
 
 .material-icons{
@@ -189,4 +190,10 @@ html, body {
 
 .clear-btn:focus, .apply-btn:focus {
     outline: none;
+}
+
+/* masked text field */
+.form-elements__input--masked{
+    background: #FFFFFF;
+    box-sizing: border-box;
 }
