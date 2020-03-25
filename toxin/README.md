@@ -14,11 +14,11 @@
 - scss
 
 ## UI Kit
-[Colors & Type](http://makysheva.github.io/colors-type.html)
+[Colors & Type](http://makysheva.github.io/toxin/build/colors-type.html)
 
-[Headers & Footers](http://makysheva.github.io/header.html)
+[Headers & Footers](http://makysheva.github.io/toxin/build/header.html)
 
-[Form elements](http://makysheva.github.io/form-elements.html)
+[Form elements](http://makysheva.github.io/toxin/build/form-elements.html)
 <!-- 
 ## Pages
 
