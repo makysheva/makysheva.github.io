@@ -1,5 +1,8 @@
 import './form-elements.scss'
-
+import 'jquery'
+import 'air-datepicker'
+import '../../blocks/form-elements/calendar/calendar'
+import '../../blocks/form-elements/calendar/calendar.scss'
 
 console.log('in form-elements.js');
 
@@ -54,3 +57,10 @@ Array.from(minusBtn).forEach(minusButtons => {
         minusButton
     })
 })
+
+
+// правый datepicker при клике на который отображается calendar
+
+const datepickerRight = $('#datepicker--right')
+
+datepickerRight.click().show()

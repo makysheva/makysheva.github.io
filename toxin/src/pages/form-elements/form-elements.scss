@@ -58,6 +58,11 @@ html, body {
     padding: 13px 15px 13px 15px;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
 }
 
 .text-field:hover{
@@ -196,4 +201,76 @@ html, body {
 .form-elements__input--masked{
     background: #FFFFFF;
     box-sizing: border-box;
+    margin-bottom: 60px;
+}
+
+/* air-datepicker */
+
+.form-elements__datepicker{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-elements__input--datepicker{
+    width: 150px;
+    height: 44px;
+}
+
+.datapicker-wrapper{
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.datapicker-wrapper--right{
+    margin-right: 0;
+}
+
+.text-field--datepicker{
+    width: 114px;
+    border: 0;
+    padding-left: 15px;
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    outline: none;
+    color: rgba(31, 32, 65, 0.75);
+    cursor: pointer;
+}
+
+.datepicker--left{
+    margin-right: 20px;
+    width: 150px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.material-icons--left-datepicker{
+    width: 38px;
+    height: 44px;
+    font-family: Material Icons;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 42px;
+    color: rgba(31, 32, 65, 0.5);
+}
+
+.datepicker--right{
+    width: 150px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }

@@ -60,4 +60,22 @@ block form-section
                         .form-elements__descr
                             span  masked text field
                         .form-elements__input--masked     
-                            input(class="text-field" type="text" placeholder="ДД.ММ.ГГГГ")       
+                            input(class="text-field" type="text" placeholder="ДД.ММ.ГГГГ")    
+
+                .form-elements-item
+                    .form-elements__datepicker
+                        .datapicker-wrapper
+                            .form-elements__descr
+                                span  date Dropdown
+                            .form-elements__input--datepicker
+                                .datepicker--left
+                                    input(class="datepicker-here text-field--datepicker" placeholder="ДД.ММ.ГГГГ" type="text" id="datepicker-here" readonly)
+                                    i(class="material-icons--left-datepicker") expand_more
+
+                        .datapicker-wrapper--right
+                            .form-elements__descr
+                                span  date Dropdown
+                            .form-elements__input--datepicker
+                                .datepicker--right
+                                    input(class="text-field--datepicker" placeholder="ДД.ММ.ГГГГ" type="text" id="datepicker--right" readonly)
+                                    i(class="material-icons--left-datepicker") expand_more

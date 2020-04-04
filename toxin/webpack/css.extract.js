@@ -12,7 +12,7 @@ module.exports = function(){
                         loader: MiniCssExtractPlugin.loader,
                         options: {
                           hmr: process.env.NODE_ENV === 'development',
-                          publicPath: '../../',
+                          publicPath: '../../',  // path to director where assets folder is located
                         },
                       },
                       'css-loader',

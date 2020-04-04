@@ -7,6 +7,7 @@ const sass = require('./webpack/sass');
 const devserver = require('./webpack/devserver');
 const extractCSS = require('./webpack/css.extract');
 const fonts = require('./webpack/fonts');
+const jQuery = require('jquery')
 
 const PATHS = {
     source: path.join(__dirname, 'src'),
@@ -45,7 +46,12 @@ const common = merge([
                 filename: 'form-elements.html',
                 chunks: ['form-elements'],
                 template: PATHS.source + '/pages/form-elements/form-elements.pug'
-            })
+            }),
+            new webpack.ProvidePlugin({
+                $: 'jquery',
+                jQuery: 'jquery',
+                'window.jQuery': 'jquery',
+            }),
         ]
     },
     pug(),
