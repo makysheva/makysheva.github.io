@@ -10,9 +10,8 @@ import 'air-datepicker'
             '<div class="datepicker">' +
             '<nav class="datepicker--nav"></nav>' +
             '<div class="datepicker--content"></div>' +
-            '<div class="datapicker--buttons">' +
-            '<span class="datapicker--button" data-action="clear">очистить</span>' +
-            '<span class="datapicker--button -apply-">применить</span>'+
+            '<div class="datepicker--buttons">' +
+            '<span class="datepicker--button" data-action="clear">очистить</span>' +
             '</div>' +
             '</div>',
         defaults = {
@@ -46,9 +45,9 @@ import 'air-datepicker'
             maxDate: '',
             disableNavWhenOutOfRange: true,
 
-            multipleDates: false, // Boolean or Number
-            multipleDatesSeparator: ',',
-            range: false,
+            multipleDates: true, // Boolean or Number
+            multipleDatesSeparator: ' ',
+            range: true,
 
             todayButton: false,
             clearButton: false,
@@ -2238,4 +2237,4 @@ import 'air-datepicker'
         }
     };
 })();
- })(window, jQuery);
+})(window, jQuery);

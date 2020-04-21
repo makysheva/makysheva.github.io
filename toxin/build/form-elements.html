@@ -7,6 +7,14 @@
     </title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Quicksand:700&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/src/blocks/form-elements/calendar/calendar.scss">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
   <link href="form-elements.css" rel="stylesheet"></head>
   <body>
 <div class="container">
@@ -82,9 +90,29 @@
               </div>
             </div>
           </div>
+          <div class="form-elements-item">
+            <div class="form-elements__datepicker">
+              <div class="datepicker-wrapper">
+                <div class="form-elements__descr"><span> date Dropdown</span></div>
+                <div class="form-elements__input--datepicker">
+                  <div class="datepicker--left" id="datepicker--left">
+                    <input class="text-field--datepicker text-field-datepicker--left" placeholder="ДД.ММ.ГГГГ" type="text" name="start" id="startDate" readonly><i class="material-icons--left-datepicker">expand_more</i>
+                  </div>
+                </div>
+              </div>
+              <div class="datepicker-wrapper--right">
+                <div class="form-elements__descr"><span> date Dropdown</span></div>
+                <div class="form-elements__input--datepicker">
+                  <div class="datepicker--right" id="datepicker--right">
+                    <input class="text-field--datepicker text-field-datepicker--right" placeholder="ДД.ММ.ГГГГ" type="text" name="end" id="endDate" readonly><i class="material-icons--left-datepicker">expand_more</i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </form>
     </div>
+    <script src="/src/blocks/form-elements/calendar/calendar.js" type="module"></script>
   <script type="text/javascript" src="./js/form-elements.js"></script></body>
-  <script src="./blocks/form-elements/dropdown-config/item-quantity-dropdown.min.js"></script>
 </html>

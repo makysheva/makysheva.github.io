@@ -7,6 +7,7 @@ const sass = require('./webpack/sass');
 const devserver = require('./webpack/devserver');
 const extractCSS = require('./webpack/css.extract');
 const fonts = require('./webpack/fonts');
+const favicons = require('./webpack/favicons');
 const jQuery = require('jquery')
 
 const PATHS = {
@@ -55,7 +56,8 @@ const common = merge([
         ]
     },
     pug(),
-    fonts()
+    fonts(),
+    favicons()
 ]);
 
 module.exports = function(env) {

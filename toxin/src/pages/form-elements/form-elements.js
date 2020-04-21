@@ -1,6 +1,6 @@
-import './form-elements.scss'
 import 'jquery'
 import 'air-datepicker'
+import './form-elements.scss'
 import '../../blocks/form-elements/calendar/calendar'
 import '../../blocks/form-elements/calendar/calendar.scss'
 
@@ -50,8 +50,6 @@ console.log('in form-elements.js');
 
 const minusBtn = document.querySelectorAll('.dropdown__minus')
 
-
-
 Array.from(minusBtn).forEach(minusButtons => {
     minusButtons.addEventListener('click', function (minusButton) {
         minusButton
@@ -59,8 +57,72 @@ Array.from(minusBtn).forEach(minusButtons => {
 })
 
 
-// правый datepicker при клике на который отображается calendar
+// отображение выбранных дат в двух input в календаре air-datepicker
 
-const datepickerRight = $('#datepicker--right')
+var dateDropdownLeft = $('.text-field-datepicker--left')
+var dateDropdownRight = $('.text-field-datepicker--right')
 
-datepickerRight.click().show()
+
+var dateDropdownDatepicker = dateDropdownLeft.datepicker({
+    range: true,
+    inline: false,
+    dateFormat: 'dd.mm.yyyy',
+
+    onSelect: function(date){
+        dateDropdownLeft.val(dateDropdownDatepicker.selectedDates[0].toLocaleDateString());
+        dateDropdownRight.val(dateDropdownDatepicker.selectedDates[1].toLocaleDateString());
+    }
+}).data('datepicker');
+
+dateDropdownLeft.click(function(){
+    dateDropdownDatepicker.show()
+})
+
+dateDropdownRight.click(function(){
+    dateDropdownLeft.trigger('click') //Выполнить событие click и запустить обработчики, прикреплённые к элементу dateDropdownLeft (левый input)
+})
+
+//  При клике на кнопку Применить в календаре происходит закрытие календаря
+
+const applyBtn = document.createElement('span')
+
+const parent = document.getElementsByClassName('datepicker--buttons')[0]
+
+parent.appendChild(applyBtn) // вставить кнопку Применить после родительского элемента
+
+applyBtn.innerHTML = 'Применить'
+
+applyBtn.classList.add('datepicker--button', '-apply-') // добавить классы
+
+applyBtn.addEventListener('click', closedDropdown) // при клике по кнопке Применить закрыть календарь
+
+function closedDropdown(){
+    dateDropdownDatepicker.hide()
+}
+
+// checkbox buttons
+
+const markSmoke = document.getElementById('mark-smoke')
+const markNursling = document.getElementById('mark-nursling')
+const markGuests = document.getElementById('mark-guests')
+const checkboxSmoke = document.getElementById('checkbox-smoke')
+const checkboxNursling = document.getElementById('checkbox-nursling')
+const checkboxGuests = document.getElementById('checkbox-guests')
+
+function smokeChecked(){         
+    markSmoke.classList.toggle('checkbox__mark--checked')    
+}
+
+function nurslingChecked(){         
+    markNursling.classList.toggle('checkbox__mark--checked')    
+}
+
+function guestsChecked(){         
+    markGuests.classList.toggle('checkbox__mark--checked')    
+}
+
+checkboxSmoke.addEventListener('click', smokeChecked)
+checkboxNursling.addEventListener('click', nurslingChecked)
+checkboxGuests.addEventListener('click', guestsChecked)
+
+    
