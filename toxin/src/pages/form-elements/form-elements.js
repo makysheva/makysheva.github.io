@@ -109,20 +109,41 @@ const checkboxSmoke = document.getElementById('checkbox-smoke')
 const checkboxNursling = document.getElementById('checkbox-nursling')
 const checkboxGuests = document.getElementById('checkbox-guests')
 
-function smokeChecked(){         
-    markSmoke.classList.toggle('checkbox__mark--checked')    
-}
+// function smokeChecked(){         
+//     markSmoke.classList.toggle('checkbox__mark--checked')    
+// }
 
-function nurslingChecked(){         
-    markNursling.classList.toggle('checkbox__mark--checked')    
-}
+// function nurslingChecked(){         
+//     markNursling.classList.toggle('checkbox__mark--checked')    
+// }
 
-function guestsChecked(){         
-    markGuests.classList.toggle('checkbox__mark--checked')    
-}
+// function guestsChecked(){         
+//     markGuests.classList.toggle('checkbox__mark--checked')    
+// }
 
-checkboxSmoke.addEventListener('click', smokeChecked)
-checkboxNursling.addEventListener('click', nurslingChecked)
-checkboxGuests.addEventListener('click', guestsChecked)
+const btn = document.querySelectorAll('.js-checkbox')
+const checkboxHide = document.querySelectorAll('.checkbox')
+
+checkboxHide.forEach((checkbox) => {
+    checkbox.addEventListener('click', () => {
+
+      
+            let attrdataType = checkbox.getAttribute('data-type')
+
+            if(attrdataType === 'smoke') {
+                markSmoke.classList.toggle('checkbox__mark--checked')
+            } else if(attrdataType === 'nursling') {
+                markNursling.classList.toggle('checkbox__mark--checked')
+            } else if(attrdataType === 'guests') {
+                markGuests.classList.toggle('checkbox__mark--checked')
+            }
+        
+        
+    })
+})
+
+// checkboxSmoke.addEventListener('click', smokeChecked)
+// checkboxNursling.addEventListener('click', nurslingChecked)
+// checkboxGuests.addEventListener('click', guestsChecked)
 
     
