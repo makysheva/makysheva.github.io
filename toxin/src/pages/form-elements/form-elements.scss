@@ -38,7 +38,7 @@ html, body {
 }
 
 .form-elements-item{
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .form-elements__descr {
@@ -348,7 +348,7 @@ html, body {
 // Checkbox
 .form-elements__checkbox{
     display: flex;
-    max-width: 222px;
+    max-width: 260px;
     width: 100%;
 }
 .checkboxs{
@@ -356,11 +356,22 @@ html, body {
 }
 
 .checkbox{
-    //width: 0;
+    width: 0;
+}
+
+.checkbox-descr{
+    max-width: 222px;
+    width: 100%;
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.5);
 }
 
 .checkbox__marks{
-    width: 20px;
+    width: 24px;
     height: 20px;
     background: #FFFFFF;
     border: 1px solid rgba(31, 32, 65, 0.25);
@@ -371,13 +382,18 @@ html, body {
     margin-right: 10px;
 }
 
+.checkbox__marks--long-text{
+    width: 20px;
+}
+
 .checkbox__mark{
     font-size: 13px;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: none;
-    padding-left: 3px;
+    margin: 2px;
+    text-align: center;
 }
 
 .checkbox__mark--checked{
@@ -397,3 +413,216 @@ html, body {
     flex-direction: row;
 }
 
+// Radio buttons (gender)
+
+.form-elements__radio-wrapper{
+    display: flex;
+    margin-top: 16px;
+}
+
+.form-elements__radio{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.gender-btn:checked, .gender-btn:not(:checked){
+    width: 0;
+}
+
+.radio__marker{
+    content: "";
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid #BC9CFF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.gender-btn:checked ~ .radio__marker:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    box-sizing: border-box;
+    background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    border-radius: 100%;
+}
+
+.marker__descr{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 20px;
+    align-items: center;
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: none;
+}
+
+.marker__descr--female{
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+.maker__descr--male{
+    margin-left: 0;
+}
+
+// Toggle
+
+.form-elements__toggle-wrapper{
+    margin-top: 16px;
+}
+
+.form-elements__toggle{
+    margin-bottom: 14px;
+}
+
+.toggle__descr{
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+}
+
+.toggle-btn {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.toggle-btn:checked ~ .toggle__marker {
+    border-color: #bc9cff;
+}
+
+.toggle-btn:checked ~ .toggle__marker::after {
+    transform: translateX(20px);
+    background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+
+.toggle__marker{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 40px;
+    height: 20px;
+    border: 1px solid rgba(31,32,65,0.25);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.toggle__marker:after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    top: 3px;
+    left: 4px;
+    border-radius: 50%;
+    background-color: rgba(31,32,65,0.25);
+    transition: 0.3s;
+}
+
+.toggle__descr {
+    padding-left: 3.6em;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+// Like Buttons
+.form-elements__like-wrapper{
+    margin-top: 16px;
+}
+
+.like {
+    display: inline-block;
+    position: relative;
+    background-color: #fff;
+    color: rgba(31,32,65,0.25);
+    cursor: pointer;
+    padding: 3px 10px 3px 20px;
+    border-radius: 10px;
+    font-size: .625rem;
+    line-height: .75rem;
+    user-select: none;
+    margin-right: 10px;
+}
+
+.like__icon {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: .625rem;
+    display: inline-block;
+    line-height: .7rem;
+    text-transform: none;
+}
+
+.like__icon--active{
+    color: #bc9cff;
+}
+
+.like__icon--active::after {
+    background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+
+.like::after {
+    content: '';
+    display: inherit;
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    background-color: rgba(31,32,65,0.25);
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.like--active{
+    color: #bc9cff;
+}
+
+// Rate buttons
+
+.form-elements__rate-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-elements__rate {
+    display: flex;
+    user-select: none;
+}
+
+.rating__icon {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.5rem;
+    display: inline-block;
+    line-height: 1rem;
+    text-transform: none;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-elements__rate--right {
+    padding-left: 20px;
+}

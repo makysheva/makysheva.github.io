@@ -127,8 +127,77 @@ block form-section
                                             input(class="checkbox" type="checkbox" id="checkbox-nursling" data-type="nursling")
                                 .form-elements__checkbox
                                     .js-checkbox
-                                        div(class="checkbox__marks")
+                                        div(class="checkbox__marks checkbox__marks--long-text")
                                             i(class="fa fa-check checkbox__mark" aria-hidden="true" id="mark-guests")
                                         label(for="checkbox-guests" class="checkbox-descr") Можно пригласить гостей (до 10 человек)
                                             input(class="checkbox" type="checkbox" id="checkbox-guests" data-type="guests")
 
+
+                .form-elements-item
+                    form(action="")
+                        .form-elements__descr
+                            span  Radio Buttons
+                        .form-elements__radio-wrapper
+                            .form-elements__radio
+                                label(for="male-btn" class="marker__descr marker__descr--female") Мужской
+                                    input(type="radio" class="gender-btn" id="male-btn" name="gender" checked)
+                                    div(class="radio__marker")
+                            .form-elements__radio
+                                label(for="female-btn" class="marker__descr marker__descr--male") Женский
+                                    input(type="radio" class="gender-btn" id="female-btn" name="gender")
+                                    div(class="radio__marker")
+
+                .form-elements-item
+                    form(action="")
+                        .form-elements__descr
+                            span  Toggle
+                        .form-elements__toggle-wrapper
+                            .form-elements__toggle
+                                label(for="toggle-btn--active" class="toggle__descr") Получать спецпредложения
+                                    input(type="checkbox" class="toggle-btn" id="toggle-btn--active" name="toggle" checked)
+                                    div(class="toggle__marker")
+                        .form-elements__toggle
+                                label(for="toggle-btn--disabled" class="toggle__descr") Получать спецпредложения
+                                    input(type="checkbox" class="toggle-btn" id="toggle-btn--disabled" name="toggle")
+                                    div(class="toggle__marker")
+
+                .form-elements-item
+                    form(action="")
+                        .form-elements__descr
+                            span  like button
+                        .form-elements__like-wrapper
+                            .form-elements__like
+                                div(class="like") 2
+                                    i(class="like__icon") favorite_border
+                                div(class="like like--active") 12
+                                    i(class="like__icon like__icon--active") favorite
+                
+                .form-elements-item
+                    form(action="")
+                        .form-elements__descr
+                            span  rate button
+                        .form-elements__rate-wrapper
+                            .form-elements__rate
+                                i(class="rating__icon") star
+                                i(class="rating__icon") star
+                                i(class="rating__icon") star
+                                i(class="rating__icon") star
+                                i(class="rating__icon") star_border
+                            .form-elements__rate.form-elements__rate--right
+                                i(class="rating__icon") star
+                                i(class="rating__icon") star
+                                i(class="rating__icon") star
+                                i(class="rating__icon") star
+                                i(class="rating__icon") star
+
+                <!-- здесь нужно будет продолжить среднюю часть верстки -->
+            
+            .form-elements.form-elements--right
+                .form-elements-item
+                    .form-elements__descr
+                        span  range slider
+                    .form-elements__slider-wrapper
+                        .form-elements__range-slider
+                            
+                
+                        
