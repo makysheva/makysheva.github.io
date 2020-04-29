@@ -196,8 +196,14 @@ block form-section
                 .form-elements-item
                     .form-elements__descr
                         span  range slider
-                    .form-elements__slider-wrapper
-                        .form-elements__range-slider
+                    .form-elements__slider-title
+                        div(class="extra-controls")
+                            input(type="text" class="js-input-from extra-controls__title" value="0" readonly)
+                            input(type="text" class="js-input-to extra-controls__title" value="0" readonly)
+                    .form-elements__range-slider
+                        div(class="range-slider")
+                            input(type="text" class="js-range-slider" value="")
                             
+
                 
                         

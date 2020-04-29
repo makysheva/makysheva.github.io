@@ -2238,3 +2238,50 @@ import 'air-datepicker'
     };
 })();
 })(window, jQuery);
+
+
+
+// отображение выбранных дат в двух input в календаре air-datepicker
+
+var dateDropdownLeft = $('.text-field-datepicker--left')
+var dateDropdownRight = $('.text-field-datepicker--right')
+
+
+var dateDropdownDatepicker = dateDropdownLeft.datepicker({
+    range: true,
+    inline: false,
+    dateFormat: 'dd.mm.yyyy',
+
+    onSelect: function(date){
+        dateDropdownLeft.val(dateDropdownDatepicker.selectedDates[0].toLocaleDateString());
+        dateDropdownRight.val(dateDropdownDatepicker.selectedDates[1].toLocaleDateString());
+    }
+}).data('datepicker');
+
+dateDropdownLeft.click(function(){
+    dateDropdownDatepicker.show()
+})
+
+dateDropdownRight.click(function(){
+    dateDropdownLeft.trigger('click') //Выполнить событие click и запустить обработчики, прикреплённые к элементу dateDropdownLeft (левый input)
+})
+
+//  При клике на кнопку Применить в календаре происходит закрытие календаря
+
+const applyBtn = document.createElement('span')
+
+const parent = document.getElementsByClassName('datepicker--buttons')[0]
+
+parent.appendChild(applyBtn) // вставить кнопку Применить после родительского элемента
+
+applyBtn.innerHTML = 'Применить'
+
+applyBtn.classList.add('datepicker--button', '-apply-') // добавить классы
+
+applyBtn.addEventListener('click', closedDropdown) // при клике по кнопке Применить закрыть календарь
+
+function closedDropdown(){
+    dateDropdownDatepicker.hide()
+}
+
+    

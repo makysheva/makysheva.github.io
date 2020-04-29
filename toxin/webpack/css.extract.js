@@ -16,7 +16,6 @@ module.exports = function(){
                         },
                       },
                       'css-loader',
-                      //'postcss-loader',
                       'sass-loader',
                     ],
                 },

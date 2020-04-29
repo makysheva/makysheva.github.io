@@ -12,7 +12,6 @@
   "author": "Aliya Makysheva",
   "license": "ISC 2019",
   "devDependencies": {
-    "air-datepicker": "^2.2.3",
     "copy-webpack-plugin": "^5.0.5",
     "css-loader": "^3.4.2",
     "file-loader": "^4.2.0",
@@ -33,6 +32,9 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "material-icons": "^0.3.1"
+    "air-datepicker": "^2.2.3",
+    "ion-rangeslider": "^2.3.1",
+    "material-icons": "^0.3.1",
+    "normalize.css": "^8.0.1"
   }
 }
