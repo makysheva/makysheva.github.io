@@ -29,7 +29,7 @@ console.log('in form-elements.js');
 //         dropdownOpen.forEach((elemDropdown)=> {// добавлять класс
 //             elemDropdown.classList.add('dropdown__menu--open')
 //         })
-//     })    
+//     })
 // })
 
 

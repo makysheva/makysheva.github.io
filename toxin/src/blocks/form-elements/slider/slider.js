@@ -16,9 +16,12 @@ $range.ionRangeSlider({
     max: max,
     from: 5000,
     to: 10000,
+    values_separator: '-',
+    prettify_enabled: true,
+    prettify_separator: ' ',
     hide_min_max: true,
     hide_from_to: true,
-    extra_classes: 'My-class', 
+    extra_classes: 'my-class',
     onStart: updateInputs,
     onChange: updateInputs
 });
@@ -27,21 +30,21 @@ instance = $range.data("ionRangeSlider");
 function updateInputs (data) {
 	from = data.from;
     to = data.to;
-    
+
     $inputFrom.prop("value", from);
-    $inputTo.prop("value", to);	
+    $inputTo.prop("value", to);
 }
 
 $inputFrom.on("input", function () {
     var val = $(this).prop("value");
-    
+
     // validate
     if (val < min) {
         val = min;
     } else if (val > to) {
         val = to;
     }
-    
+
     instance.update({
         from: val
     });
@@ -49,14 +52,14 @@ $inputFrom.on("input", function () {
 
 $inputTo.on("input", function () {
     var val = $(this).prop("value");
-    
+
     // validate
     if (val < from) {
         val = from;
     } else if (val > max) {
         val = max;
     }
-    
+
     instance.update({
         to: val
     });
@@ -64,3 +67,27 @@ $inputTo.on("input", function () {
 
 
 // стилизация согласно макету
+const myClassSlider = document.getElementsByClassName('my-class')
+
+Array.from(myClassSlider).forEach((element) => {
+
+    Array.from(element.children).forEach((child) => {
+
+        if(child.firstElementChild.className == 'irs-line'){
+            child.firstElementChild.classList.add('line-all')
+        }
+
+        if(child.className === 'irs-handle from'){
+            child.classList.add('left-toddler')
+        }
+
+        if(child.className === 'irs-handle to type_last'){
+            child.classList.add('right-toddler')
+        }
+
+        if(child.className === 'irs-bar'){
+            child.classList.add('toddler')
+        }
+    })
+})
+
