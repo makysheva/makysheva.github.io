@@ -34,38 +34,38 @@ block form-section
                                 i(class="material-icons") expand_more
 
                             div(class="dropdown__menu")
-                                div(class="dropdown__menu-option" data-id="item-adult") 
+                                div(class="dropdown__menu-option" data-id="item-adult")
                                     div(class="dropdown__item") Взрослые
                                     div(class="dropdown__controls")
                                         div(class="dropdown__minus") -
                                         div(class="dropdown__count") 0
                                         div(class="dropdown__plus") +
-                                
-                                div(class="dropdown__menu-option" data-id="item-children") 
+
+                                div(class="dropdown__menu-option" data-id="item-children")
                                     div(class="dropdown__item") Дети
                                     div(class="dropdown__controls")
                                         div(class="dropdown__minus") -
                                         div(class="dropdown__count") 0
                                         div(class="dropdown__plus") +
 
-                                div(class="dropdown__menu-option" data-id="item-babies") 
+                                div(class="dropdown__menu-option" data-id="item-babies")
                                     div(class="dropdown__item") Младенцы
                                     div(class="dropdown__controls")
                                         div(class="dropdown__minus") -
                                         div(class="dropdown__count") 0
                                         div(class="dropdown__plus") +
 
-                                div(class="dropdown__buttons" data-id="item-btn") 
+                                div(class="dropdown__buttons" data-id="item-btn")
                                     button(class="clear-btn") Очистить
                                     button(class="apply-btn") Применить
-                                
+
                 .form-elements-item
                     .form-elements__dropdown
                         form(action="")
                             .form-elements__descr
                                 span  masked text field
-                            .form-elements__input--masked     
-                                input(class="text-field" type="text" placeholder="ДД.ММ.ГГГГ")    
+                            .form-elements__input--masked
+                                input(class="text-field" type="text" placeholder="ДД.ММ.ГГГГ")
 
                 .form-elements-item
                     .form-elements__datepicker
@@ -89,8 +89,8 @@ block form-section
                     .form-elements__filter-date-wrapper
                         form(action="")
                             .form-elements__descr
-                                span  filter date dropdown 
-                            .form-elements__filter-date    
+                                span  filter date dropdown
+                            .form-elements__filter-date
                                 input(class="text-field--filter datepicker-here" data-range="true" data-multiple-dates-separator=" - " type="text" placeholder="ДД.ММ.ГГГГ")    
                                 i(class="material-icons--filter") expand_more
 
@@ -103,7 +103,7 @@ block form-section
                                     input(class="text-field--email" type="text" placeholder="Email")
                                     i(class="material-icons--email subscription__button") arrow_forward
 
-                
+
             <!-- здесь нужно будет продолжить левую часть верстки -->
 
             .form-elements.form-elements--middle
@@ -171,7 +171,7 @@ block form-section
                                     i(class="like__icon") favorite_border
                                 div(class="like like--active") 12
                                     i(class="like__icon like__icon--active") favorite
-                
+
                 .form-elements-item
                     form(action="")
                         .form-elements__descr
@@ -194,12 +194,48 @@ block form-section
 
             .form-elements.form-elements--right
                 .form-elements-item
-                    .form-elements__descr
-                        span  range slider
-                    .form-elements__slider-title
-                        div(class="extra-controls")
-                            input(type="text" class="js-input-from extra-controls__title" value="0" readonly)
-                            input(type="text" class="js-input-to extra-controls__title" value="0" readonly)
+                    .form-elements__slider-wrapper
+                        .form-elements__descr
+                            span  range slider
+                        .form-elements__slider-title
+                            div(class="extra-controls")
+                                input(type="text" class="js-input-from extra-controls__title" value="0" readonly)
+                                span -
+                                input(type="text" class="js-input-to extra-controls__title" value="0" readonly)
                     .form-elements__range-slider
                         div(class="range-slider")
                             input(type="text" class="js-range-slider" value="")
+
+                .form-elements-item
+                    form(action="")
+                        .form-elements__descr
+                            span  buttons
+                        .form-elements__buttons
+                            .form-elements__btn
+                                button(class="button") Click me
+                            .form-elements__btn
+                                button(class="button button_disabled") Click me
+                            .form-elements__btn
+                                button(class="rounded-button") Click me
+                            .form-elements__btn
+                                button(class="rounded-button rounded-button_disabled") Click me
+                            .form-elements__btn
+                                div(class="simple-button") Click me
+                            .form-elements__btn
+                                div(class="simple-button simple-button_disabled") Click me
+                            .form-elements__btn
+                                button(class="long-button") Перейти к оплате
+                                    i(class="long-button__icon") arrow_forward
+
+                .form-elements-item
+                    .form-elements__descr
+                        span  pagination
+                    .form-elements__pagination
+                        .pagination
+                            a(class="pagination__item pagination__item_active" href="/mock-address") 1
+                            a(class="pagination__item" href="/mock-address") 2
+                            a(class="pagination__item" href="/mock-address") 3
+                            div(class="pagination__item") ...
+                            a(class="pagination__item" href="/mock-address") 15
+                            button(class="pagination__next")
+                            div(class="pagination__info") 1 – 12 из 100+ вариантов аренды

@@ -16,9 +16,11 @@ $range.ionRangeSlider({
     max: max,
     from: 5000,
     to: 10000,
-    values_separator: '-',
-    prettify_enabled: true,
-    prettify_separator: ' ',
+    //values_separator: '-',
+    //prettify_enabled: true,
+    //prettify_separator: ' ',
+    postfix: '₽',
+    decorate_both: true,
     hide_min_max: true,
     hide_from_to: true,
     extra_classes: 'my-class',
@@ -73,7 +75,7 @@ Array.from(myClassSlider).forEach((element) => {
 
     Array.from(element.children).forEach((child) => {
 
-        if(child.firstElementChild.className == 'irs-line'){
+        if(child.className == 'irs-line'){
             child.firstElementChild.classList.add('line-all')
         }
 
