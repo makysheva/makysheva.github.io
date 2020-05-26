@@ -283,3 +283,46 @@ block form-section
                             a(class="pagination__item" href="/mock-address") 15
                             button(class="pagination__next")
                             div(class="pagination__info") 1 – 12 из 100+ вариантов аренды
+
+                .form-elements-item
+                    .form-elements__dropdown
+                        form(action="")
+                            .form-elements__descr
+                                span dropdown
+                            .form-elements__input--dropdown
+                                input(class="text-field--dropdown" placeholder="Сколько гостей" readonly="readonly")
+                                i(class="material-icons") expand_more
+
+                            div(class="dropdown__menu")
+                                div(class="dropdown__menu-option")
+                                    +dropdownMenuOption('Взрослые')
+                                    div(class="dropdown__controls")
+                                        +dropdownControls('-', 0, '+')
+
+                                div(class="dropdown__menu-option")
+                                    +dropdownMenuOption('Дети')
+                                    div(class="dropdown__controls")
+                                        +dropdownControls('-', 0, '+')
+
+                                div(class="dropdown__menu-option")
+                                    +dropdownMenuOption('Младенцы')
+                                    div(class="dropdown__controls")
+                                        +dropdownControls('-', 0, '+')
+
+                                div(class="dropdown__buttons")
+                                    button(class="clear-btn") Очистить
+                                    button(class="apply-btn") Применить
+
+                .form-elements-item
+                    .form-elements__bullet
+                        form(action="")
+                            .form-elements__descr
+                                span bullet list
+                            ul(class="bullet")
+                                li(class="bullet__elem")
+                                    span(class="bullet__item") Нельзя с питомцами
+                                li(class="bullet__elem")
+                                    span(class="bullet__item") Без вечеринок и мероприятий
+                                li(class="bullet__elem")
+                                    span(class="bullet__item") Время прибытия — после 13:00, а выезд до 12:00
+
