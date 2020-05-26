@@ -35,6 +35,8 @@ function updateInputs (data) {
 
     $inputFrom.prop("value", from);
     $inputTo.prop("value", to);
+
+ //$priceRange.val(`${new Intl.NumberFormat('ru-RU').format(from)}₽ - ${new Intl.NumberFormat('ru-RU').format(to)}₽`)
 }
 
 $inputFrom.on("input", function () {

@@ -1,9 +1,9 @@
 // checkbox buttons
 
-const markSmoke = document.getElementById('mark-smoke')
+const markSmoke = document.getElementById('mark-smoke')// i
 const markNursling = document.getElementById('mark-nursling')
 const markGuests = document.getElementById('mark-guests')
-const checkboxHide = document.querySelectorAll('.checkbox')
+const checkboxHide = document.querySelectorAll('.checkbox')// input
 
 checkboxHide.forEach((checkbox) => {
     checkbox.addEventListener('click', () => {
