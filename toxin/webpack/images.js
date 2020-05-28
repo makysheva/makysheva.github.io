@@ -5,7 +5,7 @@ module.exports = function(){
         module: {
             rules: [
                 {
-                    test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                    test: /\.(jpeg|jpg|png|svg)(\?v=\d+\.\d+\.\d+)?$/,
                     loader: 'file-loader',
                     options: {
                       name: '[name].[ext]'
@@ -14,10 +14,13 @@ module.exports = function(){
             ]
         },
         plugins: [
-            new CopyWebpackPlugin([{
-                from: `src/assets/fonts`,
-                to: `./assets/fonts`
-            }])
+
+            new CopyWebpackPlugin([
+                {
+                    from: 'src/assets/img',
+                    to: './assets/images'
+                },
+            ]),
         ]
     }
-}
+};

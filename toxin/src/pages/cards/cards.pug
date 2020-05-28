@@ -1,0 +1,57 @@
+extends ../../base
+
+block title
+    | Cards
+
+block main
+    .logo-wrapper
+        include ../../blocks/logo/logo-grey
+
+block cards-section
+    .container
+        div(class="cards__item")
+            div(class="find-apartments-card")
+                h1(class="find-apartments-card__title") Найдем номера под ваши пожелания
+
+                form(class="find-apartments-card__form" action="/mock-address" method="get")
+                    div(class="find-apartments-card__body")
+                        div(class="find-apartments-card__item find-apartments-card__item_high")
+                            div(class="range-dates")
+                                div(class="calendar js-calendar" style="display: none;")
+
+                                div(class="range-dates__input")
+                                    div(class="dropdown-field")
+                                        div(class="dropdown-field__title") Прибытие
+                                        label(class="dropdown-field__icon-wrapper")
+                                            input(class="dropdown-field__input" placeholder="ДД.ММ.ГГГГ")
+                                div(class="range-dates__input")
+                                    div(class="dropdown-field")
+                                        div(class="dropdown-field__title") Выезд
+                                        label(class="dropdown-field__icon-wrapper")
+                                            input(class="dropdown-field__input" placeholder="ДД.ММ.ГГГГ")
+
+                        div(class="find-apartments-card__item find-apartments-card__item_high")
+                            h3(class="find-apartments-card__subtitle") Гости
+                            div(class="configuration-dropdown")
+                                input(class="js-dropdown-find-apartments configuration-dropdown__header" readonly="readonly")
+                                div(class="configuration-dropdown__content configuration-dropdown__content_hided")
+                                    div(class="configuration-dropdown__item")
+                                        div(class="configuration-dropdown__option") Взрослых
+                                        div(class="configuration-dropdown__controls")
+                                            div(class="configuration-dropdown__button configuration-dropdown__button_disabled") -
+                                            div(class="configuration-dropdown__counter") 0
+                                            div(class="configuration-dropdown__button") +
+                                    div(class="configuration-dropdown__item")
+                                        div(class="configuration-dropdown__option") Детей
+                                        div(class="configuration-dropdown__controls")
+                                            div(class="configuration-dropdown__button configuration-dropdown__button_disabled") -
+                                            div(class="configuration-dropdown__counter") 0
+                                            div(class="configuration-dropdown__button") +
+                                    div(class="configuration-dropdown__footer")
+                                        div(class="simple-button simple-button_disabled" style="visibility: hidden;") Очистить
+                                        div(class="simple-button") Применить
+                                i(class="material-icons configuration-dropdown__header-icon") keyboard_arrow_down
+
+                    div(class="find-apartments-card__button")
+                        button(class="long-button") Подобрать номер
+                    i(class="long-button__icon") arrow_forward

@@ -8,7 +8,7 @@ const devserver = require('./webpack/devserver');
 const extractCSS = require('./webpack/css.extract');
 const fonts = require('./webpack/fonts');
 const favicons = require('./webpack/favicons');
-const jQuery = require('jquery')
+const images = require('./webpack/images')
 
 const PATHS = {
     source: path.join(__dirname, 'src'),
@@ -21,7 +21,8 @@ const common = merge([
             'index': PATHS.source + '/pages/index/index.js',
             'colors-type': PATHS.source + '/pages/colors-type/colors-type.js',
             'header': PATHS.source + '/pages/header/header.js',
-            'form-elements': PATHS.source + '/pages/form-elements/form-elements.js'
+            'form-elements': PATHS.source + '/pages/form-elements/form-elements.js',
+            'cards': PATHS.source + '/pages/cards/cards.js',
         },
         output: {
             path: PATHS.build,
@@ -48,6 +49,11 @@ const common = merge([
                 chunks: ['form-elements'],
                 template: PATHS.source + '/pages/form-elements/form-elements.pug'
             }),
+            new HtmlWebpackPlugin({
+                filename: 'cards.html',
+                chunks: ['cards'],
+                template: PATHS.source + '/pages/cards/cards.pug'
+            }),
             new webpack.ProvidePlugin({
                 $: 'jquery',
                 jQuery: 'jquery',
@@ -57,7 +63,8 @@ const common = merge([
     },
     pug(),
     fonts(),
-    favicons()
+    favicons(),
+    images()
 ]);
 
 module.exports = function(env) {
