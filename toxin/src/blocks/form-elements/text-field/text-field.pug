@@ -1,0 +1,17 @@
+mixin textField(text, forInput)
+    .form-elements__descr
+        label(for="text-field-" + forInput) #{text}
+
+mixin inputField(modificator, inputFieldClassName, idInput, inputType, email)
+    div(class="form-elements__input"+ modificator)
+        input(class= '' + inputFieldClassName, id= 'text-field-' + idInput, placeholder= email, type= inputType)
+
+mixin formElementsHeader(descr)
+    .form-elements__descr
+        span #{descr}
+
+//- mixin widgetsInfo(widget, widgetTitle, descr, widgetDescr)
+//-     .widget.widget-items(class= 'widget-title--' + widget)= widgetTitle
+//-     .widget-item(class= 'widget-descr--' + descr)= widgetDescr
+
+//- доделать миксин с инпутом, там неверное id подставляется в инпутах, где нет id

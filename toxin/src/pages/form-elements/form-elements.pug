@@ -1,5 +1,6 @@
 extends ../../base
 include ../../blocks/form-elements/dropdown/dropdown
+include ../../blocks/form-elements/text-field/text-field
 
 block title
     | Form Elements
@@ -14,22 +15,18 @@ block form-section
             .form-elements.form-elements--left
                 .form-elements-item--default
                     form(action="")
-                        .form-elements__descr
-                            label(for="text-field-default") text field
-                        .form-elements__input
-                            input(class="text-field" id="text-field-default" type="email" placeholder="Email")
+                        +textField('text field', 'default')
+                        +inputField('', 'text-field', 'default', 'email', 'Email')
                 .form-elements-item--hover
                     form(action="")
                         .form-elements__descr
-                            label(for="text-field-hover") text field
-                        .form-elements__input
-                            input(class="text-field" id="text-field-hover"  type="email" placeholder="Email")
+                            +textField('text field', 'hover')
+                            +inputField('', 'text-field', 'hover', 'email', 'Email')
 
                 .form-elements-item
                     .form-elements__dropdown
                         form(action="")
-                            .form-elements__descr
-                                span dropdown
+                            +formElementsHeader('dropdown')
                             .form-elements__input--dropdown
                                 input(class="text-field--dropdown" placeholder="Сколько гостей" readonly="readonly")
                                 i(class="material-icons") expand_more
@@ -57,10 +54,10 @@ block form-section
                 .form-elements-item
                     .form-elements__dropdown
                         form(action="")
-                            .form-elements__descr
-                                span  masked text field
-                            .form-elements__input--masked
-                                input(class="text-field" type="text" placeholder="ДД.ММ.ГГГГ")
+                            +formElementsHeader('masked text field')
+                            +inputField('--masked', 'text-field', '', 'text', 'ДД.ММ.ГГГГ')
+                            //- .form-elements__input--masked
+                            //-     input(class="text-field" type="text" placeholder="ДД.ММ.ГГГГ")
 
                 .form-elements-item
                     .form-elements__datepicker
