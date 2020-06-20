@@ -1,7 +1,11 @@
-mixin dropdownMenuOption(dropdownItem)
-    .dropdown__item #{dropdownItem}
+mixin dropdown(placeholder)
+    input(class="text-field--dropdown", placeholder= placeholder, readonly="readonly")
+    i(class="material-icons") expand_more
 
-mixin dropdownControls(minus, count, plus)
-    .dropdown__minus #{minus}
-    .dropdown__count #{count}
-    .dropdown__plus #{plus}
+mixin dropdownControls(dataId, title, minus, count, plus)
+    div(class="dropdown__menu-option" data-id= dataId)
+        .dropdown__item #{title}
+        div(class="dropdown__controls")
+            .dropdown__minus #{minus}
+            .dropdown__count #{count}
+            .dropdown__plus #{plus}

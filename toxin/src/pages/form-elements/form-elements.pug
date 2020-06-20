@@ -1,6 +1,7 @@
 extends ../../base
 include ../../blocks/form-elements/dropdown/dropdown
 include ../../blocks/form-elements/text-field/text-field
+include ../../blocks/form-elements/calendar/calendar
 include ../../blocks/form-elements/expander/expander
 include ../../blocks/form-elements/additions/additions
 include ../../blocks/form-elements/checkbox/checkbox
@@ -38,24 +39,12 @@ block form-section
                         form(action="")
                             +formElementsHeader('dropdown')
                             .form-elements__input--dropdown
-                                input(class="text-field--dropdown" placeholder="Сколько гостей" readonly="readonly")
-                                i(class="material-icons") expand_more
+                                +dropdown('Сколько гостей')
 
                             div(class="dropdown__menu")
-                                div(class="dropdown__menu-option" data-id="item-adult")
-                                    +dropdownMenuOption('Взрослые')
-                                    div(class="dropdown__controls")
-                                        +dropdownControls('-', 0, '+')
-
-                                div(class="dropdown__menu-option" data-id="item-children")
-                                    +dropdownMenuOption('Дети')
-                                    div(class="dropdown__controls")
-                                        +dropdownControls('-', 0, '+')
-
-                                div(class="dropdown__menu-option" data-id="item-babies")
-                                    +dropdownMenuOption('Младенцы')
-                                    div(class="dropdown__controls")
-                                        +dropdownControls('-', 0, '+')
+                                +dropdownControls('item-adult', 'Взрослые', '-', '0', '+')
+                                +dropdownControls('item-children', 'Дети', '-', '0', '+')
+                                +dropdownControls('item-babies', 'Младенцы', '-', '0', '+')
 
                                 div(class="dropdown__buttons" data-id="item-btn")
                                     button(class="clear-btn") Очистить
@@ -72,16 +61,12 @@ block form-section
                         .datepicker-wrapper
                             +formElementsHeader('date Dropdown')
                             .form-elements__input--datepicker
-                                .datepicker--left
-                                    input(class="text-field--datepicker text-field-datepicker--left" placeholder="ДД.ММ.ГГГГ" type="text" name="start" id="startDate" readonly)
-                                    i(class="material-icons--left-datepicker") expand_more
+                                +datepickerLeft('text-field--datepicker text-field-datepicker--left', 'ДД.ММ.ГГГГ', 'startDate', 'start', 'material-icons--left-datepicker', 'expand_more')
 
                         .datepicker-wrapper--right
                             +formElementsHeader('date Dropdown')
                             .form-elements__input--datepicker
-                                .datepicker--right
-                                    input(class="text-field--datepicker text-field-datepicker--right" placeholder="ДД.ММ.ГГГГ" type="text" name="end" id="endDate" readonly)
-                                    i(class="material-icons--left-datepicker") expand_more
+                                +datepickerRight('text-field--datepicker text-field-datepicker--right', 'ДД.ММ.ГГГГ', 'endDate', 'end', 'material-icons--left-datepicker', 'expand_more')
 
                 .form-elements-item
                     .form-elements__filter-date-wrapper
@@ -104,26 +89,14 @@ block form-section
                         form(action="")
                             +formElementsHeader('dropdown')
                             .form-elements__input--dropdown
-                                input(class="text-field--dropdown" placeholder="2 спальни, 2 кровати" readonly="readonly")
-                                i(class="material-icons") expand_more
+                                +dropdown('2 спальни, 2 кровати')
 
                             div(class="dropdown__menu")
-                                div(class="dropdown__menu-option")
-                                    +dropdownMenuOption('Спальни')
-                                    div(class="dropdown__controls")
-                                        +dropdownControls('-', 0, '+')
+                                +dropdownControls('', 'Спальни', '-', '0', '+')
+                                +dropdownControls('', 'Кровати', '-', '0', '+')
+                                +dropdownControls('', 'Ванные комнаты', '-', '0', '+')
 
-                                div(class="dropdown__menu-option")
-                                    +dropdownMenuOption('Кровати')
-                                    div(class="dropdown__controls")
-                                        +dropdownControls('-', 0, '+')
-
-                                div(class="dropdown__menu-option")
-                                    +dropdownMenuOption('Ванные комнаты')
-                                    div(class="dropdown__controls")
-                                        +dropdownControls('-', 0, '+')
-
-                                div(class="dropdown__buttons")
+                                div(class="dropdown__buttons" data-id="item-btn")
                                     button(class="clear-btn") Очистить
                                     button(class="apply-btn") Применить
 
@@ -131,27 +104,33 @@ block form-section
                     .form-elements__dropdown
                         form(action="")
                             +formElementsHeader('dropdown')
+
                             .form-elements__input--dropdown
-                                input(class="text-field--dropdown" placeholder="2 спальни, 2 кровати" readonly="readonly")
-                                i(class="material-icons") expand_more
+                                +dropdown('2 спальни, 2 кровати')
 
                             div(class="dropdown__menu")
-                                div(class="dropdown__menu-option")
-                                    +dropdownMenuOption('Спальни')
-                                    div(class="dropdown__controls")
-                                        +dropdownControls('-', 0, '+')
+                                +dropdownControls('', 'Спальни', '-', '0', '+')
+                                +dropdownControls('', 'Кровати', '-', '0', '+')
+                                +dropdownControls('', 'Ванные комнаты', '-', '0', '+')
 
-                                div(class="dropdown__menu-option")
-                                    +dropdownMenuOption('Кровати')
-                                    div(class="dropdown__controls")
-                                        +dropdownControls('-', 0, '+')
+                                div(class="dropdown__buttons" data-id="item-btn")
+                                    button(class="clear-btn") Очистить
+                                    button(class="apply-btn") Применить
 
-                                div(class="dropdown__menu-option")
-                                    +dropdownMenuOption('Ванные комнаты')
-                                    div(class="dropdown__controls")
-                                        +dropdownControls('-', 0, '+')
+                .form-elements-item
+                    .form-elements__dropdown
+                        form(action="")
+                            +formElementsHeader('dropdown')
 
-                                div(class="dropdown__buttons")
+                            .form-elements__input--dropdown
+                                +dropdown('2 спальни, 2 кровати')
+
+                            div(class="dropdown__menu")
+                                +dropdownControls('', 'Спальни', '-', '0', '+')
+                                +dropdownControls('', 'Кровати', '-', '0', '+')
+                                +dropdownControls('', 'Ванные комнаты', '-', '0', '+')
+
+                                div(class="dropdown__buttons" data-id="item-btn")
                                     button(class="clear-btn") Очистить
                                     button(class="apply-btn") Применить
 
@@ -229,27 +208,16 @@ block form-section
                     .form-elements__dropdown
                         form(action="")
                             +formElementsHeader('dropdown')
+
                             .form-elements__input--dropdown
-                                input(class="text-field--dropdown" placeholder="Сколько гостей" readonly="readonly")
-                                i(class="material-icons") expand_more
+                                +dropdown('Сколько гостей')
 
                             div(class="dropdown__menu")
-                                div(class="dropdown__menu-option")
-                                    +dropdownMenuOption('Взрослые')
-                                    div(class="dropdown__controls")
-                                        +dropdownControls('-', 0, '+')
+                                +dropdownControls('', 'Взрослые', '-', '0', '+')
+                                +dropdownControls('', 'Дети', '-', '0', '+')
+                                +dropdownControls('', 'Младенцы', '-', '0', '+')
 
-                                div(class="dropdown__menu-option")
-                                    +dropdownMenuOption('Дети')
-                                    div(class="dropdown__controls")
-                                        +dropdownControls('-', 0, '+')
-
-                                div(class="dropdown__menu-option")
-                                    +dropdownMenuOption('Младенцы')
-                                    div(class="dropdown__controls")
-                                        +dropdownControls('-', 0, '+')
-
-                                div(class="dropdown__buttons")
+                                div(class="dropdown__buttons" data-id="item-btn")
                                     button(class="clear-btn") Очистить
                                     button(class="apply-btn") Применить
 
@@ -284,6 +252,7 @@ block form-section
                             +button('rounded-button rounded-button_disabled', 'Click me')
                             +simpleButton('simple-button', 'Click me')
                             +simpleButton('simple-button simple-button_disabled', 'Click me')
+                        .form-elements__btn
                             +longButton('long-button', 'Перейти к оплате', 'long-button__icon', 'arrow_forward')
 
                 .form-elements-item
@@ -302,27 +271,16 @@ block form-section
                     .form-elements__dropdown
                         form(action="")
                             +formElementsHeader('dropdown')
+
                             .form-elements__input--dropdown
-                                input(class="text-field--dropdown" placeholder="Сколько гостей" readonly="readonly")
-                                i(class="material-icons") expand_more
+                                +dropdown('Сколько гостей')
 
                             div(class="dropdown__menu")
-                                div(class="dropdown__menu-option")
-                                    +dropdownMenuOption('Взрослые')
-                                    div(class="dropdown__controls")
-                                        +dropdownControls('-', 0, '+')
+                                +dropdownControls('', 'Взрослые', '-', '0', '+')
+                                +dropdownControls('', 'Дети', '-', '0', '+')
+                                +dropdownControls('', 'Младенцы', '-', '0', '+')
 
-                                div(class="dropdown__menu-option")
-                                    +dropdownMenuOption('Дети')
-                                    div(class="dropdown__controls")
-                                        +dropdownControls('-', 0, '+')
-
-                                div(class="dropdown__menu-option")
-                                    +dropdownMenuOption('Младенцы')
-                                    div(class="dropdown__controls")
-                                        +dropdownControls('-', 0, '+')
-
-                                div(class="dropdown__buttons")
+                                div(class="dropdown__buttons" data-id="item-btn")
                                     button(class="clear-btn") Очистить
                                     button(class="apply-btn") Применить
 

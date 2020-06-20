@@ -1,4 +1,9 @@
 extends ../../base
+include ../../blocks/cards/find-apartments
+include ../../blocks/form-elements/calendar/calendar
+include ../../blocks/form-elements/text-field/text-field
+include ../../blocks/form-elements/dropdown/dropdown
+include ../../blocks/form-elements/buttons/buttons
 
 block title
     | Cards
@@ -9,49 +14,39 @@ block main
 
 block cards-section
     .container
-        div(class="cards__item")
-            div(class="find-apartments-card")
-                h1(class="find-apartments-card__title") Найдем номера под ваши пожелания
+        .cards__wrapper
+            .cards__column
+                .cards__item
+                    .find-apartments
+                        .find-apartments__item
+                            +title('find-apartments__title', 'Найдем номера под ваши пожелания')
 
-                form(class="find-apartments-card__form" action="/mock-address" method="get")
-                    div(class="find-apartments-card__body")
-                        div(class="find-apartments-card__item find-apartments-card__item_high")
-                            div(class="range-dates")
-                                div(class="calendar js-calendar" style="display: none;")
+                            form(class="find-apartments__form" action="/mock-address" method="get")
+                                .datepicker-field
+                                    .datepicker-field--left
+                                        .datepicker-field__title Прибытие
+                                        +datepickerLeft('text-field--datepicker text-field-datepicker--left', 'ДД.ММ.ГГГГ', 'startDate', 'start', 'material-icons--left-datepicker', 'expand_more')
+                                    .datepicker-field--right
+                                        .datepicker-field__title Выезд
+                                        +datepickerRight('text-field--datepicker text-field-datepicker--right', 'ДД.ММ.ГГГГ', 'endDate', 'end', 'material-icons--left-datepicker', 'expand_more')
 
-                                div(class="range-dates__input")
-                                    div(class="dropdown-field")
-                                        div(class="dropdown-field__title") Прибытие
-                                        label(class="dropdown-field__icon-wrapper")
-                                            input(class="dropdown-field__input" placeholder="ДД.ММ.ГГГГ")
-                                div(class="range-dates__input")
-                                    div(class="dropdown-field")
-                                        div(class="dropdown-field__title") Выезд
-                                        label(class="dropdown-field__icon-wrapper")
-                                            input(class="dropdown-field__input" placeholder="ДД.ММ.ГГГГ")
+                        .find-apartments__item
+                            h3(class="find-apartments__subtitle") Гости
+                        .find-apartments__dropdown
+                            form(action="")
+                                .form-elements__input--dropdown
+                                    +dropdown('Сколько гостей')
 
-                        div(class="find-apartments-card__item find-apartments-card__item_high")
-                            h3(class="find-apartments-card__subtitle") Гости
-                            div(class="configuration-dropdown")
-                                input(class="js-dropdown-find-apartments configuration-dropdown__header" readonly="readonly")
-                                div(class="configuration-dropdown__content configuration-dropdown__content_hided")
-                                    div(class="configuration-dropdown__item")
-                                        div(class="configuration-dropdown__option") Взрослых
-                                        div(class="configuration-dropdown__controls")
-                                            div(class="configuration-dropdown__button configuration-dropdown__button_disabled") -
-                                            div(class="configuration-dropdown__counter") 0
-                                            div(class="configuration-dropdown__button") +
-                                    div(class="configuration-dropdown__item")
-                                        div(class="configuration-dropdown__option") Детей
-                                        div(class="configuration-dropdown__controls")
-                                            div(class="configuration-dropdown__button configuration-dropdown__button_disabled") -
-                                            div(class="configuration-dropdown__counter") 0
-                                            div(class="configuration-dropdown__button") +
-                                    div(class="configuration-dropdown__footer")
-                                        div(class="simple-button simple-button_disabled" style="visibility: hidden;") Очистить
-                                        div(class="simple-button") Применить
-                                i(class="material-icons configuration-dropdown__header-icon") keyboard_arrow_down
+                                div(class="dropdown__menu")
+                                    +dropdownControls('item-adult', 'Взрослые', '-', '0', '+')
+                                    +dropdownControls('item-children', 'Дети', '-', '0', '+')
+                                    +dropdownControls('item-babies', 'Младенцы', '-', '0', '+')
 
-                    div(class="find-apartments-card__button")
-                        button(class="long-button") Подобрать номер
-                    i(class="long-button__icon") arrow_forward
+                                    div(class="dropdown__buttons" data-id="item-btn")
+                                        button(class="clear-btn") Очистить
+                                        button(class="apply-btn") Применить
+
+                        .find-apartments__item
+                            +longButton('long-button', 'Подобрать номер', 'long-button__icon', 'arrow_forward')
+
+                        //- доделать кнопку длинную

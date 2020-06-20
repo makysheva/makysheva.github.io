@@ -2283,5 +2283,3 @@ applyBtn.addEventListener('click', closedDropdown) // при клике по к�
 function closedDropdown(){
     dateDropdownDatepicker.hide()
 }
-
-    

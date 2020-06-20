@@ -18,5 +18,80 @@ html, body {
 }
 
 .logo{
-    margin: 30px 0 0 30px;
+    margin: 30px 0 72px;
+}
+
+.cards__wrapper{
+    display: flex;
+    justify-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cards__column{
+    margin: 0 10px;
+}
+
+.cards__item{
+    margin-bottom: 40px;
+}
+
+//первая карточка - поиск апартаментов
+
+.find-apartments{
+    max-width: 380px;
+    height: 374px;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px 30px 0px 30px;
+}
+
+.find-apartments__title{
+    width: 320px;
+    font-family: Quicksand, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1F2041;
+    padding-bottom: 20px;
+}
+
+.datepicker-field__title{
+    width: 83px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+    padding-bottom: 6px;
+}
+
+.datepicker-field{
+    display: flex;
+    flex-direction: row;
+}
+
+.datepicker-field--left, .datepicker-field--right{
+    display: flex;
+    flex-direction: column;
+}
+
+.find-apartments__subtitle{
+    width: 43px;
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+    padding: 20px 0 5px 0;
 }
