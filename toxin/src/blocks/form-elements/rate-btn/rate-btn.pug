@@ -1,6 +1,15 @@
-mixin rateButton(icon, iconBorder)
-    - for (var x = 0; x < 5; x++)
-        if icon
+mixin rateButton(icon, iconBorder, iconWrapClassName)
+    if iconWrapClassName
+        div(class="form-elements__rate " +iconWrapClassName)
             i(class="rating__icon") #{icon}
-        else if iconBorder
+            i(class="rating__icon") #{icon}
+            i(class="rating__icon") #{icon}
+            i(class="rating__icon") #{icon}
+            i(class="rating__icon") #{icon}
+    else
+        .form-elements__rate
+            i(class="rating__icon") #{icon}
+            i(class="rating__icon") #{icon}
+            i(class="rating__icon") #{icon}
+            i(class="rating__icon") #{icon}
             i(class="rating__icon") #{iconBorder}
