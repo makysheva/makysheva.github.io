@@ -1,0 +1,15 @@
+mixin checkbox(divClassName, idIcon, forInput, title, idInput, inputDataType)
+    if divClassName
+        .form-elements__checkbox
+            .js-checkbox
+                div(class="checkbox__marks " + divClassName)
+                    i(class="fa fa-check checkbox__mark", aria-hidden="true", id= idIcon)
+                label(for= forInput, class="checkbox-descr") #{title}
+                    input(class="checkbox", type="checkbox", id= idInput, data-type= inputDataType)
+    else
+        .form-elements__checkbox
+            .js-checkbox
+                div(class="checkbox__marks")
+                    i(class="fa fa-check checkbox__mark", aria-hidden="true", id= idIcon)
+                label(for= forInput, class="checkbox-descr") #{title}
+                    input(class="checkbox", type="checkbox", id= idInput, data-type= inputDataType)

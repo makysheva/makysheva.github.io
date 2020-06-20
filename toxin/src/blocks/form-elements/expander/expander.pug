@@ -1,0 +1,8 @@
+mixin expander(idIcon, title, idInput, inputDataType)
+    div(class="expander__wrapper")
+        div(class="checkbox__marks")
+            i(class="fa fa-check checkbox__mark" aria-hidden="true" id= idIcon)
+        div(class="expander__checkbox")
+            label(class="checkbox" for="checkbox-breakfast--open") #{title}
+                input(class="checkbox__input", type="checkbox", checked="", id= idInput, data-type= inputDataType)
+                div(class="checkbox__mark")
