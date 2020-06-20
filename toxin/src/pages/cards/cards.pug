@@ -1,9 +1,10 @@
 extends ../../base
-include ../../blocks/cards/find-apartments
+include ../../blocks/cards/cards-title
 include ../../blocks/form-elements/calendar/calendar
 include ../../blocks/form-elements/text-field/text-field
 include ../../blocks/form-elements/dropdown/dropdown
 include ../../blocks/form-elements/buttons/buttons
+include ../../blocks/form-elements/radio-btn/radio-btn
 
 block title
     | Cards
@@ -17,36 +18,48 @@ block cards-section
         .cards__wrapper
             .cards__column
                 .cards__item
-                    .find-apartments
-                        .find-apartments__item
-                            +title('find-apartments__title', 'Найдем номера под ваши пожелания')
+                    .find-apartments__item
+                        +title('cards__title', 'Найдем номера под ваши пожелания')
 
-                            form(class="find-apartments__form" action="/mock-address" method="get")
-                                .datepicker-field
-                                    .datepicker-field--left
-                                        .datepicker-field__title Прибытие
-                                        +datepickerLeft('text-field--datepicker text-field-datepicker--left', 'ДД.ММ.ГГГГ', 'startDate', 'start', 'material-icons--left-datepicker', 'expand_more')
-                                    .datepicker-field--right
-                                        .datepicker-field__title Выезд
-                                        +datepickerRight('text-field--datepicker text-field-datepicker--right', 'ДД.ММ.ГГГГ', 'endDate', 'end', 'material-icons--left-datepicker', 'expand_more')
+                        form(class="find-apartments__form" action="/mock-address" method="get")
+                            .datepicker-field
+                                .datepicker-field--left
+                                    +subtitle('datepicker-field__title', 'Прибытие')
+                                    +datepickerLeft('text-field--datepicker text-field-datepicker--left', 'ДД.ММ.ГГГГ', 'startDate', 'start', 'material-icons--left-datepicker', 'expand_more')
+                                .datepicker-field--right
+                                    +subtitle('datepicker-field__title', 'Выезд')
+                                    +datepickerRight('text-field--datepicker text-field-datepicker--right', 'ДД.ММ.ГГГГ', 'endDate', 'end', 'material-icons--left-datepicker', 'expand_more')
 
-                        .find-apartments__item
-                            h3(class="find-apartments__subtitle") Гости
-                        .find-apartments__dropdown
-                            form(action="")
-                                .form-elements__input--dropdown
-                                    +dropdown('Сколько гостей')
+                    .find-apartments__item
+                        +subtitle('find-apartments__subtitle', 'Гости')
+                    .find-apartments__dropdown
+                        form(action="")
+                            .form-elements__input--dropdown
+                                +dropdown('Сколько гостей')
 
-                                div(class="dropdown__menu")
-                                    +dropdownControls('item-adult', 'Взрослые', '-', '0', '+')
-                                    +dropdownControls('item-children', 'Дети', '-', '0', '+')
-                                    +dropdownControls('item-babies', 'Младенцы', '-', '0', '+')
+                            div(class="dropdown__menu")
+                                +dropdownControls('item-adult', 'Взрослые', '-', '0', '+')
+                                +dropdownControls('item-children', 'Дети', '-', '0', '+')
+                                +dropdownControls('item-babies', 'Младенцы', '-', '0', '+')
 
-                                    div(class="dropdown__buttons" data-id="item-btn")
-                                        button(class="clear-btn") Очистить
-                                        button(class="apply-btn") Применить
+                                div(class="dropdown__buttons" data-id="item-btn")
+                                    button(class="clear-btn") Очистить
+                                    button(class="apply-btn") Применить
 
-                        .find-apartments__item
-                            +longButton('long-button', 'Подобрать номер', 'long-button__icon', 'arrow_forward')
+                    .find-apartments__item
+                        +longButton('find-apartments__button long-button', 'Подобрать номер', 'long-button__icon', 'arrow_forward')
 
-                        //- доделать кнопку длинную
+                .cards__item
+                    .register
+                        +title('cards__title', 'Регистрация аккаунта')
+                        +inputField('', 'cards__field--name text-field', '', 'text', 'Имя')
+                        +inputField('', 'cards__field--surname text-field', '', 'text', 'Фамилия')
+
+                        .register__gender
+                            +radioButton('male-btn', 'marker__descr--female', 'Мужской', 'male-btn', 'checked')
+                            +radioButton('female-btn', 'marker__descr--male', 'Женский', 'female-btn', '')
+
+                        .register__birthday
+                            +subtitle('register-birthday__subtitle', 'дата рождения')
+
+                            //-доделать дата рождения, разобраться с классами

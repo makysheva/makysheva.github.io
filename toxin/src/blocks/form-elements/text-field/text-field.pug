@@ -2,6 +2,7 @@ mixin textField(text, forInput)
     .form-elements__descr
         label(for="text-field-" + forInput) #{text}
 
+//-если есть модификатор у класса, то НЕ добавлять этому инпуту idInput
 mixin inputField(modificator, inputFieldClassName, idInput, inputType, email)
     if modificator
         div(class="form-elements__input"+ modificator)
@@ -13,8 +14,3 @@ mixin inputField(modificator, inputFieldClassName, idInput, inputType, email)
 mixin formElementsHeader(descr)
     .form-elements__descr
         span #{descr}
-
-//- mixin widgetsInfo(widget, widgetTitle, descr, widgetDescr)
-//-     .widget.widget-items(class= 'widget-title--' + widget)= widgetTitle
-//-     .widget-item(class= 'widget-descr--' + descr)= widgetDescr
-//-если есть модификатор у класса, то НЕ добавлять этому инпуту idInput

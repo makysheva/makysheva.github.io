@@ -34,15 +34,10 @@ html, body {
 }
 
 .cards__item{
-    margin-bottom: 40px;
-}
-
-//первая карточка - поиск апартаментов
-
-.find-apartments{
     max-width: 380px;
     height: 374px;
     width: 100%;
+    margin-bottom: 40px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
@@ -51,7 +46,9 @@ html, body {
     padding: 40px 30px 0px 30px;
 }
 
-.find-apartments__title{
+//первая карточка - поиск апартаментов
+
+.cards__title{
     width: 320px;
     font-family: Quicksand, sans-serif;
     font-style: normal;
@@ -94,4 +91,18 @@ html, body {
     text-transform: uppercase;
     color: #1F2041;
     padding: 20px 0 5px 0;
+}
+
+.find-apartments__button{
+    margin-top: 31px;
+}
+
+// вторая карточка - регистрация аккаунта
+.cards__field--name{
+    margin-bottom: 10px;
+}
+
+.register__gender{
+    display: flex;
+    margin-top: 10px;
 }

@@ -5,7 +5,9 @@ import '../../blocks/form-elements/calendar/calendar'
 import '../../blocks/form-elements/calendar/calendar.scss'
 import '../../blocks/form-elements/dropdown/dropdown'
 import '../../blocks/form-elements/dropdown/dropdown.scss'
-import '../../pages/form-elements/form-elements.scss'
+import '../../blocks/form-elements/buttons/buttons.scss'
+import '../../blocks/form-elements/text-field/text-field.scss'
+import '../../blocks/form-elements/radio-btn/radio-btn.scss'
 
 
 console.log('in cards.js')
