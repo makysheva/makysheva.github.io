@@ -28,65 +28,280 @@
 </div>
     </div>
     <div class="container">
-      <div class="cards__item">
-        <div class="find-apartments-card">
-          <h1 class="find-apartments-card__title">Найдем номера под ваши пожелания</h1>
-          <form class="find-apartments-card__form" action="/mock-address" method="get">
-            <div class="find-apartments-card__body">
-              <div class="find-apartments-card__item find-apartments-card__item_high">
-                <div class="range-dates">
-                  <div class="calendar js-calendar" style="display: none;"></div>
-                  <div class="range-dates__input">
-                    <div class="dropdown-field">
-                      <div class="dropdown-field__title">Прибытие</div>
-                      <label class="dropdown-field__icon-wrapper">
-                        <input class="dropdown-field__input" placeholder="ДД.ММ.ГГГГ">
-                      </label>
+      <div class="cards__wrapper">
+        <div class="cards__column">
+          <div class="cards__item">
+            <div class="find-apartments__items">
+              <div class="find-apartments__item">
+                <h1 class="cards__title">Найдем номера под ваши пожелания</h1>
+                <form class="find-apartments__form" action="/mock-address" method="get">
+                  <div class="datepicker-field">
+                    <div class="datepicker-field--left">
+                      <h3 class="datepicker-field__title">Прибытие</h3>
+                      <div class="datepicker--left">
+                        <input class="text-field--datepicker text-field-datepicker--left" placeholder="ДД.ММ.ГГГГ" type="text" name="start" id="startDate" readonly><i class="material-icons--left-datepicker">expand_more</i>
+                      </div>
+                    </div>
+                    <div class="datepicker-field--right">
+                      <h3 class="datepicker-field__title">Выезд</h3>
+                      <div class="datepicker--right">
+                        <input class="text-field--datepicker text-field-datepicker--right" placeholder="ДД.ММ.ГГГГ" type="text" name="end" id="endDate" readonly><i class="material-icons--left-datepicker">expand_more</i>
+                      </div>
                     </div>
                   </div>
-                  <div class="range-dates__input">
-                    <div class="dropdown-field">
-                      <div class="dropdown-field__title">Выезд</div>
-                      <label class="dropdown-field__icon-wrapper">
-                        <input class="dropdown-field__input" placeholder="ДД.ММ.ГГГГ">
-                      </label>
+                </form>
+              </div>
+              <div class="find-apartments__item">
+                <h3 class="find-apartments__subtitle">Гости</h3>
+              </div>
+              <div class="find-apartments__dropdown">
+                <form action="">
+                  <div class="form-elements__input--dropdown">
+                    <input class="text-field--dropdown" placeholder="Сколько гостей" readonly="readonly"><i class="material-icons">expand_more</i>
+                  </div>
+                  <div class="dropdown__menu">
+                    <div class="dropdown__menu-option" data-id="item-adult">
+                      <div class="dropdown__item">Взрослые</div>
+                      <div class="dropdown__controls">
+                        <div class="dropdown__minus">-</div>
+                        <div class="dropdown__count">0</div>
+                        <div class="dropdown__plus">+</div>
+                      </div>
                     </div>
+                    <div class="dropdown__menu-option" data-id="item-children">
+                      <div class="dropdown__item">Дети</div>
+                      <div class="dropdown__controls">
+                        <div class="dropdown__minus">-</div>
+                        <div class="dropdown__count">0</div>
+                        <div class="dropdown__plus">+</div>
+                      </div>
+                    </div>
+                    <div class="dropdown__menu-option" data-id="item-babies">
+                      <div class="dropdown__item">Младенцы</div>
+                      <div class="dropdown__controls">
+                        <div class="dropdown__minus">-</div>
+                        <div class="dropdown__count">0</div>
+                        <div class="dropdown__plus">+</div>
+                      </div>
+                    </div>
+                    <div class="dropdown__buttons" data-id="item-btn">
+                      <button class="clear-btn">Очистить</button>
+                      <button class="apply-btn">Применить</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="find-apartments__item">
+                <button class="find-apartments__button long-button">Подобрать номер<i class="long-button__icon">arrow_forward</i></button>
+              </div>
+            </div>
+          </div>
+          <div class="cards__item">
+            <div class="register__items">
+              <div class="register">
+                <h1 class="cards__title">Регистрация аккаунта</h1>
+                <div class="form-elements__input">
+                  <input class="cards__field--name text-field" type="text" id="text-field-" placeholder="Имя">
+                </div>
+                <div class="form-elements__input">
+                  <input class="cards__field--surname text-field" type="text" id="text-field-" placeholder="Фамилия">
+                </div>
+                <div class="register__gender">
+                  <div class="form-elements__radio">
+                    <label class="marker__descr marker__descr--female" for="male-btn">Мужской
+                      <input class="gender-btn" type="radio" id="male-btn" name="gender" checked>
+                      <div class="radio__marker"></div>
+                    </label>
+                  </div>
+                  <div class="form-elements__radio">
+                    <label class="marker__descr marker__descr--male" for="female-btn">Женский
+                      <input class="gender-btn" type="radio" id="female-btn" name="gender">
+                      <div class="radio__marker"></div>
+                    </label>
                   </div>
                 </div>
-              </div>
-              <div class="find-apartments-card__item find-apartments-card__item_high">
-                <h3 class="find-apartments-card__subtitle">Гости</h3>
-                <div class="configuration-dropdown">
-                  <input class="js-dropdown-find-apartments configuration-dropdown__header" readonly="readonly">
-                  <div class="configuration-dropdown__content configuration-dropdown__content_hided">
-                    <div class="configuration-dropdown__item">
-                      <div class="configuration-dropdown__option">Взрослых</div>
-                      <div class="configuration-dropdown__controls">
-                        <div class="configuration-dropdown__button configuration-dropdown__button_disabled">-</div>
-                        <div class="configuration-dropdown__counter">0</div>
-                        <div class="configuration-dropdown__button">+</div>
-                      </div>
-                    </div>
-                    <div class="configuration-dropdown__item">
-                      <div class="configuration-dropdown__option">Детей</div>
-                      <div class="configuration-dropdown__controls">
-                        <div class="configuration-dropdown__button configuration-dropdown__button_disabled">-</div>
-                        <div class="configuration-dropdown__counter">0</div>
-                        <div class="configuration-dropdown__button">+</div>
-                      </div>
-                    </div>
-                    <div class="configuration-dropdown__footer">
-                      <div class="simple-button simple-button_disabled" style="visibility: hidden;">Очистить</div>
-                      <div class="simple-button">Применить</div>
-                    </div>
-                  </div><i class="material-icons configuration-dropdown__header-icon">keyboard_arrow_down</i>
+                <div class="register__birthday">
+                  <h3 class="datepicker-field__title">дата рождения</h3>
+                  <div class="form-elements__input">
+                    <input class="register__birthday--field text-field" type="text" id="text-field-" placeholder="ДД.ММ.ГГГГ">
+                  </div>
+                </div>
+                <div class="register__service">
+                  <h3 class="datepicker-field__title">данные для входа в сервис</h3>
+                  <div class="form-elements__input">
+                    <input class="register__service--email text-field" type="email" id="text-field-" placeholder="Email">
+                  </div>
+                  <div class="form-elements__input">
+                    <input class="register__service--password text-field" type="password" id="text-field-" placeholder="Пароль">
+                  </div>
+                  <div class="form-elements__toggle">
+                    <label class="toggle__descr" for="register__service--toggle">Получать спецпредложения
+                      <input class="toggle-btn" type="checkbox" id="register__service--toggle" name="toggle">
+                      <div class="toggle__marker"></div>
+                    </label>
+                  </div>
+                </div>
+                <div class="register__button">
+                  <button class="register__button--long long-button">перейти к оплате<i class="long-button__icon">arrow_forward</i></button>
+                </div>
+                <div class="register__account">
+                  <div class="account__text">Уже есть аккаунт на Toxin</div>
+                  <div class="account__button">
+                    <button class="rounded-button">Войти</button>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="find-apartments-card__button">
-              <button class="long-button">Подобрать номер</button>
-            </div><i class="long-button__icon">arrow_forward</i>
-          </form>
+          </div>
+        </div>
+        <div class="cards__column">
+          <div class="cards__item">
+            <div class="booking__items">
+              <div class="booking__item">
+                <div class="booking__item--apartment">
+                  <div class="apartment__info"><span class="apartment__number">№</span><span class="apartment__number apartment__number--large"> 888</span><span class="apartment__text"> люкс</span></div>
+                  <div class="price"><span class="price__number">9 990₽</span><span class="price__text"> в сутки</span></div>
+                </div>
+              </div>
+              <div class="booking__item">
+                <form class="find-apartments__form" action="/mock-address" method="get">
+                  <div class="datepicker-field">
+                    <div class="datepicker-field--left">
+                      <h3 class="datepicker-field__title">Прибытие</h3>
+                      <div class="datepicker--left">
+                        <input class="text-field--datepicker text-field-datepicker--left" placeholder="ДД.ММ.ГГГГ" type="text" name="start" id="startDate" readonly><i class="material-icons--left-datepicker">expand_more</i>
+                      </div>
+                    </div>
+                    <div class="datepicker-field--right">
+                      <h3 class="datepicker-field__title">Выезд</h3>
+                      <div class="datepicker--right">
+                        <input class="text-field--datepicker text-field-datepicker--right" placeholder="ДД.ММ.ГГГГ" type="text" name="end" id="endDate" readonly><i class="material-icons--left-datepicker">expand_more</i>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="booking__item">
+                <div class="find-apartments__item">
+                  <h3 class="find-apartments__subtitle">Гости</h3>
+                </div>
+                <div class="find-apartments__dropdown">
+                  <form action="">
+                    <div class="form-elements__input--dropdown">
+                      <input class="text-field--dropdown" placeholder="3 гостя" readonly="readonly"><i class="material-icons">expand_more</i>
+                    </div>
+                    <div class="dropdown__menu">
+                      <div class="dropdown__menu-option" data-id="item-adult">
+                        <div class="dropdown__item">Взрослые</div>
+                        <div class="dropdown__controls">
+                          <div class="dropdown__minus">-</div>
+                          <div class="dropdown__count">0</div>
+                          <div class="dropdown__plus">+</div>
+                        </div>
+                      </div>
+                      <div class="dropdown__menu-option" data-id="item-children">
+                        <div class="dropdown__item">Дети</div>
+                        <div class="dropdown__controls">
+                          <div class="dropdown__minus">-</div>
+                          <div class="dropdown__count">0</div>
+                          <div class="dropdown__plus">+</div>
+                        </div>
+                      </div>
+                      <div class="dropdown__menu-option" data-id="item-babies">
+                        <div class="dropdown__item">Младенцы</div>
+                        <div class="dropdown__controls">
+                          <div class="dropdown__minus">-</div>
+                          <div class="dropdown__count">0</div>
+                          <div class="dropdown__plus">+</div>
+                        </div>
+                      </div>
+                      <div class="dropdown__buttons" data-id="item-btn">
+                        <button class="clear-btn">Очистить</button>
+                        <button class="apply-btn">Применить</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="booking__item">
+                <div class="invoice__item">
+                  <div class="invoice">
+                    <div class="invoice__row">
+                      <div class="invoice__service">9 990₽ х 4 суток</div>
+                      <div class="invoice__sum">39 960₽</div>
+                    </div>
+                    <div class="invoice__row">
+                      <div class="invoice__service invoice__service_with-icon">Сбор за услуги: скидка 2 179₽</div>
+                      <div class="invoice__sum">0₽</div>
+                    </div>
+                    <div class="invoice__row">
+                      <div class="invoice__service  invoice__service_with-icon">Сбор за дополнительные услуги</div>
+                      <div class="invoice__sum">300₽</div>
+                    </div>
+                    <div class="invoice__row invoice__row_font_large">
+                      <h2 class="invoice__block">Итого</h2>
+                      <div class="invoice__line"></div>
+                      <h2 class="invoice__block">38 081₽</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="booking__item">
+                <button class="booking__button--long long-button">забронировать<i class="long-button__icon">arrow_forward</i></button>
+              </div>
+            </div>
+          </div>
+          <div class="cards__item">
+            <div class="enter__items">
+              <div class="enter__item">
+                <h1 class="cards__title">Войти</h1>
+                <div class="form-elements__input">
+                  <input class="register__service--email text-field" type="email" id="text-field-" placeholder="Email">
+                </div>
+                <div class="form-elements__input">
+                  <input class="register__service--password text-field" type="password" id="text-field-" placeholder="Пароль">
+                </div>
+              </div>
+              <div class="enter__item">
+                <button class="enter__button--long long-button">войти<i class="long-button__icon">arrow_forward</i></button>
+              </div>
+              <div class="enter__item">
+                <div class="register__account">
+                  <div class="enter__text">Нет аккаунта на Toxin?</div>
+                  <div class="enter__button">
+                    <button class="rounded-button">создать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cards__column">
+          <div class="cards__item">
+            <div class="text-field-datepicker--left"></div>
+          </div>
+          <div class="cards__item">
+            <div class="gallery__items">
+              <div class="gallery">
+                <div class="gallery__image"><img src="../../assets/img/gallery-1.jpg" alt="apartment photo">
+                  <div class="gallery__left-arrow gallery__arrow"><i class="material-icons gallery__icon">keyboard_arrow_left</i></div>
+                  <div class="gallery__right-arrow gallery__arrow"><i class="material-icons gallery__icon">keyboard_arrow_left</i></div>
+                  <div class="gallery__point-container">
+                    <div class="gallery__point gallery__point_filled"></div>
+                    <div class="gallery__point"></div>
+                    <div class="gallery__point"></div>
+                    <div class="gallery__point"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cards__item">
+            <div class="booking__item--apartment">
+              <div class="apartment__info"><span class="apartment__number">№</span><span class="apartment__number apartment__number--large"> 888</span><span class="apartment__text"> люкс</span></div>
+              <div class="price"><span class="price__number">9 990₽</span><span class="price__text"> в сутки</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

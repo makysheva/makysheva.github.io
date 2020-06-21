@@ -1,0 +1,9 @@
+mixin booking(number, numberLarge, text, price, priceText)
+    .booking__item--apartment
+        .apartment__info
+            span.apartment__number #{number}
+            span.apartment__number.apartment__number--large  #{numberLarge}
+            span.apartment__text  #{text}
+        .price
+            span.price__number #{price}
+            span.price__text #{priceText}

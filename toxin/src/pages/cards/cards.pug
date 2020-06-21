@@ -1,11 +1,13 @@
 extends ../../base
-include ../../blocks/cards/cards-title
+include ../../blocks/cards/cards-title/cards-title
 include ../../blocks/form-elements/calendar/calendar
 include ../../blocks/form-elements/text-field/text-field
 include ../../blocks/form-elements/dropdown/dropdown
 include ../../blocks/form-elements/buttons/buttons
 include ../../blocks/form-elements/radio-btn/radio-btn
 include ../../blocks/form-elements/toggle/toggle
+include ../../blocks/cards/invoice/invoice
+include ../../blocks/cards/booking/booking
 
 block title
     | Cards
@@ -79,3 +81,89 @@ block cards-section
                                 .account__text Уже есть аккаунт на Toxin
                                 .account__button
                                     +accountButton('rounded-button', 'Войти')
+
+            .cards__column
+                .cards__item
+                    .booking__items
+                        .booking__item
+                            +booking('№', '888', 'люкс', '9 990₽', ' в сутки')
+
+                        .booking__item
+                            form(class="find-apartments__form" action="/mock-address" method="get")
+                                .datepicker-field
+                                    .datepicker-field--left
+                                        +subtitle('datepicker-field__title', 'Прибытие')
+                                        +datepickerLeft('text-field--datepicker text-field-datepicker--left', 'ДД.ММ.ГГГГ', 'startDate', 'start', 'material-icons--left-datepicker', 'expand_more')
+                                    .datepicker-field--right
+                                        +subtitle('datepicker-field__title', 'Выезд')
+                                        +datepickerRight('text-field--datepicker text-field-datepicker--right', 'ДД.ММ.ГГГГ', 'endDate', 'end', 'material-icons--left-datepicker', 'expand_more')
+
+                        .booking__item
+                            .find-apartments__item
+                                +subtitle('find-apartments__subtitle', 'Гости')
+                            .find-apartments__dropdown
+                                form(action="")
+                                    .form-elements__input--dropdown
+                                        +dropdown('3 гостя')
+
+                                    div(class="dropdown__menu")
+                                        +dropdownControls('item-adult', 'Взрослые', '-', '0', '+')
+                                        +dropdownControls('item-children', 'Дети', '-', '0', '+')
+                                        +dropdownControls('item-babies', 'Младенцы', '-', '0', '+')
+
+                                        div(class="dropdown__buttons" data-id="item-btn")
+                                            button(class="clear-btn") Очистить
+                                            button(class="apply-btn") Применить
+
+                        .booking__item
+                            .invoice__item
+                                .invoice
+                                    +invoice('invoice__service', '9 990₽ х 4 суток', '39 960₽')
+                                    +invoice('invoice__service invoice__service_with-icon', 'Сбор за услуги: скидка 2 179₽', '0₽')
+                                    +invoice('invoice__service  invoice__service_with-icon', 'Сбор за дополнительные услуги', '300₽')
+                                    +invoiceTotal('invoice__row invoice__row_font_large', 'Итого', 'invoice__block', '38 081₽')
+
+
+                        .booking__item
+                            +longButton('booking__button--long long-button', 'забронировать', 'long-button__icon', 'arrow_forward')
+
+                .cards__item
+                    .enter__items
+                        .enter__item
+                            +title('cards__title', 'Войти')
+                            +inputField('', 'register__service--email text-field', '', 'email', 'Email')
+                            +inputField('', 'register__service--password text-field', '', 'password', 'Пароль')
+
+                        .enter__item
+                            +longButton('enter__button--long long-button', 'войти', 'long-button__icon', 'arrow_forward')
+
+                        .enter__item
+                            .register__account
+                                .enter__text Нет аккаунта на Toxin?
+                                .enter__button
+                                    +accountButton('rounded-button', 'создать')
+
+            .cards__column
+                .cards__item
+                    +datepickerLeft('text-field-datepicker--left', '', '', '', '', '')
+
+                .cards__item
+                    .gallery__items
+                        .gallery
+                            .gallery__image
+                                img(src="../../assets/img/gallery-1.jpg" alt="apartment photo")
+                                .gallery__left-arrow.gallery__arrow
+                                    i(class="material-icons gallery__icon") keyboard_arrow_left
+                                .gallery__right-arrow.gallery__arrow
+                                    i(class="material-icons gallery__icon") keyboard_arrow_left
+                                .gallery__point-container
+                                    .gallery__point.gallery__point_filled
+                                    .gallery__point
+                                    .gallery__point
+                                    .gallery__point
+
+
+                .cards__item
+                    +booking('№', '888', 'люкс', '9 990₽', ' в сутки')
+
+//- доделать галерею, вставить картинку
