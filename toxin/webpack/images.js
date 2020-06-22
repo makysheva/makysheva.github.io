@@ -5,16 +5,15 @@ module.exports = function(){
         module: {
             rules: [
                 {
-                    test: /\.(jpeg|jpg|png|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                    test: /\.(jpg|png|svg)$/,
                     loader: 'file-loader',
                     options: {
-                      name: '[name].[ext]'
-                    }
+                        name: '[name].[ext]',
+                    },
                 },
             ]
         },
         plugins: [
-
             new CopyWebpackPlugin([
                 {
                     from: 'src/assets/img',

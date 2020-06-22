@@ -28,6 +28,17 @@ const common = merge([
             path: PATHS.build,
             filename: './js/[name].js'
         },
+        module: {
+            rules: [
+                {
+                    test: /\.(jpeg|jpg|png|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                    loader: 'file-loader',
+                    options: {
+                      name: '[name].[ext]'
+                    }
+                },
+            ]
+        },
         plugins: [
             new HtmlWebpackPlugin({
                 filename: 'index.html',

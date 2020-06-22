@@ -151,7 +151,7 @@ block cards-section
                     .gallery__items
                         .gallery
                             .gallery__image
-                                img(src="../../assets/img/gallery-1.jpg" alt="apartment photo")
+                                img(src=require("../../assets/img/gallery-1.jpg"), alt="apartment photo")
                                 .gallery__left-arrow.gallery__arrow
                                     i(class="material-icons gallery__icon") keyboard_arrow_left
                                 .gallery__right-arrow.gallery__arrow
@@ -166,4 +166,4 @@ block cards-section
                 .cards__item
                     +booking('№', '888', 'люкс', '9 990₽', ' в сутки')
 
-//- доделать галерею, вставить картинку
+//- доделать галерею, вставить картинку, разобраться с ID в inputFiled(файл text-field.pug),убрать с миксина id
