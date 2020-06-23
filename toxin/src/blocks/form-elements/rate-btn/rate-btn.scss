@@ -8,6 +8,7 @@
 .form-elements__rate {
     display: flex;
     user-select: none;
+    padding-right: 20px;
 }
 
 .rating__icon {
@@ -21,8 +22,4 @@
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.form-elements__rate--right {
-    padding-left: 20px;
 }
