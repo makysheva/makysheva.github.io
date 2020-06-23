@@ -1,0 +1,20 @@
+extends ../../base
+include ../../blocks/headers-footers/menu/menu
+
+block title
+    | Headers & Footers
+block main
+    .logo-wrapper
+        include ../../blocks/logo/logo-grey
+
+block headers-section
+    .container
+        .header__wrapper
+            .header__item--register
+                //-registered
+                .logo-wrapper
+                    include ../../blocks/logo/logo-main
+
+                .header__menu--register
+                    +menu('О нас')
+//- доделать меню

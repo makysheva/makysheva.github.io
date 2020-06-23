@@ -20,24 +20,13 @@ const common = merge([
         entry: {
             'index': PATHS.source + '/pages/index/index.js',
             'colors-type': PATHS.source + '/pages/colors-type/colors-type.js',
-            'header': PATHS.source + '/pages/header/header.js',
+            'header': PATHS.source + '/pages/headers-footers/headers-footers.js',
             'form-elements': PATHS.source + '/pages/form-elements/form-elements.js',
             'cards': PATHS.source + '/pages/cards/cards.js',
         },
         output: {
             path: PATHS.build,
             filename: './js/[name].js'
-        },
-        module: {
-            rules: [
-                {
-                    test: /\.(jpeg|jpg|png|svg)(\?v=\d+\.\d+\.\d+)?$/,
-                    loader: 'file-loader',
-                    options: {
-                      name: '[name].[ext]'
-                    }
-                },
-            ]
         },
         plugins: [
             new HtmlWebpackPlugin({
@@ -51,9 +40,9 @@ const common = merge([
                 template: PATHS.source + '/pages/colors-type/colors-type.pug'
             }),
             new HtmlWebpackPlugin({
-                filename: 'header.html',
+                filename: 'headers-footers.html',
                 chunks: ['header'],
-                template: PATHS.source + '/pages/header/header.pug'
+                template: PATHS.source + '/pages/headers-footers/headers-footers.pug'
             }),
             new HtmlWebpackPlugin({
                 filename: 'form-elements.html',
