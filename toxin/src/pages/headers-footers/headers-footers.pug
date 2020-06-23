@@ -3,6 +3,7 @@ include ../../blocks/headers-footers/menu/menu
 
 block title
     | Headers & Footers
+
 block main
     .logo-wrapper
         include ../../blocks/logo/logo-grey
@@ -11,10 +12,25 @@ block headers-section
     .container
         .header__wrapper
             .header__item--register
-                //-registered
                 .logo-wrapper
                     include ../../blocks/logo/logo-main
-
                 .header__menu--register
-                    +menu('О нас')
-//- доделать меню
+                    .menu
+                        ul.menu__list
+                            -
+                                let menuList = [
+                                    {title: "О нас", link: "#", showFooter: true,},
+                                    {title: "Услуги", link: "#",showFooter: true,
+                                        subnav: [{title: "item 1",link: "#",}, {title: "item 2",link: "#",}]},
+                                    {title: "Вакансии", link: "#", showFooter: true,},
+                                    {title: "Новости", link: "#", showFooter: true,},
+                                    {title: "Соглашения", link: "#", showFooter: true,
+                                        subnav: [{title: "item 1", link: "#",},{title: "item 2",link: "#",}]},
+                                ]
+
+                        each element in menuList
+                            li.menu__item
+                                +elementMenu(element)
+
+
+

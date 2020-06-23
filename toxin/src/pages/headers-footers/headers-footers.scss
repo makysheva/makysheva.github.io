@@ -17,15 +17,24 @@ html, body {
     margin: auto;
 }
 
-.header__item{
+//- header для регистрации
+.header__item--register{
     background-color: #fff;
     box-shadow: 0px 10px 20px rgba(31,32,65,0.05);
     margin-bottom: 40px;
     height: 70px;
+    display: flex;
+    flex-direction: row;
 }
 
 .logo-wrapper{
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
 }
