@@ -1,3 +1,13 @@
-mixin elementMenu(element)
+mixin elementMenu(element, subnav)
     li.menu__item
-        a(class="menu__link", href= element.link) #{element.title}
+        if (subnav)
+            li.menu__subitem
+                a(class="menu__link menu__expander", href= element.link) #{element.title}
+                li.menu__submenu.menu__submenu_visible
+                    a(class="menu__link", href= element.link) #{element.title}
+
+        else if (element.title === 'О нас')
+            a(class="menu__link menu__link--bold", href= element.link) #{element.title}
+
+        else
+            a(class="menu__link", href= element.link) #{element.title}

@@ -1,0 +1,15 @@
+.menu__expander{
+    display: flex;
+}
+
+.menu__expander:after {
+    content: '\e313';
+    font-family: 'Material Icons';
+    font-size: 1.5rem;
+    width: 24px;
+    line-height: 1.25rem;
+}
+
+.menu__submenu_visible{
+    display: flex;
+}

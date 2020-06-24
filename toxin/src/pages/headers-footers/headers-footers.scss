@@ -17,6 +17,14 @@ html, body {
     margin: auto;
 }
 
+.logo{
+    padding: 30px 0px 62px 30px;
+}
+
+.logo-main{
+    padding-right: 12px;
+}
+
 //- header для регистрации
 .header__item--register{
     background-color: #fff;
@@ -25,6 +33,17 @@ html, body {
     height: 70px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+}
+
+.header__menu--register{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
 }
 
 .logo-wrapper{
@@ -33,8 +52,33 @@ html, body {
     align-items: center;
 }
 
-.menu{
+.menu__list{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     list-style: none;
+}
+
+.header__button{
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: inherit;
+    position: relative;
+    top: 14px;
+}
+
+.menu__link{
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(31, 32, 65, 0.5);
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+.menu__link--bold{
+    font-weight: bold;
 }
