@@ -1,5 +1,21 @@
 .menu__expander{
+    font-family: 'Material Icons', OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 20px;
     display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(31, 32, 65, 0.5);
+}
+
+.menu{
+    position: relative;
+}
+
+.menu__submenu--wrap{
+    position: absolute;
 }
 
 .menu__expander:after {
@@ -10,6 +26,49 @@
     line-height: 1.25rem;
 }
 
-.menu__submenu_visible{
+.menu__list{
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.menu__submenu{
+    display: none;
+    position: relative;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.menu__submenu--visible{
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu__link{
+    padding: 10px 16px;
+    width: 85px;
+}
+
+.submenu__link:hover {
+    background-color: rgba(31,32,65,0.05);
+}
+
+.menu__link{
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(31, 32, 65, 0.5);
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+.menu__link--icon{
+    padding-right: 0;
+}
+
+.menu__link--bold{
+    font-weight: bold;
 }

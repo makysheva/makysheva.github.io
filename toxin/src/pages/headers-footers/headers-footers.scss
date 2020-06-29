@@ -52,13 +52,6 @@ html, body {
     align-items: center;
 }
 
-.menu__list{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    list-style: none;
-}
-
 .header__button{
     z-index: 1;
     display: flex;
@@ -66,19 +59,4 @@ html, body {
     justify-content: inherit;
     position: relative;
     top: 14px;
-}
-
-.menu__link{
-    font-family: Montserrat, OpenSans, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-    color: rgba(31, 32, 65, 0.5);
-    text-decoration: none;
-    padding-right: 20px;
-}
-
-.menu__link--bold{
-    font-weight: bold;
 }

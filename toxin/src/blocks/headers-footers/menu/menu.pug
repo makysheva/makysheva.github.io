@@ -1,10 +1,12 @@
-mixin elementMenu(element, subnav)
-    li.menu__item
-        if (subnav)
-            li.menu__subitem
-                a(class="menu__link menu__expander", href= element.link) #{element.title}
-                li.menu__submenu.menu__submenu_visible
-                    a(class="menu__link", href= element.link) #{element.title}
+mixin elementMenu(element)
+    .menu__item
+        if (element.subnav)
+            .menu__submenu--wrap
+                .menu__expander.js-menu__expander
+                    a(class="menu__link menu__link--icon", href= element.link) #{element.title}
+                .menu__submenu.js-menu__submenu
+                    a(class="menu__link submenu__link", href= element.link) #{element.title}
+                    a(class="menu__link submenu__link", href= element.link) #{element.title}
 
         else if (element.title === 'О нас')
             a(class="menu__link menu__link--bold", href= element.link) #{element.title}

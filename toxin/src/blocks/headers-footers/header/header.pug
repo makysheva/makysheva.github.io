@@ -8,7 +8,7 @@ mixin header()
                 include ../../logo/logo-main
             .header__menu--register
                 .menu
-                    ul.menu__list
+                    .menu__list
                         -
                             let menuList = [
                                 {title: "О нас", link: "#", showFooter: true,},
@@ -21,10 +21,10 @@ mixin header()
                             ]
 
                         each element in menuList
-                            +elementMenu(element, element.subnav)
+                            +elementMenu(element)
 
                 .header__button
                     +button('rounded-button', 'Войти')
                     +button('button', 'Зарегистрироваться')
 
-//- доделать подменю
+//- доделать логику, чтобы по-одному открывались под меню
