@@ -5,8 +5,8 @@ mixin elementMenu(element)
                 .menu__expander.js-menu__expander
                     a(class="menu__link menu__link--icon", href= element.link) #{element.title}
                 .menu__submenu.js-menu__submenu
-                    a(class="menu__link submenu__link", href= element.link) #{element.title}
-                    a(class="menu__link submenu__link", href= element.link) #{element.title}
+                    a(class="menu__link submenu__link", href= element.link) item 1
+                    a(class="menu__link submenu__link", href= element.link) item 2
 
         else if (element.title === 'О нас')
             a(class="menu__link menu__link--bold", href= element.link) #{element.title}
