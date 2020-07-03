@@ -1,24 +1,21 @@
 extends ../../base
+include ../../blocks/headers-footers/header/header
 include ../../blocks/headers-footers/menu/menu
 include ../../blocks/form-elements/buttons/buttons
-include ../../blocks/headers-footers/header/header
+include ../../blocks/cards/find-apartments-card/find-apartments-card
 include ../../blocks/headers-footers/footer/footer
-include ../../blocks/headers-footers/light-footer/light-footer
 
 block title
-    | Headers & Footers
+    | Landing
 
-block main
-    .logo-wrapper
-        include ../../blocks/logo/logo-grey
+block landing-section
+    +header('headerRegister')
 
-block headers-section
-    .container
-        +header('headerRegister')
-        +header('headerRegistered')
+    .landing__container
+        +findApartmentsCard()
+        div(class="landing__text") Лучшие номера для вашей работы, отдыха и просто вдохновения
 
-block footers-section
-    .container
+    .landing__footer
         +footer({
             navigation: [
                 {
@@ -49,5 +46,3 @@ block footers-section
                 },
             ]
         })
-
-        +lightFooter()

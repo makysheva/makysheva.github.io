@@ -23,6 +23,7 @@ const common = merge([
             'header': PATHS.source + '/pages/headers-footers/headers-footers.js',
             'form-elements': PATHS.source + '/pages/form-elements/form-elements.js',
             'cards': PATHS.source + '/pages/cards/cards.js',
+            'landing': PATHS.source + '/pages/landing/landing.js',
         },
         output: {
             path: PATHS.build,
@@ -53,6 +54,11 @@ const common = merge([
                 filename: 'cards.html',
                 chunks: ['cards'],
                 template: PATHS.source + '/pages/cards/cards.pug'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'landing.html',
+                chunks: ['landing'],
+                template: PATHS.source + '/pages/landing/landing.pug'
             }),
             new webpack.ProvidePlugin({
                 $: 'jquery',
