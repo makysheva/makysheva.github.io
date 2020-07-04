@@ -1,5 +1,6 @@
 extends ../../base
 include ../../blocks/cards/find-apartments-card/find-apartments-card
+include ../../blocks/cards/register-account-card/register-account-card
 include ../../blocks/form-elements/text-field/text-field
 include ../../blocks/form-elements/radio-btn/radio-btn
 include ../../blocks/form-elements/toggle/toggle
@@ -21,34 +22,7 @@ block cards-section
             .cards__column
                 +findApartmentsCard()
 
-                .cards__item
-                    .register__items
-                        .register
-                            +title('cards__title', 'Регистрация аккаунта')
-                            +inputField('', 'cards__field--name text-field', '', 'text', 'Имя')
-                            +inputField('', 'cards__field--surname text-field', '', 'text', 'Фамилия')
-
-                            .register__gender
-                                +radioButton('male-btn', 'marker__descr--female', 'Мужской', 'male-btn', 'checked')
-                                +radioButton('female-btn', 'marker__descr--male', 'Женский', 'female-btn', '')
-
-                            .register__birthday
-                                +subtitle('datepicker-field__title', 'дата рождения')
-                                +inputField('', 'register__birthday--field text-field', '', 'text', 'ДД.ММ.ГГГГ')
-
-                            .register__service
-                                +subtitle('datepicker-field__title', 'данные для входа в сервис')
-                                +inputField('', 'register__service--email text-field', '', 'email', 'Email')
-                                +inputField('', 'register__service--password text-field', '', 'password', 'Пароль')
-                                +toggle('register__service--toggle', 'Получать спецпредложения', 'register__service--toggle', '')
-
-                            .register__button
-                                +longButton('register__button--long long-button', 'перейти к оплате', 'long-button__icon', 'arrow_forward')
-
-                            .register__account
-                                .account__text Уже есть аккаунт на Toxin
-                                .account__button
-                                    +accountButton('rounded-button', 'Войти')
+                +registerAccountCard()
 
             .cards__column
                 .cards__item
