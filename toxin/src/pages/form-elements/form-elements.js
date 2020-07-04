@@ -25,6 +25,7 @@ import '../../blocks/form-elements/slider/slider.scss'
 import '../../blocks/form-elements/buttons/buttons.scss'
 import '../../blocks/form-elements/pagination/pagination.scss'
 import '../../blocks/form-elements/bullet-list/bullet-list.scss'
+import '../../blocks/form-elements/feedback/feedback'
 import '../../blocks/form-elements/feedback/feedback.scss'
 
 console.log('in form-elements.js');

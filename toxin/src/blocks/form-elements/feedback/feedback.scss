@@ -30,8 +30,35 @@
     margin-right: 8px;
 }
 
+.like {
+    display: inline-block;
+    position: relative;
+    background-color: #fff;
+    color: rgba(31, 32, 65, 0.25);
+    cursor: pointer;
+    padding: 3px 10px 3px 20px;
+    border-radius: 10px;
+    font-size: .625rem;
+    line-height: .75rem;
+    user-select: none;
+    margin-right: 10px;
+}
+
 .like_liked {
     color: #bc9cff;
+}
+
+.like__icon {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: .625rem;
+    display: inline-block;
+    line-height: .7rem;
+    text-transform: none;
 }
 
 .like__icon_liked {

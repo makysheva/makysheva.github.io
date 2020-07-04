@@ -7,11 +7,13 @@ include ../../blocks/form-elements/additions/additions
 include ../../blocks/form-elements/checkbox/checkbox
 include ../../blocks/form-elements/radio-btn/radio-btn
 include ../../blocks/form-elements/toggle/toggle
+include ../../blocks/form-elements/like-btn/like-btn
 include ../../blocks/form-elements/rate-btn/rate-btn
 include ../../blocks/form-elements/rich-checkbox/rich-checkbox
 include ../../blocks/form-elements/buttons/buttons
 include ../../blocks/form-elements/pagination/pagination
 include ../../blocks/form-elements/bullet-list/bullet-list
+include ../../blocks/form-elements/feedback/feedback
 
 block title
     | Form Elements
@@ -192,10 +194,8 @@ block form-section
                         +formElementsHeader('like button')
                         .form-elements__like-wrapper
                             .form-elements__like
-                                div(class="like") 2
-                                    i(class="like__icon") favorite_border
-                                div(class="like like--active") 12
-                                    i(class="like__icon like__icon--active") favorite
+                                +likeButton('2', 'favorite_border', '', '')
+                                +likeButton('12', 'favorite', 'like--active', 'like__icon--active')
 
                 .form-elements-item
                     form(action="")
@@ -296,15 +296,4 @@ block form-section
             .form-elements--bottom
                 .form-elements-item
                     .form-elements__feedback
-                        article(class="feedback")
-                            div(class="feedback__wrapper")
-                                div(class="feedback__avatar-wrapper")
-                                    img(class="feedback__avatar" src="assets/images/avatar.jpg" alt="user avatar")
-                                div(class="feedback__author-wrapper")
-                                    div(class="feedback__author") Мурад Сарафанов
-                                    div(class="feedback__date") 5 дней назад
-                            div(class="feedback__wrapper")
-                                div(class="feedback__like")
-                                    div(class="like like_liked") 12
-                                        i(class="like__icon like__icon_liked") favorite
-                                div(class="feedback__text") Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+                        +feedback()
