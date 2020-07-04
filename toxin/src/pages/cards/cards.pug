@@ -5,6 +5,7 @@ include ../../blocks/form-elements/text-field/text-field
 include ../../blocks/form-elements/radio-btn/radio-btn
 include ../../blocks/form-elements/toggle/toggle
 include ../../blocks/cards/invoice/invoice
+include ../../blocks/cards/enter-card/enter-card
 include ../../blocks/cards/booking/booking
 include ../../blocks/form-elements/rate-btn/rate-btn
 include ../../blocks/cards/gallery/gallery
@@ -69,21 +70,7 @@ block cards-section
                         .booking__item
                             +longButton('booking__button--long long-button', 'забронировать', 'long-button__icon', 'arrow_forward')
 
-                .cards__item
-                    .enter__items
-                        .enter__item
-                            +title('cards__title', 'Войти')
-                            +inputField('', 'register__service--email text-field', '', 'email', 'Email')
-                            +inputField('', 'register__service--password text-field', '', 'password', 'Пароль')
-
-                        .enter__item
-                            +longButton('enter__button--long long-button', 'войти', 'long-button__icon', 'arrow_forward')
-
-                        .enter__item
-                            .register__account
-                                .enter__text Нет аккаунта на Toxin?
-                                .enter__button
-                                    +accountButton('rounded-button', 'создать')
+                +enterCard()
 
             .cards__column
                 .cards__item

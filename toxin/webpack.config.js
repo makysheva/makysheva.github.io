@@ -25,6 +25,7 @@ const common = merge([
             'cards': PATHS.source + '/pages/cards/cards.js',
             'landing': PATHS.source + '/pages/landing/landing.js',
             'registration': PATHS.source + '/pages/registration/registration.js',
+            'sign-in': PATHS.source + '/pages/sign-in/sign-in.js',
         },
         output: {
             path: PATHS.build,
@@ -65,6 +66,11 @@ const common = merge([
                 filename: 'registration.html',
                 chunks: ['registration'],
                 template: PATHS.source + '/pages/registration/registration.pug'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'sign-in.html',
+                chunks: ['sign-in'],
+                template: PATHS.source + '/pages/sign-in/sign-in.pug'
             }),
             new webpack.ProvidePlugin({
                 $: 'jquery',
