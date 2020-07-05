@@ -20,16 +20,13 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.logo-wrapper{
     margin-top: 30px;
-    margin-bottom: 65px;
 }
 
 .logo {
     width: 48px;
     height: 48px;
+    margin-top: 30px;
 }
 
 .form-elements{
@@ -50,11 +47,6 @@ html, body {
     color: #1F2041;
     margin-bottom: 5px;
 }
-
-.form-elements__input{
-    margin-bottom: 40px;
-}
-
 
 /* masked text field */
 .form-elements__input--masked{

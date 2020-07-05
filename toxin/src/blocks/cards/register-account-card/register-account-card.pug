@@ -10,8 +10,8 @@ mixin registerAccountCard()
         .register__items
             .register
                 +title('cards__title', 'Регистрация аккаунта')
-                +inputField('', 'cards__field--name text-field', '', 'text', 'Имя')
-                +inputField('', 'cards__field--surname text-field', '', 'text', 'Фамилия')
+                +inputField('', '', 'cards__field--name text-field', '', 'text', 'Имя')
+                +inputField('', '', 'cards__field--surname text-field', '', 'text', 'Фамилия')
 
                 .register__gender
                     +radioButton('male-btn', 'marker__descr--female', 'Мужской', 'male-btn', 'checked')
@@ -19,12 +19,12 @@ mixin registerAccountCard()
 
                 .register__birthday
                     +subtitle('datepicker-field__title', 'дата рождения')
-                    +inputField('', 'register__birthday--field text-field', '', 'text', 'ДД.ММ.ГГГГ')
+                    +inputField('', '', 'register__birthday--field text-field', '', 'text', 'ДД.ММ.ГГГГ')
 
                 .register__service
                     +subtitle('datepicker-field__title', 'данные для входа в сервис')
-                    +inputField('', 'register__service--email text-field', '', 'email', 'Email')
-                    +inputField('', 'register__service--password text-field', '', 'password', 'Пароль')
+                    +inputField('', '', 'register__service--email text-field', '', 'email', 'Email')
+                    +inputField('', '', 'register__service--password text-field', '', 'password', 'Пароль')
                     +toggle('register__service--toggle', 'Получать спецпредложения', 'register__service--toggle', '')
 
                 .register__button

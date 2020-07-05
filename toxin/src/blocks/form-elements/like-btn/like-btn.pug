@@ -1,5 +1,5 @@
 mixin likeButton(countLike, typeLike, likeActiveClassName, iconClassName)
-    if (likeActiveClassName)
+    if likeActiveClassName
         div(class="like " +likeActiveClassName) #{countLike}
             i(class="like__icon " +iconClassName) #{typeLike}
 

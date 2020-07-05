@@ -3,12 +3,12 @@ mixin textField(text, forInput)
         label(for="text-field-" + forInput) #{text}
 
 //-если есть модификатор у класса, то НЕ добавлять этому инпуту idInput
-mixin inputField(modificator, inputFieldClassName, idInput, inputType, email)
+mixin inputField(divClassName, modificator, inputFieldClassName, idInput, inputType, email)
     if modificator
-        div(class="form-elements__input"+ modificator)
+        div(class= divClassName + modificator)
             input(type= inputType, class= '' + inputFieldClassName, placeholder= email)
     else
-        div(class="form-elements__input")
+        div(class=divClassName)
             input(type= inputType, class= '' + inputFieldClassName, id= 'text-field-' + idInput, placeholder= email)
 
 mixin formElementsHeader(descr)

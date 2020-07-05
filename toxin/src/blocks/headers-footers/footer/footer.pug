@@ -5,7 +5,7 @@ include ../socials/socials
 mixin footer({navigation})
     footer.footer
         .footer__wrapper
-            .footer__container
+            .footer__logo
                 .logo-wrapper
                     include ../../logo/logo-main
                 .footer__text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
@@ -23,7 +23,7 @@ mixin footer({navigation})
                 .subscription__form
                     form(class="footer__form" action="/mock-address" method="get")
                         .form-elements__email-field
-                            +inputField('', 'text-field--email', '', 'email', 'Email')
+                            +inputField('', '', 'text-field--email', '', 'email', 'Email')
                             i(class="material-icons--email subscription__button") arrow_forward
 
 
