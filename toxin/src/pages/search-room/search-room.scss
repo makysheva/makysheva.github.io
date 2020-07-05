@@ -1,0 +1,25 @@
+html, body {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #fff !important;
+}
+
+.search-room__sidebar{
+    max-width: 266px;
+    width: 100%;
+}
+
+.search-room__slider, .search-room__checkbox, .search-room__rich-checkbox, .search-room__dropdown, .search-room__expander{
+    margin-top: 30px;
+}
+
+.slider__footer{
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(31, 32, 65, 0.5);
+    margin-top: -21px;
+}

@@ -1,3 +1,21 @@
+include ../text-field/text-field
+
+mixin dropdownCard(mainTitle, dropdownTitle, titleControls1, titleControls2, titleControls3)
+    .form-elements__dropdown
+        form(action="")
+            +formElementsHeader(mainTitle)
+            .form-elements__input--dropdown
+                +dropdown(dropdownTitle)
+
+            div(class="dropdown__menu")
+                +dropdownControls('', titleControls1, '-', '0', '+')
+                +dropdownControls('', titleControls2, '-', '0', '+')
+                +dropdownControls('', titleControls3, '-', '0', '+')
+
+                div(class="dropdown__buttons" data-id="item-btn")
+                    button(class="clear-btn") Очистить
+                    button(class="apply-btn") Применить
+
 mixin dropdown(placeholder)
     input(class="text-field--dropdown", placeholder= placeholder, readonly="readonly")
     i(class="material-icons") expand_more

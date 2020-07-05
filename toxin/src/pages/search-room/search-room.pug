@@ -1,0 +1,47 @@
+extends ../../base
+include ../../blocks/headers-footers/header/header
+include ../../blocks/headers-footers/menu/menu
+include ../../blocks/form-elements/buttons/buttons
+include ../../blocks/form-elements/calendar/calendar
+include ../../blocks/form-elements/dropdown/dropdown
+include ../../blocks/form-elements/text-field/text-field
+include ../../blocks/form-elements/slider/slider
+include ../../blocks/form-elements/checkbox/checkbox
+include ../../blocks/form-elements/rich-checkbox/rich-checkbox
+include ../../blocks/form-elements/expander/expander
+
+
+block title
+    | Search Room
+
+block searchRoom-section
+    +header('headerRegister')
+
+    .container
+        .search-room
+            .search-room__sidebar
+                form(action="")
+                    +formElementsHeader('даты пребывания в отеле')
+                    .form-elements__filter-date
+                        input(class="text-field--filter datepicker-here" data-range="true" data-multiple-dates-separator=" - " type="text" placeholder="ДД.ММ.ГГГГ")
+                        i(class="material-icons--filter") expand_more
+
+                    .search-room__dropdown
+                        +dropdownCard('гости', '3 гостя, 1 младенец ', 'взрослые', 'дети', 'младенцы', '')
+
+                    .search-room__slider
+                        +sliderCard('диапазон цены')
+                        .slider__footer Стоимость за сутки пребывания в номере
+
+                    .search-room__checkbox
+                        +checkboxCard()
+
+                    .search-room__rich-checkbox
+                        +richCheckbox('mark-hall', 'checkbox-hall', 'Широкий коридор', 'checkbox-hall', 'hall', 'Ширина коридоров в номере не менее 91 см.')
+                        +richCheckbox('mark-specialist', 'checkbox-specialist', 'Помощник для инвалидов', 'checkbox-specialist', 'specialist', 'На 1 этаже вас встретит специалист и проводит до номера.')
+
+                    .search-room__dropdown
+                        +dropdownCard('гости', '3 гостя, 1 младенец ', 'взрослые', 'дети', 'младенцы', '')
+
+                    .search-room__expander
+                        +expanderCard('дополнительные удобства')

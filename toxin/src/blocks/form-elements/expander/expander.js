@@ -11,7 +11,6 @@ expanderItems.forEach((expanderItem) => {
     })
 })
 
-
 /* переключение галочек на списке expander */
 const markBreakfast = document.getElementById('mark-breakfast')
 const markBreakfastOpen = document.getElementById('mark-breakfast--open')

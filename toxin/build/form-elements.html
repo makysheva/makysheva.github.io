@@ -35,7 +35,7 @@
               <div class="form-elements__descr">
                 <label for="text-field-default">text field</label>
               </div>
-              <div class="form-elements__input">
+              <div>
                 <input class="text-field" type="email" id="text-field-default" placeholder="Email">
               </div>
             </form>
@@ -46,7 +46,7 @@
                 <div class="form-elements__descr">
                   <label for="text-field-hover">text field</label>
                 </div>
-                <div class="form-elements__input">
+                <div>
                   <input class="text-field" type="email" id="text-field-hover" placeholder="Email">
                 </div>
               </div>
@@ -60,7 +60,7 @@
                   <input class="text-field--dropdown" placeholder="Сколько гостей" readonly="readonly"><i class="material-icons">expand_more</i>
                 </div>
                 <div class="dropdown__menu">
-                  <div class="dropdown__menu-option" data-id="item-adult">
+                  <div class="dropdown__menu-option" data-id="">
                     <div class="dropdown__item">Взрослые</div>
                     <div class="dropdown__controls">
                       <div class="dropdown__minus">-</div>
@@ -68,7 +68,7 @@
                       <div class="dropdown__plus">+</div>
                     </div>
                   </div>
-                  <div class="dropdown__menu-option" data-id="item-children">
+                  <div class="dropdown__menu-option" data-id="">
                     <div class="dropdown__item">Дети</div>
                     <div class="dropdown__controls">
                       <div class="dropdown__minus">-</div>
@@ -76,7 +76,7 @@
                       <div class="dropdown__plus">+</div>
                     </div>
                   </div>
-                  <div class="dropdown__menu-option" data-id="item-babies">
+                  <div class="dropdown__menu-option" data-id="">
                     <div class="dropdown__item">Младенцы</div>
                     <div class="dropdown__controls">
                       <div class="dropdown__minus">-</div>
@@ -138,46 +138,6 @@
                 <div class="form-elements__descr"><span>subscription text field</span></div>
                 <div class="form-elements__email-field">
                   <input class="text-field--email" type="text" placeholder="Email"><i class="material-icons--email subscription__button">arrow_forward</i>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="form-elements-item">
-            <div class="form-elements__dropdown">
-              <form action="">
-                <div class="form-elements__descr"><span>dropdown</span></div>
-                <div class="form-elements__input--dropdown">
-                  <input class="text-field--dropdown" placeholder="2 спальни, 2 кровати" readonly="readonly"><i class="material-icons">expand_more</i>
-                </div>
-                <div class="dropdown__menu">
-                  <div class="dropdown__menu-option" data-id="">
-                    <div class="dropdown__item">Спальни</div>
-                    <div class="dropdown__controls">
-                      <div class="dropdown__minus">-</div>
-                      <div class="dropdown__count">0</div>
-                      <div class="dropdown__plus">+</div>
-                    </div>
-                  </div>
-                  <div class="dropdown__menu-option" data-id="">
-                    <div class="dropdown__item">Кровати</div>
-                    <div class="dropdown__controls">
-                      <div class="dropdown__minus">-</div>
-                      <div class="dropdown__count">0</div>
-                      <div class="dropdown__plus">+</div>
-                    </div>
-                  </div>
-                  <div class="dropdown__menu-option" data-id="">
-                    <div class="dropdown__item">Ванные комнаты</div>
-                    <div class="dropdown__controls">
-                      <div class="dropdown__minus">-</div>
-                      <div class="dropdown__count">0</div>
-                      <div class="dropdown__plus">+</div>
-                    </div>
-                  </div>
-                  <div class="dropdown__buttons" data-id="item-btn">
-                    <button class="clear-btn">Очистить</button>
-                    <button class="apply-btn">Применить</button>
-                  </div>
                 </div>
               </form>
             </div>
@@ -515,7 +475,7 @@
         <div class="form-elements form-elements--right">
           <div class="form-elements-item">
             <div class="form-elements__slider-wrapper">
-              <div class="form-elements__descr"><span>range slider</span></div>
+              <div class="form-elements__descr"><span>Range Slider</span></div>
               <div class="form-elements__slider-title">
                 <div class="extra-controls">
                   <input class="js-input-from extra-controls__title" type="text" value="0" readonly><span>-</span>
@@ -633,7 +593,7 @@
                 </div>
                 <div class="feedback__wrapper">
                   <div class="feedback__like">
-                    <div class="like like_liked">12<i class="like__icon like__icon_liked">favorite</i></div>
+                    <div class="like like--active">12<i class="like__icon like__icon--active">favorite</i></div>
                   </div>
                   <div class="feedback__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</div>
                 </div>

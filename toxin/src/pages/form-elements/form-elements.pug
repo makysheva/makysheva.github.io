@@ -10,6 +10,7 @@ include ../../blocks/form-elements/toggle/toggle
 include ../../blocks/form-elements/like-btn/like-btn
 include ../../blocks/form-elements/rate-btn/rate-btn
 include ../../blocks/form-elements/rich-checkbox/rich-checkbox
+include ../../blocks/form-elements/slider/slider
 include ../../blocks/form-elements/buttons/buttons
 include ../../blocks/form-elements/pagination/pagination
 include ../../blocks/form-elements/bullet-list/bullet-list
@@ -37,20 +38,7 @@ block form-section
                             +inputField('', '', 'text-field', 'hover', 'email', 'Email')
 
                 .form-elements-item
-                    .form-elements__dropdown
-                        form(action="")
-                            +formElementsHeader('dropdown')
-                            .form-elements__input--dropdown
-                                +dropdown('Сколько гостей')
-
-                            div(class="dropdown__menu")
-                                +dropdownControls('item-adult', 'Взрослые', '-', '0', '+')
-                                +dropdownControls('item-children', 'Дети', '-', '0', '+')
-                                +dropdownControls('item-babies', 'Младенцы', '-', '0', '+')
-
-                                div(class="dropdown__buttons" data-id="item-btn")
-                                    button(class="clear-btn") Очистить
-                                    button(class="apply-btn") Применить
+                    +dropdownCard('dropdown', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы')
 
                 .form-elements-item
                     .form-elements__dropdown
@@ -75,8 +63,8 @@ block form-section
                         form(action="")
                             +formElementsHeader('filter date dropdown')
                             .form-elements__filter-date
-                                input(class="text-field--filter datepicker-here" data-range="true" data-multiple-dates-separator=" - " type="text" placeholder="ДД.ММ.ГГГГ")
-                                i(class="material-icons--filter") expand_more
+                               input(class="text-field--filter datepicker-here" data-range="true" data-multiple-dates-separator=" - " type="text" placeholder="ДД.ММ.ГГГГ")
+                               i(class="material-icons--filter") expand_more
 
                 .form-elements-item
                     .form-elements__email-wrapper
@@ -87,54 +75,10 @@ block form-section
                                     i(class="material-icons--email subscription__button") arrow_forward
 
                 .form-elements-item
-                    .form-elements__dropdown
-                        form(action="")
-                            +formElementsHeader('dropdown')
-                            .form-elements__input--dropdown
-                                +dropdown('2 спальни, 2 кровати')
-
-                            div(class="dropdown__menu")
-                                +dropdownControls('', 'Спальни', '-', '0', '+')
-                                +dropdownControls('', 'Кровати', '-', '0', '+')
-                                +dropdownControls('', 'Ванные комнаты', '-', '0', '+')
-
-                                div(class="dropdown__buttons" data-id="item-btn")
-                                    button(class="clear-btn") Очистить
-                                    button(class="apply-btn") Применить
+                    +dropdownCard('dropdown', '2 спальни, 2 кровати', 'Спальни', 'Кровати', 'Ванные комнаты')
 
                 .form-elements-item
-                    .form-elements__dropdown
-                        form(action="")
-                            +formElementsHeader('dropdown')
-
-                            .form-elements__input--dropdown
-                                +dropdown('2 спальни, 2 кровати')
-
-                            div(class="dropdown__menu")
-                                +dropdownControls('', 'Спальни', '-', '0', '+')
-                                +dropdownControls('', 'Кровати', '-', '0', '+')
-                                +dropdownControls('', 'Ванные комнаты', '-', '0', '+')
-
-                                div(class="dropdown__buttons" data-id="item-btn")
-                                    button(class="clear-btn") Очистить
-                                    button(class="apply-btn") Применить
-
-                .form-elements-item
-                    .form-elements__dropdown
-                        form(action="")
-                            +formElementsHeader('dropdown')
-
-                            .form-elements__input--dropdown
-                                +dropdown('2 спальни, 2 кровати')
-
-                            div(class="dropdown__menu")
-                                +dropdownControls('', 'Спальни', '-', '0', '+')
-                                +dropdownControls('', 'Кровати', '-', '0', '+')
-                                +dropdownControls('', 'Ванные комнаты', '-', '0', '+')
-
-                                div(class="dropdown__buttons" data-id="item-btn")
-                                    button(class="clear-btn") Очистить
-                                    button(class="apply-btn") Применить
+                    +dropdownCard('dropdown', '2 спальни, 2 кровати', 'Спальни', 'Кровати', 'Ванные комнаты')
 
                 .form-elements-item
                     .form-elements__expander
@@ -150,15 +94,7 @@ block form-section
                                                 input(class="checkbox__input" type="checkbox" checked="" id="checkbox-breakfast" data-type="expander-breakfast")
                                                 div(class="checkbox__mark")
 
-                            div(class="expander")
-                                div(class="expander__header js-expander") Expandable checkbox list
-                                div(class="expander__list expander__list_hided")
-                                    +expander('mark-breakfast--open', 'Завтрак', 'checkbox-breakfast--open', 'expander-breakfast--open')
-                                    +expander('mark-desk', 'Письменный стол', 'checkbox-desk', 'expander-desk')
-                                    +expander('mark-feeding-chair', 'Стул для кормления', 'checkbox-feeding-chair', 'expander-feeding-chair')
-                                    +expander('mark-cot', 'Кроватка', 'checkbox-cot', 'expander-cot')
-                                    +expander('mark-tv', 'Телевизор', 'checkbox-tv', 'expander-tv')
-                                    +expander('mark-shampoo', 'Шампунь', 'checkbox-shampoo', 'expander-shampoo')
+                            +expanderCard('Expandable checkbox list')
 
                 .form-elements-item
                     .form-elements__additions
@@ -167,13 +103,7 @@ block form-section
 
             .form-elements.form-elements--middle
                 .form-elements-item
-                    .form-elements__checkbox-wrapper
-                        form(action="")
-                            +formElementsHeader('Checkbox Buttons')
-                            .checkboxs
-                                +checkbox('', 'mark-smoke', 'checkbox-smoke', 'Можно курить', 'checkbox-smoke', 'smoke')
-                                +checkbox('', 'mark-nursling', 'checkbox-nursling', 'Можно с питомцами', 'checkbox-nursling', 'nursling')
-                                +checkbox('checkbox__marks--long-text', 'mark-guests', 'checkbox-guests', 'Можно пригласить гостей (до 10 человек)', 'checkbox-guests', 'guests')
+                    +checkboxCard()
 
                 .form-elements-item
                     form(action="")
@@ -205,21 +135,7 @@ block form-section
                             +rateButton('star', '', 'form-elements__rate--right')
 
                 .form-elements-item
-                    .form-elements__dropdown
-                        form(action="")
-                            +formElementsHeader('dropdown')
-
-                            .form-elements__input--dropdown
-                                +dropdown('Сколько гостей')
-
-                            div(class="dropdown__menu")
-                                +dropdownControls('', 'Взрослые', '-', '0', '+')
-                                +dropdownControls('', 'Дети', '-', '0', '+')
-                                +dropdownControls('', 'Младенцы', '-', '0', '+')
-
-                                div(class="dropdown__buttons" data-id="item-btn")
-                                    button(class="clear-btn") Очистить
-                                    button(class="apply-btn") Применить
+                    +dropdownCard('dropdown', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы')
 
                 .form-elements-item
                     +formElementsHeader('Rich Checkbox Buttons')
@@ -231,16 +147,7 @@ block form-section
 
             .form-elements.form-elements--right
                 .form-elements-item
-                    .form-elements__slider-wrapper
-                        +formElementsHeader('range slider')
-                        .form-elements__slider-title
-                            div(class="extra-controls")
-                                input(type="text" class="js-input-from extra-controls__title" value="0" readonly)
-                                span -
-                                input(type="text" class="js-input-to extra-controls__title" value="0" readonly)
-                    .form-elements__range-slider
-                        div(class="range-slider")
-                            input(type="text" class="js-range-slider" value="")
+                    +sliderCard('Range Slider')
 
                 .form-elements-item
                     form(action="")
@@ -268,21 +175,7 @@ block form-section
                             div(class="pagination__info") 1 – 12 из 100+ вариантов аренды
 
                 .form-elements-item
-                    .form-elements__dropdown
-                        form(action="")
-                            +formElementsHeader('dropdown')
-
-                            .form-elements__input--dropdown
-                                +dropdown('Сколько гостей')
-
-                            div(class="dropdown__menu")
-                                +dropdownControls('', 'Взрослые', '-', '0', '+')
-                                +dropdownControls('', 'Дети', '-', '0', '+')
-                                +dropdownControls('', 'Младенцы', '-', '0', '+')
-
-                                div(class="dropdown__buttons" data-id="item-btn")
-                                    button(class="clear-btn") Очистить
-                                    button(class="apply-btn") Применить
+                    +dropdownCard('dropdown', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы')
 
                 .form-elements-item
                     .form-elements__bullet
