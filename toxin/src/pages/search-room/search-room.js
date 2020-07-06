@@ -21,5 +21,11 @@ import '../../blocks/form-elements/rich-checkbox/rich-checkbox'
 import '../../blocks/form-elements/rich-checkbox/rich-checkbox.scss'
 import '../../blocks/form-elements/expander/expander'
 import '../../blocks/form-elements/expander/expander.scss'
+import '../../blocks/cards/gallery/gallery.scss'
+import '../../blocks/form-elements/rate-btn/rate-btn.scss'
+import '../../blocks/cards/booking/booking.scss'
+import '../../blocks/form-elements/pagination/pagination.scss'
+import '../../blocks/headers-footers/footer/footer'
+import '../../blocks/headers-footers/footer/footer.scss'
 
 console.log('in search-room.js')

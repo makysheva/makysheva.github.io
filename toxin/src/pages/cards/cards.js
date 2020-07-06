@@ -11,6 +11,7 @@ import '../../blocks/form-elements/radio-btn/radio-btn.scss'
 import '../../blocks/form-elements/toggle/toggle.scss'
 import '../../blocks/form-elements/rate-btn/rate-btn.scss'
 import '../../blocks/cards/booking/booking.scss'
+import '../../blocks/cards/gallery/gallery.scss'
 
 
 console.log('in cards.js')

@@ -2299,7 +2299,7 @@ const allParent = document.querySelectorAll('.datepicker')
 
     allParent.forEach(parentEl => {
         parentEl.appendChild(parentBtn)
-        console.log(parentEl)
+       // console.log(parentEl)
     })
     
 

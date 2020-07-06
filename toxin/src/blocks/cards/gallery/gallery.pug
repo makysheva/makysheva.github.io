@@ -1,7 +1,7 @@
 include ../booking/booking
 include ../../form-elements/rate-btn/rate-btn
 
-mixin gallery(image, arrows= true, number, numberLarge, text, price, priceText, icon, iconBorder, iconWrapClassName, countComments, comments)
+mixin gallery(image, arrows= true, number, numberLarge, text, price, priceText, icon, iconBorder1, iconBorder2, iconWrapClassName, countComments, comments)
     .gallery
         .gallery__image
             img(src=`./assets/images/${image}`, alt="apartment photo")
@@ -20,7 +20,7 @@ mixin gallery(image, arrows= true, number, numberLarge, text, price, priceText, 
             .gallery__info
                 +booking(number, numberLarge, text, price, priceText)
             .gallery__rating
-                +rateButton(icon, iconBorder, iconWrapClassName)
+                +rateButton(icon, iconBorder1, iconBorder2, iconWrapClassName)
                 .gallery__rating--comments
                     .gallery__rating--text.gallery__rating--bold #{countComments}
                     .gallery__rating--descr  #{comments}

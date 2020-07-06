@@ -131,8 +131,8 @@ block form-section
                     form(action="")
                         +formElementsHeader('rate button')
                         .form-elements__rate-wrapper
-                            +rateButton('star', 'star_border', '')
-                            +rateButton('star', '', 'form-elements__rate--right')
+                            +rateButton('star', 'star_border', '', '')
+                            +rateButton('star', '', '', 'form-elements__rate--right')
 
                 .form-elements-item
                     +dropdownCard('dropdown', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы')
@@ -165,14 +165,7 @@ block form-section
                 .form-elements-item
                     +formElementsHeader('pagination')
                     .form-elements__pagination
-                        .pagination
-                            +pagination('pagination__item pagination__item_active', '/mock-address', '1')
-                            +pagination('pagination__item', '/mock-address', '2')
-                            +pagination('pagination__item', '/mock-address', '3')
-                            div(class="pagination__item") ...
-                            +pagination('pagination__item', '/mock-address', '15')
-                            button(class="pagination__next")
-                            div(class="pagination__info") 1 – 12 из 100+ вариантов аренды
+                        +paginationCard()
 
                 .form-elements-item
                     +dropdownCard('dropdown', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы')

@@ -5,6 +5,13 @@ html, body {
     background-color: #fff !important;
 }
 
+.search-room{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .search-room__sidebar{
     max-width: 266px;
     width: 100%;
@@ -22,4 +29,31 @@ html, body {
     line-height: 14px;
     color: rgba(31, 32, 65, 0.5);
     margin-top: -21px;
+}
+
+.search-room__content{
+    max-width: 858px;
+    width: 100%;
+    margin-left: 36px;
+}
+
+.search-room__title{
+    font-family: Quicksand, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1F2041;
+}
+
+.search-room__card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.search-room__pagination{
+    padding-left: 287px;
+    margin: 40px 0 70px;
 }
