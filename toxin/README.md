@@ -13,6 +13,11 @@
 - pug
 - scss
 
+Используемые плагины:
+- air-datepicker для выпадающего и открытого календаря
+- ion-range-slider для слайдера-ползунка
+- chart.js для круговой диаграммы
+
 ## UI Kit
 [Colors & Type](http://makysheva.github.io/toxin/build/colors-type.html)
 
@@ -20,15 +25,12 @@
 
 [Form elements](http://makysheva.github.io/toxin/build/form-elements.html)
 
-<!-- 
-## Pages
+[Landing](http://makysheva.github.io/toxin/build/landing.html)
 
-[Landing](http://makysheva.github.io/fsd/landing.html)
+[Registration](http://makysheva.github.io/toxin/build/registration.html)
 
-[Registration](http://makysheva.github.io/fsd/registration.html)
+[Sign In](http://makysheva.github.io/toxin/build/sign-in.html)
 
-[Sign In](http://makysheva.github.io/fsd/sign-in.html)
+[Search room](http://makysheva.github.io/toxin/build/search-room.html)
 
-[Search room](http://makysheva.github.io/fsd/search-room.html)
-
-[Room details](http://makysheva.github.io/fsd/room-details.html) -->
+[Room details](http://makysheva.github.io/toxin/build/room-details.html)
