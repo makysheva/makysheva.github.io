@@ -21,7 +21,7 @@
 ## UI Kit
 [Colors & Type](http://makysheva.github.io/toxin/build/colors-type.html)
 
-[Headers & Footers](http://makysheva.github.io/toxin/build/header.html)
+[Headers & Footers](http://makysheva.github.io/toxin/build/headers-footers.html)
 
 [Form elements](http://makysheva.github.io/toxin/build/form-elements.html)
 
