@@ -8,7 +8,8 @@ module.exports = function(){
                     test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
                     loader: 'file-loader',
                     options: {
-                      name: '[name].[ext]'
+                      name: '[name].[ext]',
+                      outputPath: 'assets/fonts/'
                     }
                 },
             ]
