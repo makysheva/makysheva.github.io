@@ -9,7 +9,7 @@ module.exports = function(){
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        publicPath: '../build/',  // path to director where assets folder is located
+                        publicPath: '../build/assets/',  // path to director where assets folder is located
                     },
                 },
             ]
