@@ -8,7 +8,7 @@ module.exports = function(){
                     test: /\.(jpg|png|svg)$/,
                     loader: 'file-loader',
                     options: {
-                        name: '[path][name].[ext]',
+                        name: '[name].[ext]',
                     },
                 },
             ]
