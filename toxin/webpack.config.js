@@ -31,7 +31,7 @@ const common = merge([
         },
         output: {
             path: PATHS.build,
-            filename: './js/[name].js'
+            filename: './js/[name].js',
         },
         plugins: [
             new HtmlWebpackPlugin({
