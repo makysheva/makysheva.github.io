@@ -9,7 +9,7 @@ module.exports = function(){
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        publicPath: '../build/assets/',  // path to director where assets folder is located
+                        publicPath: '../../',  // path to director where assets folder is located
                     },
                 },
             ]
@@ -18,7 +18,7 @@ module.exports = function(){
             new CopyWebpackPlugin([
                 {
                     from: 'src/assets/img',
-                    to: '/assets/images'
+                    to: '/images'
                 },
             ]),
         ]
