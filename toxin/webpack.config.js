@@ -15,7 +15,8 @@ const PATHS = {
     build: path.join(__dirname, 'build')
 };
 
-const common = merge([
+function common(env) {
+  return merge([
     {
         entry: {
             'index': PATHS.source + '/pages/index/index.js',
@@ -99,19 +100,19 @@ const common = merge([
     pug(),
     fonts(),
     favicons(),
-    images()
-]);
+    images(env)
+])};
 
 module.exports = function(env) {
     if (env === 'production') {
         return merge([
-            common,
+            common(env),
             extractCSS()
         ])
     }
     if (env === 'development') {
         return merge([
-            common,
+            common(env),
             devserver(),
             sass()
         ])
