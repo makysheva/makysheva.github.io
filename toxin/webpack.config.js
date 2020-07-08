@@ -33,6 +33,11 @@ const common = merge([
             path: PATHS.build,
             filename: './assets/js/[name].js'
         },
+        resolve:{
+            alias:{
+              images: path.resolve(__dirname, 'src/assets/img/'), 
+            }
+        },
         plugins: [
             new HtmlWebpackPlugin({
                 filename: 'index.html',
