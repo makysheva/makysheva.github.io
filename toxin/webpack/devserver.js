@@ -6,6 +6,7 @@ module.exports = function(){
             stats: 'errors-only',
             contentBase: path.resolve(__dirname, 'build'),
             port: 9000,
+            publicPath: ''
         }
     }
 };
