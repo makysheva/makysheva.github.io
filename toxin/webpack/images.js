@@ -9,7 +9,6 @@ module.exports = function(){
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        publicPath: './assets/images/',
                     },
                 },
             ]
