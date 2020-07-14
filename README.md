@@ -17,10 +17,10 @@
 
 ## Макеты:
 
-[Saraevo](http://makysheva.github.io/saraevo/index.html)
+[Saraevo](https://makysheva.github.io/sarajevo/index.html)
 
-[Tinyone](http://makysheva.github.io/tinyone/app/index.html)
+[Tinyone](https://makysheva.github.io/tinyone/app/index.html)
 
-[Toxin](http://makysheva.github.io/toxin/build/form-elements.html)
+[Waxom](https://makysheva.github.io/waxom/build/index.html)
 
-[Waxom](http://makysheva.github.io/waxom/build/index.html)
+[Toxin](https://makysheva.github.io/toxin/build/form-elements.html)
