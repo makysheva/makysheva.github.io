@@ -23,4 +23,4 @@
 
 [Waxom](https://makysheva.github.io/waxom/build/index.html)
 
-[Toxin](https://makysheva.github.io/toxin/build/form-elements.html)
+[Toxin](https://makysheva.github.io/toxin/build/landing.html)
