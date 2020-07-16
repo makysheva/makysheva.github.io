@@ -1,6 +1,7 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-module.exports = function(){
+module.exports = function(env){
+    isDev = env === 'development'
     return {
         module: {
             rules: [
@@ -9,6 +10,8 @@ module.exports = function(){
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
+                        outputPath: '/assets/images/',
+                        publicPath: isDev ? '/assets/images/' : '/toxin/build/assets/images/'
                     },
                 },
             ]
