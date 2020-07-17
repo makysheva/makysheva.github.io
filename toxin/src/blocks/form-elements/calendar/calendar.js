@@ -2265,85 +2265,76 @@ dateDropdownRight.click(function(){
 
 //  При клике на кнопку Применить в календаре происходит закрытие календаря
 
-const allParent = document.querySelectorAll('.datepicker')
+// const allParent = document.querySelectorAll('.datepicker')
+// const parentBtn = document.createElement('div')
+// let clearBtn = document.createElement('span')
+// let applyBtn = document.createElement('span')
+// let clearButton = parentBtn.appendChild(clearBtn)// вставить кнопку Отменить после родительского элемента
+// let applyButton = parentBtn.appendChild(applyBtn) // вставить кнопку Применить после родительского элемента
 
+// clearBtn.innerHTML = 'Отменить'
+// applyBtn.innerHTML = 'Применить'
 
+// parentBtn.classList.add('datepicker--buttons') // добавить классы
+// clearBtn.classList.add('datepicker--button') // добавить классы
+// applyBtn.classList.add('datepicker--button', '-apply-') // добавить классы
 
-    const parentBtn = document.createElement('div')
-    let clearBtn = document.createElement('span')
-    let applyBtn = document.createElement('span')
+// applyBtn.addEventListener('click', closedDropdown) // при клике по кнопке Применить закрыть календарь
 
+// function closedDropdown(){
+//     dateDropdownDatepicker.hide()
+// }
 
+// clearBtn.addEventListener('click', clearDropdown) // при клике по кнопке Отменить закрыть календарь
 
-    let clearButton = parentBtn.appendChild(clearBtn)// вставить кнопку Отменить после родительского элемента
-    let applyButton = parentBtn.appendChild(applyBtn) // вставить кнопку Применить после родительского элемента
+// function clearDropdown(){
+//     dateDropdownDatepicker.clear()
+// }
 
-    clearBtn.innerHTML = 'Отменить'
-    applyBtn.innerHTML = 'Применить'
+// allParent.forEach(parentEl => {
+//     parentEl.appendChild(parentBtn)
+//     // console.log(parentEl)
+// })
 
-    parentBtn.classList.add('datepicker--buttons') // добавить классы
-    clearBtn.classList.add('datepicker--button') // добавить классы
-    applyBtn.classList.add('datepicker--button', '-apply-') // добавить классы
-
-    applyBtn.addEventListener('click', closedDropdown) // при клике по кнопке Применить закрыть календарь
-
-    function closedDropdown(){
-        dateDropdownDatepicker.hide()
-    }
-
-    clearBtn.addEventListener('click', clearDropdown) // при клике по кнопке Отменить закрыть календарь
-
-    function clearDropdown(){
-        dateDropdownDatepicker.clear()
-    }
-
-    allParent.forEach(parentEl => {
-        parentEl.appendChild(parentBtn)
-       // console.log(parentEl)
-    })
-    
 
 //-кнопки применить и очистить не добавляются во все календари, из-за appendChild
 
 //  При клике на кнопку Применить в календаре происходит закрытие календаря
-// setTimeout(() => {
-//     const allParent = document.querySelectorAll(".datepicker");
-//     const all = document.querySelectorAll("input");
-//     console.log(allParent.length);
-//     console.log(all.length);
-//     const parentBtn = document.createElement("div");
-//     let clearBtn = document.createElement("span");
-//     let applyBtn = document.createElement("span");
-  
-//     let clearButton = parentBtn.appendChild(clearBtn); // вставить кнопку Отменить после родительского элемента
-//     let applyButton = parentBtn.appendChild(applyBtn); // вставить кнопку Применить после родительского элемента
-  
-//     clearBtn.innerHTML = "Отменить";
-//     applyBtn.innerHTML = "Применить";
-  
-//     parentBtn.classList.add("datepicker--buttons"); // добавить классы
-//     clearBtn.classList.add("datepicker--button"); // добавить классы
-//     applyBtn.classList.add("datepicker--button", "-apply-"); // добавить классы
-//     applyBtn.addEventListener("click", closedDropdown); // при клике по кнопке Применить закрыть календарь
-  
-//     function closedDropdown() {
-//       dateDropdownDatepicker.hide();
-//     }
-  
-//     clearBtn.addEventListener("click", clearDropdown); // при клике по кнопке Отменить закрыть календарь
-  
-//     function clearDropdown() {
-//       dateDropdownDatepicker.clear();
-//     }
-  
-//     allParent.forEach((parentEl,index) => {
-//       let child = parentBtn.cloneNode(true);
-//       parentEl.append(child);
-//       console.log(index,"calc")
-      
-//     });
-  
-//     //-кнопки применить и очистить не добавляются во все календари, из-за appendChild
-//   }, 1000);
-  
-  
+setTimeout(() => {
+    const allParent = document.querySelectorAll(".datepicker");
+    const all = document.querySelectorAll("input");
+    console.log(allParent.length);
+    console.log(all.length);
+    const parentBtn = document.createElement("div");
+    let clearBtn = document.createElement("span");
+    let applyBtn = document.createElement("span");
+
+    let clearButton = parentBtn.appendChild(clearBtn); // вставить кнопку Отменить после родительского элемента
+    let applyButton = parentBtn.appendChild(applyBtn); // вставить кнопку Применить после родительского элемента
+
+    clearBtn.innerHTML = "Отменить";
+    applyBtn.innerHTML = "Применить";
+
+    parentBtn.classList.add("datepicker--buttons"); // добавить классы
+    clearBtn.classList.add("datepicker--button"); // добавить классы
+    applyBtn.classList.add("datepicker--button", "-apply-"); // добавить классы
+    applyBtn.addEventListener("click", closedDropdown); // при клике по кнопке Применить закрыть календарь
+
+    function closedDropdown() {
+      dateDropdownDatepicker.hide();
+    }
+
+    clearBtn.addEventListener("click", clearDropdown); // при клике по кнопке Отменить закрыть календарь
+
+    function clearDropdown() {
+      dateDropdownDatepicker.clear();
+    }
+
+    allParent.forEach((parentEl,index) => {
+      let child = parentBtn.cloneNode(true);
+      parentEl.append(child);
+      console.log(index,"calc")
+    });
+
+    //-кнопки применить и очистить не добавляются во все календари, из-за appendChild
+  }, 1000);
