@@ -4,7 +4,7 @@ include ../../form-elements/rate-btn/rate-btn
 mixin gallery(image, arrows= true, number, numberLarge, text, price, priceText, icon, iconBorder1, iconBorder2, iconWrapClassName, countComments, comments)
     .gallery
         .gallery__image
-            img(src=`./assets/images/${image}`, alt="apartment photo")
+            img(src=require(`assets/img/${image}`), alt="apartment photo")
             if (arrows)
                 .gallery__left-arrow.gallery__arrow
                     i(class="gallery__icon material-icons") keyboard_arrow_left
