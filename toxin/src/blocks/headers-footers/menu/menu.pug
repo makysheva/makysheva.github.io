@@ -1,15 +1,34 @@
+//- mixin elementMenu(element)
+//-     .menu__item
+//-         if (element.subnav)
+//-             .menu__submenu--wrap
+//-                 .menu__expander.js-menu__expander
+//-                     a(class="menu__link menu__link--icon", href= element.link) #{element.title}
+//-                 .menu__submenu.js-menu__submenu
+//-                     a(class="menu__link submenu__link", href= element.link) item 1
+//-                     a(class="menu__link submenu__link", href= element.link) item 2
+
+//-         else if (element.title === 'О нас')
+//-             a(class="menu__link menu__link--bold", href= element.link) #{element.title}
+
+//-         else
+//-             a(class="menu__link", href= element.link) #{element.title}
+
 mixin elementMenu(element)
-    .menu__item
+    li.menu__item
         if (element.subnav)
-            .menu__submenu--wrap
-                .menu__expander.js-menu__expander
-                    a(class="menu__link menu__link--icon", href= element.link) #{element.title}
-                .menu__submenu.js-menu__submenu
-                    a(class="menu__link submenu__link", href= element.link) item 1
-                    a(class="menu__link submenu__link", href= element.link) item 2
+            li.menu__expander.js-menu__expander
+                a.menu__link(href= element.link) #{element.title}
+                    i.menu__checkmark.checkmark.checkmark__down
+                ul.menu__submenu.js-menu__submenu
+                    li.menu__sub-item
+                        a(class="menu__link submenu__link", href= element.link) item 1
+                    li.menu__sub-item
+                        a(class="menu__link submenu__link", href= element.link) item 2
 
         else if (element.title === 'О нас')
             a(class="menu__link menu__link--bold", href= element.link) #{element.title}
 
         else
-            a(class="menu__link", href= element.link) #{element.title}
+            a(class='menu__link', href= element.link) #{element.title}
+
