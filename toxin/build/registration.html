@@ -50,28 +50,32 @@
 </div>
         </div>
         <div class="header__menu--register">
-          <div class="menu">
-            <div class="menu__list">
-              <div class="menu__item"><a class="menu__link menu__link--bold" href="#">О нас</a>
-              </div>
-              <div class="menu__item">
-                <div class="menu__submenu--wrap">
-                  <div class="menu__expander js-menu__expander"><a class="menu__link menu__link--icon" href="#">Услуги</a></div>
-                  <div class="menu__submenu js-menu__submenu"><a class="menu__link submenu__link" href="#">item 1</a><a class="menu__link submenu__link" href="#">item 2</a></div>
-                </div>
-              </div>
-              <div class="menu__item"><a class="menu__link" href="#">Вакансии</a>
-              </div>
-              <div class="menu__item"><a class="menu__link" href="#">Новости</a>
-              </div>
-              <div class="menu__item">
-                <div class="menu__submenu--wrap">
-                  <div class="menu__expander js-menu__expander"><a class="menu__link menu__link--icon" href="#">Соглашения</a></div>
-                  <div class="menu__submenu js-menu__submenu"><a class="menu__link submenu__link" href="#">item 1</a><a class="menu__link submenu__link" href="#">item 2</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a class="menu__link menu__link--bold" href="#">О нас</a>
+              </li>
+              <li class="menu__item">
+                <li class="menu__expander js-menu__expander"><a class="menu__link" href="#">Услуги<i class="menu__checkmark checkmark checkmark__down"></i></a>
+                  <ul class="menu__submenu js-menu__submenu">
+                    <li class="menu__sub-item"><a class="menu__link submenu__link" href="#">item 1</a></li>
+                    <li class="menu__sub-item"><a class="menu__link submenu__link" href="#">item 2</a></li>
+                  </ul>
+                </li>
+              </li>
+              <li class="menu__item"><a class="menu__link" href="#">Вакансии</a>
+              </li>
+              <li class="menu__item"><a class="menu__link" href="#">Новости</a>
+              </li>
+              <li class="menu__item">
+                <li class="menu__expander js-menu__expander"><a class="menu__link" href="#">Соглашения<i class="menu__checkmark checkmark checkmark__down"></i></a>
+                  <ul class="menu__submenu js-menu__submenu">
+                    <li class="menu__sub-item"><a class="menu__link submenu__link" href="#">item 1</a></li>
+                    <li class="menu__sub-item"><a class="menu__link submenu__link" href="#">item 2</a></li>
+                  </ul>
+                </li>
+              </li>
+            </ul>
+          </nav>
           <div class="header__button">
             <div class="form-elements__btn">
               <button class="rounded-button">Войти</button>
