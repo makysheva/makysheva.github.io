@@ -3,32 +3,78 @@
     const dropdownSelect = document.querySelectorAll('.form-elements__input--dropdown')
     const dropdownOpen = document.querySelectorAll('.dropdown__menu')
 
-    dropdownSelect.forEach((elem) => {//нашел нужный div
-        elem.addEventListener('click', () => {// при клике на div
-
-            dropdownOpen.forEach((elemDropdown)=> {// добавлять класс
-                elemDropdown.classList.toggle('dropdown__menu--open')
-            })
-        })
-    })
-
-    // dropdownSelect.forEach((elem) => {//нашел нужный div
-    //     elem.removeEventListener('click', () => {// при клике на div
-
-    //         dropdownOpen.forEach((elemDropdown)=> {// добавлять класс
-    //             elemDropdown.classList.remove('dropdown__menu--open')//не работает
-    //         })
-    //     })
-    // })
-
+    for(let i=0; i<dropdownSelect.length; i++){
+        dropdownSelect[i].onclick = function(e){
+            e.preventDefault()
+            dropdownOpen[i].classList.toggle('dropdown__menu--open')
+        }
+    }
 })();
 
 // функция для увеличения/уменьшения выбора количества гостей
 
 const minusBtn = document.querySelectorAll('.dropdown__minus')
+const plusBtn= document.querySelectorAll('.dropdown__plus')
+const dropdownCount = document.querySelectorAll('.dropdown__count')
+const applyBtn = document.querySelectorAll('.apply-btn')
+const dropdownOpen = document.querySelectorAll('.dropdown__menu')
+const countGuests = document.querySelectorAll('.text-field--dropdown')
 
-Array.from(minusBtn).forEach(minusButtons => {
-    minusButtons.addEventListener('click', function (minusButton) {
-        minusButton
-    })
-})
+for(let i=0; i<minusBtn.length; i++){
+    minusBtn[i].innerHTML = '-'
+    minusBtn[i].onclick = function(){
+        if(parseInt(dropdownCount[i].innerHTML) !== 0){
+            dropdownCount[i].innerHTML = parseInt(dropdownCount[i].innerHTML) - 1
+            isTypeNouns(i)
+        } else{
+        return false
+        }
+    }
+}
+
+for(let i=0; i<plusBtn.length; i++){
+    plusBtn[i].innerHTML = '+'
+    plusBtn[i].onclick = function(){
+        if(parseInt(dropdownCount[i].innerHTML) !== 10){
+            dropdownCount[i].innerHTML = parseInt(dropdownCount[i].innerHTML) + 1
+            isTypeNouns(i)
+        } else{
+        return false
+        }
+    }
+}
+
+function isTypeNouns(i){
+    if(dataId === 'adults'){
+        countGuests[i].value = getTypeNouns(parseInt(dropdownCount[i].innerHTML), 'взрослый', 'взрослых', 'взрослых')
+    }else if(dataId === 'children'){
+        countGuests[i].value = getTypeNouns(parseInt(dropdownCount[i].innerHTML), 'ребенок', 'ребенка', 'детей')
+    } else if(dataId === 'babies'){
+        countGuests[i].value = getTypeNouns(parseInt(dropdownCount[i].innerHTML), 'младенец', 'младенца', 'младенцев')
+    } else if(dataId === 'bedrooms'){
+        countGuests[i].value = getTypeNouns(parseInt(dropdownCount[i].innerHTML), 'спальня', 'спальни', 'спален')
+    }else if(dataId === 'beds'){
+        countGuests[i].value = getTypeNouns(parseInt(dropdownCount[i].innerHTML), 'кровать', 'кровати', 'кроватей')
+    } else if(dataId === 'bathroom'){
+        countGuests[i].value = getTypeNouns(parseInt(dropdownCount[i].innerHTML), 'ванная комната', 'ванные комнаты', 'ванных комнат')
+    }
+}
+
+// функция для проверки условия склонения слов
+function getTypeNouns(num, singular, moreTwo, moreFour){
+    if(num === 1){
+        return num + ' ' + singular
+    }else if(num >= 2 && num <= 4){
+        return num + ' ' + moreTwo
+    } else if(num >= 5){
+        return num + ' ' + moreFour
+    }
+}
+
+// функция кнопки Применить, закрывает dropdown
+for(let i=0; i<applyBtn.length; i++){
+    applyBtn[i].onclick = function(e){
+        e.preventDefault()
+        dropdownOpen[i].classList.toggle('dropdown__menu--open')
+    }
+}
