@@ -16,10 +16,8 @@ $range.ionRangeSlider({
     max: max,
     from: 5000,
     to: 10000,
-    //values_separator: '-',
-    //prettify_enabled: true,
-    //prettify_separator: ' ',
-    postfix: '₽',
+    prettify_enabled: true,
+    prettify_separator: " ",
     decorate_both: true,
     hide_min_max: true,
     hide_from_to: true,
@@ -30,8 +28,8 @@ $range.ionRangeSlider({
 instance = $range.data("ionRangeSlider");
 
 function updateInputs (data) {
-	from = data.from;
-    to = data.to;
+    from = data.from + ' ₽';
+    to = data.to + ' ₽';
 
     $inputFrom.prop("value", from);
     $inputTo.prop("value", to);

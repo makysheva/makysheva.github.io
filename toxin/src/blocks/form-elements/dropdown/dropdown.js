@@ -10,7 +10,6 @@
         }
     }
 
-
     // функция для увеличения/уменьшения выбора количества гостей
     const minusBtn = document.querySelectorAll('.dropdown__minus')
     const plusBtn= document.querySelectorAll('.dropdown__plus')
@@ -21,10 +20,9 @@
     for(let i=0; i < minusBtn.length; i++){
         minusBtn[i].innerHTML = '-'
         minusBtn[i].onclick = function(){
-            let count = parseInt(dropdownCount[i].innerHTML)
-            if(count !== 0){
-                dropdownCount[i].innerHTML = count - 1
-                isTypeNouns(i, count)
+            if(parseInt(dropdownCount[i].innerHTML) !== 0){
+                dropdownCount[i].innerHTML = parseInt(dropdownCount[i].innerHTML) - 1
+                isTypeNouns(i)
             } else{
             return false
             }
@@ -34,38 +32,35 @@
     for(let i=0; i < plusBtn.length; i++){
         plusBtn[i].innerHTML = '+'
         plusBtn[i].onclick = function(){
-            let count = parseInt(dropdownCount[i].innerHTML)
-            if(count !== 10){
-                dropdownCount[i].innerHTML = count + 1
-                isTypeNouns(i, count)
+            if(parseInt(dropdownCount[i].innerHTML) !== 10){
+                dropdownCount[i].innerHTML = parseInt(dropdownCount[i].innerHTML) + 1
+                isTypeNouns(i)
             } else{
             return false
             }
         }
     }
 
-
-    function isTypeNouns(i, count){
+    function isTypeNouns(i){
         let menuOption = document.getElementsByClassName('dropdown__menu-option')
 
         for(let j=0; j < menuOption.length; j++){
-            let dataId = menuOption[j].getAttribute('data-id')
+            let dataId = menuOption[i].getAttribute('data-id')
 
             if(dataId === 'adults' || dataId === 'children' || dataId === 'babies'){
-                countGuests[i].value = getTypeNouns(count, 'гость', 'гостя', 'гостей')
+                countGuests[i].value = getTypeNouns(getTypeNouns(parseInt(dropdownCount[i].innerHTML)), 'гость', 'гостя', 'гостей')
 
             } else if(dataId === 'bedrooms'){
-                countGuests[i].value = getTypeNouns(count, 'спальня', 'спальни', 'спален')
+                countGuests[i].value = getTypeNouns(getTypeNouns(parseInt(dropdownCount[i].innerHTML)), 'спальня', 'спальни', 'спален')
 
             }else if(dataId === 'beds'){
-                countGuests[i].value = getTypeNouns(count, 'кровать', 'кровати', 'кроватей')
+                countGuests[i].value = getTypeNouns(getTypeNouns(parseInt(dropdownCount[i].innerHTML)), 'кровать', 'кровати', 'кроватей')
 
             } else if(dataId === 'bathroom'){
-                countGuests[i].value = getTypeNouns(count, 'ванная комната', 'ванные комнаты', 'ванных комнат')
+                countGuests[i].value = getTypeNouns(getTypeNouns(parseInt(dropdownCount[i].innerHTML)), 'ванная комната', 'ванные комнаты', 'ванных комнат')
             }
         }
     }
-    //getTypeNouns(parseInt(dropdownCount[i].innerHTML), 'спальня', 'спальни', 'спален')
 
     // функция для проверки условия склонения слов
     function getTypeNouns(num, singular, moreTwo, moreFour){
@@ -85,5 +80,4 @@
             dropdownOpen[i].classList.toggle('dropdown__menu--open')
         }
     }
-
 })();

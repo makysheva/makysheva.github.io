@@ -1,24 +1,17 @@
+.form-elements__slider-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .range-slider-wrapper{
     display: flex;
 }
 
-// .range-slider{
-//     display: block;
-//     width: 266px;
-//     height: 6px;
-//     background: #FFFFFF;
-//     border: 1px solid rgba(31, 32, 65, 0.25);
-//     box-sizing: border-box;
-//     border-radius: 3px;
-// }
-
 .range-slider__range{
-   // position: absolute;
     display: block;
     width: 88px;
     height: 6px;
-    // left: 1061px;
-    // top: 181.44px;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     border-radius: 3px;
 }
@@ -28,10 +21,6 @@
     height: 80px;
 }
 
-// .irs-from{
-//     visibility: hidden;
-// }
-
 .extra-controls{
     display: inline;
 }
@@ -39,6 +28,15 @@
 .extra-controls__title{
     border: 0;
     outline: none;
+    max-width: 51px;
+    width: 100%;
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: rgba(31, 32, 65, 0.5);
 }
 
 // стилизация ползунков
