@@ -1,13 +1,20 @@
-mixin expanderCard(title)
-    div(class="expander")
-        div(class="expander__header js-expander") #{title}
-        div(class="expander__list expander__list_hided")
-            +expander('mark-breakfast--open', 'Завтрак', 'checkbox-breakfast--open', 'expander-breakfast--open')
-            +expander('mark-desk', 'Письменный стол', 'checkbox-desk', 'expander-desk')
-            +expander('mark-feeding-chair', 'Стул для кормления', 'checkbox-feeding-chair', 'expander-feeding-chair')
-            +expander('mark-cot', 'Кроватка', 'checkbox-cot', 'expander-cot')
-            +expander('mark-tv', 'Телевизор', 'checkbox-tv', 'expander-tv')
-            +expander('mark-shampoo', 'Шампунь', 'checkbox-shampoo', 'expander-shampoo')
+mixin expanderCard(title, hidedClassName)
+    if hidedClassName
+        div(class="expander")
+            div(class="expander__header js-expander") #{title}
+            div(class="expander__list expander__list_hided")
+                +expander('mark-breakfast--open', 'Завтрак', 'checkbox-breakfast--open', 'expander-breakfast--open')
+
+    else
+        div(class="expander")
+            div(class="expander__header js-expander") #{title}
+            div(class="expander__list")
+                +expander('mark-breakfast--opens', 'Завтрак', 'checkbox-breakfast--opens', 'expander-breakfast--opens')
+                +expander('mark-desk', 'Письменный стол', 'checkbox-desk', 'expander-desk')
+                +expander('mark-feeding-chair', 'Стул для кормления', 'checkbox-feeding-chair', 'expander-feeding-chair')
+                +expander('mark-cot', 'Кроватка', 'checkbox-cot', 'expander-cot')
+                +expander('mark-tv', 'Телевизор', 'checkbox-tv', 'expander-tv')
+                +expander('mark-shampoo', 'Шампунь', 'checkbox-shampoo', 'expander-shampoo')
 
 mixin expander(idIcon, title, idInput, inputDataType)
     div(class="expander__wrapper")

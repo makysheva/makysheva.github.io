@@ -83,18 +83,8 @@ block form-section
                 .form-elements-item
                     .form-elements__expander
                         form(action="")
-                            div(class="expander")
-                                div(class="expander__header js-expander") Expandable checkbox list
-                                div(class="expander__list expander__list_hided")
-                                    div(class="expander__wrapper")
-                                        div(class="checkbox__marks")
-                                            i(class="fa fa-check checkbox__mark" aria-hidden="true" id="mark-breakfast")
-                                        div(class="expander__checkbox")
-                                            label(class="checkbox" for="checkbox-breakfast") Завтрак
-                                                input(class="checkbox__input" type="checkbox" checked="" id="checkbox-breakfast" data-type="expander-breakfast")
-                                                div(class="checkbox__mark")
-
-                            +expanderCard('Expandable checkbox list')
+                            +expanderCard('Expandable checkbox list', 'expander__list_hided')
+                            +expanderCard('Expandable checkbox list', '')
 
                 .form-elements-item
                     .form-elements__additions
