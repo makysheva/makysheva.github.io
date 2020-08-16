@@ -2,12 +2,14 @@ mixin expanderCard(title, hidedClassName)
     if hidedClassName
         div(class="expander")
             div(class="expander__header js-expander") #{title}
-            div(class="expander__list expander__list_hided")
+                i.expander__checkmark.checkmark.checkmark__down
+            div(class="expander__list " + hidedClassName)
                 +expander('mark-breakfast--open', 'Завтрак', 'checkbox-breakfast--open', 'expander-breakfast--open')
 
     else
         div(class="expander")
-            div(class="expander__header js-expander") #{title}
+            div(class="expander__header js-expander " + hidedClassName) #{title}
+                i.expander__checkmark.checkmark.checkmark__down
             div(class="expander__list")
                 +expander('mark-breakfast--opens', 'Завтрак', 'checkbox-breakfast--opens', 'expander-breakfast--opens')
                 +expander('mark-desk', 'Письменный стол', 'checkbox-desk', 'expander-desk')

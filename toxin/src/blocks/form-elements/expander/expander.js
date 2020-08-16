@@ -2,14 +2,20 @@
 (function(){
     const expanderItems = document.querySelectorAll('.js-expander')
     const expanderList = document.querySelectorAll('.expander__list')
+    let checkmarks = document.querySelectorAll(".expander__checkmark")
 
-    expanderItems.forEach((expanderItem) => {
-        expanderItem.addEventListener('click', () => {
-            expanderList.forEach((expander) => {
-                expander.classList.toggle('expander__list_hided')
-            })
-        })
-    })
+    for(let i=0; i < expanderItems.length; i++){
+        expanderItems[i].onclick = function(e){
+            e.preventDefault()
+            expanderList[i].classList.toggle('expander__list_hided')
+
+            if(expanderList[i].hasAttribute('class') === 'expander__list_hided'){
+                checkmarks[i].classList.toggle("checkmark__down");
+            }else{
+                checkmarks[i].classList.toggle("checkmark__up");
+            }
+        }
+    }
 })();
 
 
