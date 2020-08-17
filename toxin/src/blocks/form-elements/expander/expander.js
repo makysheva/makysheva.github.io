@@ -16,8 +16,6 @@
             }
         }
     }
-})();
-
 
 /* переключение галочек на списке expander */
 const markBreakfast = document.getElementById('mark-breakfast')
@@ -60,3 +58,4 @@ checkboxHide.forEach((checkbox) => {
         }
     })
 })
+})();
