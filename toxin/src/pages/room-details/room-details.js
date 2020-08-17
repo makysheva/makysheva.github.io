@@ -23,8 +23,8 @@ import '../../blocks/headers-footers/footer/footer.scss'
 console.log('in room-details.js')
 
 var ctx = document.getElementById('myChart').getContext('2d');
-
-//document.getElementById('actual-font').innerHTML = ctx.fillText('260 голосов', 100, 100)
+// ctx.fillText('260 голосов', 100, 100)
+// document.getElementById('actual-font').innerHTML = ctx.fillText('260 голосов', 100, 100)
 
 var chart = new Chart(ctx, {
     // The type of chart we want to create
@@ -49,17 +49,19 @@ var chart = new Chart(ctx, {
             enabled: false,
         },
         cutoutPercentage: 90,
-        title: {
-            display: true,
-            text: '260 голосов',
-            position: "bottom",
-            align: 'center',
-            font: {
-                color: '#BC9CFF',
-                size: 24,
-                family: 'Quicksand',
-                weight: 'bold',
-            },
-        }
+        // title: {
+        //     display: true,
+        //     text: '260 голосов',
+        //     position: function(context){
+        //         this.position = 'bottom'
+        //     },
+        //     align: 'center',
+        //     font: {
+        //         color: '#BC9CFF',
+        //         size: 24,
+        //         family: 'Quicksand',
+        //         weight: 'bold',
+        //     },
+        // }
     }
 });

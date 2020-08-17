@@ -58,6 +58,21 @@ html, body {
     width: 100%;
 }
 
+.chart__text {
+    position: absolute;
+    width: 41px;
+    height: 30px;
+    left: 462px;
+    top: 697px;
+    font-family: Quicksand, OpenSans, sans-serif;
+    font-style: normal;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #BC9CFF;
+}
+
 .bullet {
     list-style: none;
     line-height: 1.54em;
