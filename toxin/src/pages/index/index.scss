@@ -1,15 +1,31 @@
-.logo-main {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    left: 140px;
-    top: 165px;
-}
+.index {
+    &__title{
+        text-align: center;
+        font-family: Montserrat, OpenSans, sans-serif;
+        margin: 40px 0;
+    }
 
-.logo-main--text {
-    position: absolute;
-    width: 53.19px;
-    height: 12.95px;
-    left: 192.5px;
-    top: 178.33px;
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 363px;
+        width: 100%;
+        border: 1px solid rgba(31, 32, 65, 0.75);
+        border-radius: 12px;
+        margin: auto;
+    }
+
+    &__link{
+        padding: 20px 0 15px 0;
+        text-decoration: none;
+        color: rgba(31, 32, 65, 0.5);
+        text-transform: uppercase;
+        font-size: 20px;
+        font-family: Montserrat, OpenSans, sans-serif;
+
+        &:hover{
+            color: rgba(31, 32, 65, 0.75);
+        }
+    }
 }

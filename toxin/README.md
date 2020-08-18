@@ -19,6 +19,9 @@
 - chart.js для круговой диаграммы
 
 ## UI Kit
+
+[Index Page](http://makysheva.github.io/toxin/build/index.html)
+
 [Colors & Type](http://makysheva.github.io/toxin/build/colors-type.html)
 
 [Headers & Footers](http://makysheva.github.io/toxin/build/headers-footers.html)
