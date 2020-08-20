@@ -10,12 +10,13 @@ mixin footer({navigation})
                     include ../../logo/logo-main
                 .footer__text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
 
-            each element in navigation
-                section.footer__nav
-                    +navigation(element.title)
-                    .link__container
-                        each link in element.links
-                            +link(link.text)
+            .footer__items
+                each element in navigation
+                    section.footer__nav
+                        +navigation(element.title)
+                        .link__container
+                            each link in element.links
+                                +link(link.text)
 
             .footer__subscription
                 .subscription__title Подписка
