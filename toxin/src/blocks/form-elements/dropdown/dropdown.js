@@ -1,4 +1,3 @@
-//функция для октрытия/закрытия dropdown
 (function () {
     const dropdownSelect = document.querySelectorAll('.form-elements__input--dropdown')
     const dropdownOpen = document.querySelectorAll('.dropdown__menu')
@@ -48,16 +47,16 @@
             let dataId = menuOption[i].getAttribute('data-id')
 
             if(dataId === 'adults' || dataId === 'children' || dataId === 'babies'){
-                countGuests[i].value = getTypeNouns(getTypeNouns(parseInt(dropdownCount[i].innerHTML)), 'гость', 'гостя', 'гостей')
+                countGuests[i].value = getTypeNouns(parseInt(dropdownCount[i].innerHTML), 'гость', 'гостя', 'гостей')
 
             } else if(dataId === 'bedrooms'){
-                countGuests[i].value = getTypeNouns(getTypeNouns(parseInt(dropdownCount[i].innerHTML)), 'спальня', 'спальни', 'спален')
+                countGuests[i].value = getTypeNouns(parseInt(dropdownCount[i].innerHTML), 'спальня', 'спальни', 'спален')
 
             }else if(dataId === 'beds'){
-                countGuests[i].value = getTypeNouns(getTypeNouns(parseInt(dropdownCount[i].innerHTML)), 'кровать', 'кровати', 'кроватей')
+                countGuests[i].value = getTypeNouns(parseInt(dropdownCount[i].innerHTML), 'кровать', 'кровати', 'кроватей')
 
             } else if(dataId === 'bathroom'){
-                countGuests[i].value = getTypeNouns(getTypeNouns(parseInt(dropdownCount[i].innerHTML)), 'ванная комната', 'ванные комнаты', 'ванных комнат')
+                countGuests[i].value = getTypeNouns(parseInt(dropdownCount[i].innerHTML), 'ванная комната', 'ванные комнаты', 'ванных комнат')
             }
         }
     }

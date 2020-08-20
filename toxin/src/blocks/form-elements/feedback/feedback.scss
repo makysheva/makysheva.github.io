@@ -2,6 +2,8 @@
     position: absolute;
     top: 1216px;
     left: 515px;
+    max-width: 709px;
+    width: 100%;
 }
 
 .feedback__avatar-wrapper{
@@ -105,7 +107,16 @@
     display: flex;
 }
 
-.form-elements--bottom{
-    max-width: 709px;
-    width: 100%;
+
+@media (max-width: 1200px){
+    .form-elements--bottom{
+        position: initial;
+    }
+}
+
+@media (max-width: 700px){
+    .form-elements--bottom{
+        max-width: 500px;
+        width: 100%;
+    }
 }

@@ -33,9 +33,8 @@ block form-section
                         +inputField('', '', 'text-field', 'default', 'email', 'Email')
                 .form-elements-item--hover
                     form(action="")
-                        .form-elements__descr
-                            +textField('text field', 'hover')
-                            +inputField('', '', 'text-field', 'hover', 'email', 'Email')
+                        +textField('text field', 'hover')
+                        +inputField('', '', 'text-field', 'hover', 'email', 'Email')
 
                 .form-elements-item
                     +dropdownCard('dropdown', 'Сколько гостей', 'Взрослые', 'Дети', 'Младенцы', '', '', '')
