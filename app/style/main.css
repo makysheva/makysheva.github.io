@@ -79,6 +79,13 @@ div {
   padding-top: 40px;
 }
 
+
+@media(max-width: 500px){
+  .header-section {
+    padding-left: 20px;
+  }
+}
+
 .header-title {
   display: flex;
   flex-direction: column;
@@ -195,6 +202,12 @@ div {
   flex-wrap: wrap;
 }
 
+@media(max-width: 700px){
+  .portfolio-items{
+    padding: 0 20px;
+  }
+}
+
 @media(max-width: 500px){
   .portfolio-items{
     justify-content: center;
@@ -217,6 +230,12 @@ div {
 
 .toggle-btn {
   padding-bottom: 20px;
+}
+
+@media(max-width: 700px){
+  .toggle-btn {
+    padding-left: 20px;
+  }
 }
 
 .all {
