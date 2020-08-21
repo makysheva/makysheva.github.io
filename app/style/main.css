@@ -195,6 +195,12 @@ div {
   flex-wrap: wrap;
 }
 
+@media(max-width: 500px){
+  .portfolio-items{
+    justify-content: center;
+  }
+}
+
 .portfolio-item {
   text-align: center;
   margin-bottom: 100px;
