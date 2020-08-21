@@ -17,10 +17,10 @@ block roomDetails-section
 
     .hero-gallery
         .hero-gallery__left
-            img(src=require('assets/img/room-1.png'), alt="room-1")
+            img(class="hero-gallery__img--main" src=require('assets/img/room-1.png'), alt="room-1")
         .hero-gallery__right
-            img(src=require('assets/img/room-2.png'), alt="room-2")
-            img(src=require('assets/img/room-3.png'), class="hero-gallery--small", alt="room-3")
+            img(class="hero-gallery__img--right" src=require('assets/img/room-2.png'), alt="room-2")
+            img(class="hero-gallery__img--right" src=require('assets/img/room-3.png'), class="hero-gallery--small", alt="room-3")
 
     .container
         .room-details
@@ -35,9 +35,9 @@ block roomDetails-section
                     +formElementsHeader('Впечатления от номера')
 
                     .chart__wrapper
-                        span.chart__text 260 голосов
                         .chart
                             canvas(id="myChart")
+                                span.chart__text 260 голосов
 
                         .room-details__list
                             ul(class="bullet")
