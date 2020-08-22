@@ -56,9 +56,7 @@ var chart = new Chart(ctx, {
         // title: {
         //     display: true,
         //     text: '260 голосов',
-        //     position: function(context){
-        //         this.position = 'bottom'
-        //     },
+        //     position: 'bottom',
         //     align: 'center',
         //     font: {
         //         color: '#BC9CFF',
@@ -66,6 +64,5 @@ var chart = new Chart(ctx, {
         //         family: 'Quicksand',
         //         weight: 'bold',
         //     },
-        // }
     }
 });
