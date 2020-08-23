@@ -1,3 +1,5 @@
+@import '../../scss/fonts.scss';
+
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +32,6 @@ html, body {
         width: 35%;
         margin: 0;
         padding: 0;
-        // flex-flow: column wrap;
     }
 
     &__img--right{
@@ -118,7 +119,7 @@ html, body {
         height: 30px;
         left: 88px;
         top: -75px;
-        font-family: Quicksand, OpenSans, sans-serif;
+        font-family: 'Quicksand', 'OpenSans', 'sans-serif';
         font-style: normal;
         font-size: 21px;
         display: flex;
@@ -140,7 +141,7 @@ html, body {
     &__element{
         position: relative;
         padding-left: 20px;
-        font-family: Montserrat, OpenSans, sans-serif;
+        font-family: 'Montserrat', 'OpenSans', 'sans-serif';
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -202,7 +203,7 @@ html, body {
     }
 
     &__title{
-        font-family: Quicksand, OpenSans, sans-serif;
+        font-family: 'Quicksand', 'OpenSans', 'sans-serif';
         font-style: normal;
         font-weight: bold;
         font-size: 19px;
@@ -214,7 +215,7 @@ html, body {
     }
 
     &__subtitle{
-        font-family: Montserrat, OpenSans, sans-serif;
+        font-family: 'Montserrat', 'OpenSans', 'sans-serif';
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -233,7 +234,7 @@ html, body {
     }
 
     &__descr{
-        font-family: Montserrat, OpenSans, sans-serif;
+        font-family: 'Montserrat', 'OpenSans', 'sans-serif';
         font-style: normal;
         font-weight: normal;
         font-size: 14px;

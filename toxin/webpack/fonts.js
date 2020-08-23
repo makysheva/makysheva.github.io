@@ -10,7 +10,7 @@ module.exports = function(){
                     options: {
                       name: '[name].[ext]',
                       publicPath: '../../',  // path to director where assets folder is located
-                    }
+                }
                 },
             ]
         },

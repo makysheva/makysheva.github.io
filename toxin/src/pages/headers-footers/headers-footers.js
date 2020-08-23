@@ -9,5 +9,6 @@ import '../../blocks/headers-footers/footer/footer.scss'
 import '../../blocks/form-elements/text-field/text-field.scss'
 import '../../blocks/form-elements/email-text-field/email-text-field.scss'
 import '../../blocks/headers-footers/light-footer/light-footer.scss'
+import '../../scss/fonts.scss'
 
 console.log('in headers-footers.js')

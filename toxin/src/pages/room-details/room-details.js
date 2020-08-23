@@ -23,6 +23,7 @@ import '../../blocks/form-elements/bullet-list/bullet-list.scss'
 import '../../blocks/form-elements/buttons/buttons.scss'
 import '../../blocks/headers-footers/footer/footer'
 import '../../blocks/headers-footers/footer/footer.scss'
+import '../../scss/fonts.scss'
 
 console.log('in room-details.js')
 
