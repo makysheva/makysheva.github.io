@@ -296,22 +296,32 @@ div {
 
 .social-items, .copyright {
   padding-top: 20px;
-  max-width: 161px;
+  max-width: 166px;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .social-item {
   margin-right: 20px;
 }
 
+.social-item--in{
+  padding-left: 26px;
+}
+
 .copyright-text {
   color: #fff;
   font-size: 20px;
   font-family: "Taurus", sans-serif;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
 }
 
-.copyright-heart {
-  color: #EE101B;
+.copyright-link{
+  padding-left: 10px;
 }
 
 .icon {
@@ -354,5 +364,13 @@ div {
     position: fixed;
     right: 40px;
     top: 40px;
+  }
+  .header-section{
+    padding-left: 25px;
+  }
+  .header-title{
+    padding-left: 7px;
+    padding-right: 7px;
+    text-align: center;
   }
 }
