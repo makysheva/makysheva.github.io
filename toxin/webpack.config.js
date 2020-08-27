@@ -100,7 +100,7 @@ function common(env) {
     },
     pug(),
     fonts(),
-    favicons(),
+    favicons(env),
     images(env)
 ])};
 
