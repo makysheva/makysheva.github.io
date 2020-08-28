@@ -1,4 +1,5 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
 
 module.exports = function(env){
     isDev = env === 'development'
@@ -8,6 +9,7 @@ module.exports = function(env){
                 {
                     test: /\.(jpg|png|svg)$/,
                     loader: 'file-loader',
+                    exclude: [path.resolve(__dirname, 'assets/favicons')],
                     options: {
                         name: '[name].[ext]',
                         outputPath: '/assets/images/',

@@ -1,14 +1,16 @@
+const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = function(env){
+module.exports = function(env, source){
     isDev = env === 'development'
+    const favicons = path.join(source, 'assets/favicons')
     return {
         module: {
             rules: [
                 {
                     test: /\.(ico|png|svg|webmanifest|xml)$/,
                     loader: 'file-loader',
+                    include: [favicons],
                     options: {
                         name: '[name].[ext]',
                         outputPath: '/assets/favicons/',
