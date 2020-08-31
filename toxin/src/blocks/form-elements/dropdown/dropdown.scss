@@ -15,7 +15,7 @@
   .material-icons{
     width: 44px;
     height: 30px;
-    font-family: Material Icons;
+    font-family: 'Material Icons';
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -32,7 +32,7 @@
     padding-left: 14px;
     cursor: pointer;
     user-select: none;
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: 'Montserrat-Regular', 'OpenSans-Regular', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -57,9 +57,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: 'Montserrat-Bold', 'OpenSans-Bold', sans-serif;
     font-style: normal;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 12px;
     text-transform: uppercase;
     color: #1F2041;
@@ -79,7 +79,7 @@
   .dropdown__minus, .dropdown__plus{
     width: 30px;
     height: 30px;
-    font-family: Montserrat;
+    font-family: 'Montserrat-Regular', 'OpenSans-Regular', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -104,9 +104,9 @@
 
 .clear-btn, .apply-btn{
     border: 0;
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: 'Montserrat-Bold', 'OpenSans-Bold', sans-serif;
     font-style: normal;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;

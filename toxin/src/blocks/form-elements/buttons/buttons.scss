@@ -3,7 +3,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 16px;
-    //width: 258px;
 }
 
 .form-elements__btn {
@@ -37,7 +36,7 @@
     display: inline-block;
     position: relative;
     top: 2px;
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: 'Montserrat-Bold', 'OpenSans-Bold', sans-serif;
     color: #bc9cff;
     border-radius: 22px;
     border: none;
@@ -46,7 +45,7 @@
     font-size: 0.75rem;
     height: 30px;
     line-height: 30px;
-    font-weight: bold;
+    font-weight: bolder;
     cursor: pointer;
     user-select: none;
     background-color: #fff;
@@ -90,9 +89,9 @@
     font-weight: bold;
     color: #bc9cff;
     cursor: pointer;
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: 'Montserrat-Bold', 'OpenSans-Bold', sans-serif;
     font-style: normal;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 12px;
     line-height: 15px;
 }
@@ -105,7 +104,7 @@
 .long-button{
     position: relative;
     display: inline-block;
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: 'Montserrat-Bold', 'OpenSans-Bold', sans-serif;
     color: #fff;
     background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     border: none;
@@ -115,10 +114,9 @@
     padding: 0 18px;
     text-transform: uppercase;
     font-size: 0.75rem;
-    font-weight: bold;
+    font-weight: bolder;
     cursor: pointer;
     user-select: none;
-    //width: 100%;
     text-align: center;
     width: 320px;
 }

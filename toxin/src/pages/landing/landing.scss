@@ -1,5 +1,3 @@
-@import '../../scss/fonts.scss';
-
 .landing__container {
     background-image: url("~images/landing-background.png");
     background-position: bottom;
@@ -16,7 +14,7 @@
 
 .landing__text{
     width: 297px;
-    font-family: 'Montserrat', 'OpenSans', 'sans-serif';
+    font-family: 'Montserrat-Regular', 'OpenSans-Regular', 'sans-serif';
     font-style: normal;
     font-weight: normal;
     font-size: 14px;

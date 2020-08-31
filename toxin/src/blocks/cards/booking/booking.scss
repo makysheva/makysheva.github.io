@@ -20,9 +20,9 @@
 
 .apartment{
     &__number{
-        font-family: Quicksand, OpenSans, sans-serif;
+        font-family: 'Quicksand-Bold', 'OpenSans-Bold', sans-serif;
         font-style: normal;
-        font-weight: bold;
+        font-weight: bolder;
         font-size: 14px;
         line-height: 17px;
         color: #1F2041;
@@ -33,9 +33,9 @@
     }
 
     &__text{
-        font-family: Montserrat, OpenSans, sans-serif;
+        font-family: 'Montserrat-Bold', 'OpenSans-Bold', sans-serif;
         font-style: normal;
-        font-weight: bold;
+        font-weight: bolder;
         font-size: 12px;
         line-height: 15px;
         text-transform: uppercase;
@@ -44,11 +44,11 @@
 }
 
 .price{
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: 'Montserrat-Bold', 'OpenSans-Bold', sans-serif;
     color: rgba(31,32,65,0.5);
 
     &__number{
-        font-weight: bold;
+        font-weight: bolder;
     }
 
     &__text {
@@ -71,7 +71,7 @@
         padding-right: 24px;
         width: 80%;
         line-height: 1.125rem;
-        font-family: Montserrat, OpenSans, sans-serif;
+        font-family: 'Montserrat-Regular', 'OpenSans-Regular', sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -83,8 +83,8 @@
             content: 'i';
             top: 0;
             right: 0;
-            font-family: Montserrat, OpenSans, sans-serif;
-            font-weight: bold;
+            font-family: 'Montserrat-Bold', 'OpenSans-Bold', sans-serif;
+            font-weight: bolder;
             color: rgba(31,32,65,0.25);
             border: 1px solid rgba(31,32,65,0.25);
             border-radius: 50%;
@@ -96,7 +96,7 @@
     }
 
     &__sum{
-        font-family: Montserrat, OpenSans, sans-serif;
+        font-family: 'Montserrat-Regular', 'OpenSans-Regular', sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -112,9 +112,9 @@
     }
 
     &__block{
-        font-family: Quicksand, OpenSans, sans-serif;
+        font-family: 'Quicksand-Bold', 'OpenSans-Bold', sans-serif;
         font-style: normal;
-        font-weight: bold;
+        font-weight: bolder;
         font-size: 19px;
         line-height: 24px;
         color: #1F2041;

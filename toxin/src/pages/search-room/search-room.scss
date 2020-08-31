@@ -1,5 +1,3 @@
-@import '../../scss/fonts.scss';
-
 html, body {
     width: 100%;
     margin: 0 auto;
@@ -24,7 +22,7 @@ html, body {
 }
 
 .slider__footer{
-    font-family: 'Montserrat', 'OpenSans', 'sans-serif';
+    font-family: 'Montserrat-Regular', 'OpenSans-Regular', 'sans-serif';
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
@@ -40,9 +38,9 @@ html, body {
 }
 
 .search-room__title{
-    font-family: 'Quicksand', 'OpenSans', 'sans-serif';
+    font-family: 'Quicksand-Bold', 'OpenSans-Bold', 'sans-serif';
     font-style: normal;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 24px;
     line-height: 30px;
     color: #1F2041;

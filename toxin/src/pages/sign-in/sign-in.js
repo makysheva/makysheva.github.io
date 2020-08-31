@@ -11,6 +11,6 @@ import '../headers-footers/headers-footers.scss'
 import '../../blocks/headers-footers/footer/footer'
 import '../../blocks/headers-footers/footer/footer.scss'
 import '../../blocks/cards/enter-card/enter-card'
-import '../../scss/fonts.scss'
+import '../../assets/scss/fonts.scss'
 
 console.log('in sign-in.js')

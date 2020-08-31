@@ -10,6 +10,6 @@ import '../../blocks/headers-footers/mobile-menu/mobile-menu.scss'
 import '../../blocks/form-elements/buttons/buttons.scss'
 import '../../blocks/headers-footers/footer/footer'
 import '../../blocks/headers-footers/footer/footer.scss'
-import '../../scss/fonts.scss'
+import '../../assets/scss/fonts.scss'
 
 console.log('in registration.js')

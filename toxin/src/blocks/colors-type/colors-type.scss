@@ -67,9 +67,9 @@
     &-descr {
         width: 159px;
         height: 57px;
-        font-family: Quicksand;
+        font-family: 'Quicksand-Bold', sans-serif;
         font-style: normal;
-        font-weight: bold;
+        font-weight: bolder;
         font-size: 19px;
         line-height: 29px;
         display: flex;
@@ -88,7 +88,7 @@
 
 /*section Widgets pages colorsandtype*/
 .widget {
-    font-family: Montserrat;
+    font-family: 'Montserrat-Regular', 'Quicksand-Regular', sans-serif;
     font-style: normal;
     font-weight: normal;
     text-align: right;
@@ -101,9 +101,9 @@
     }
 
     &-item {
-        font-family: Quicksand;
+        font-family: 'Quicksand-Bold', sans-serif;
         font-style: normal;
-        font-weight: bold;
+        font-weight: bolder;
         color: #1F2041;
         padding: 0 0 60px 20px;
     }

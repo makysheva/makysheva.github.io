@@ -31,6 +31,6 @@ import '../../blocks/cards/booking/booking.scss'
 import '../../blocks/form-elements/pagination/pagination.scss'
 import '../../blocks/headers-footers/footer/footer'
 import '../../blocks/headers-footers/footer/footer.scss'
-import '../../scss/fonts.scss'
+import '../../assets/scss/fonts.scss'
 
 console.log('in search-room.js')

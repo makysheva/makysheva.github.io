@@ -38,8 +38,6 @@ function common(env) {
             alias: {
                 images: path.resolve(__dirname, 'src/assets/img'),
                 assets: path.resolve(__dirname, 'src/assets'),
-                favicons: path.resolve(__dirname, 'src/assets/favicons'),
-                fonts: path.resolve(__dirname, 'src/assets/fonts'),
             }
         },
         plugins: [
@@ -101,7 +99,7 @@ function common(env) {
         ]
     },
     pug(),
-    fonts(),
+    fonts(env, PATHS.source),
     favicons(env, PATHS.source),
     images(env)
 ])};

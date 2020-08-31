@@ -11,8 +11,8 @@
 
 
 .rich-checkbox__title{
-    font-family: Montserrat, OpenSans, sans-serif;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold', 'OpenSans-Bold', sans-serif;
+    font-weight: bolder;
     color: rgba(31,32,65,0.75);
     font-size: 14px;
 }
@@ -43,7 +43,7 @@
 }
 
 .rich-checkbox__descr {
-    font-family: Montserrat, OpenSans, sans-serif;
+    font-family: 'Montserrat-Regular', 'OpenSans-Regular', sans-serif;
     font-size: 0.75rem;
     line-height: 1.2em;
     font-weight: normal;

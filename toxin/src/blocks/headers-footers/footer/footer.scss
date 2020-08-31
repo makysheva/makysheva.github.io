@@ -1,3 +1,4 @@
+
 .footer {
     width: 100%;
     background-color: #fff;
@@ -28,7 +29,7 @@
     &__text{
         max-width: 260px;
         width: 100%;
-        font-family: Montserrat, OpenSans, sans-serif;
+        font-family: 'Montserrat-Regular', 'OpenSans-Regular', sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -43,9 +44,9 @@
     }
 
     &__subtitle{
-        font-family: Montserrat, OpenSans, sans-serif;
+        font-family: 'Montserrat-Bold', 'OpenSans-Bold', sans-serif;
         font-style: normal;
-        font-weight: bold;
+        font-weight: bolder;
         font-size: 12px;
         line-height: 15px;
         text-transform: uppercase;
@@ -58,7 +59,7 @@
     }
 
     &__link{
-        font-family: Montserrat, OpenSans, sans-serif;
+        font-family: 'Montserrat-Regular', 'OpenSans-Regular', sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -79,7 +80,7 @@
     }
 
     &__paragraph{
-        font-family: Montserrat, OpenSans, sans-serif;
+        font-family: 'Montserrat-Regular', 'OpenSans-Regular', sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -109,9 +110,9 @@
 
 .subscription{
     &__title{
-        font-family: Montserrat, OpenSans, sans-serif;
+        font-family: 'Montserrat-Bold', 'OpenSans-Bold', sans-serif;
         font-style: normal;
-        font-weight: bold;
+        font-weight: bolder;
         font-size: 12px;
         line-height: 15px;
         text-transform: uppercase;
@@ -120,7 +121,7 @@
 
     &__text{
         width: 260px;
-        font-family: Montserrat, OpenSans, sans-serif;
+        font-family: 'Montserrat-Regular', 'OpenSans-Regular', sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;

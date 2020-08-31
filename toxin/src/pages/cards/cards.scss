@@ -1,5 +1,3 @@
-@import '../../scss/fonts.scss';
-
 * {
     margin: 0;
     padding: 0;
@@ -55,9 +53,9 @@ html, body {
 
 .cards__title{
     width: 320px;
-    font-family: 'Quicksand', 'OpenSans';
+    font-family: 'Quicksand-Bold', 'OpenSans-Bold';
     font-style: normal;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 24px;
     line-height: 30px;
     color: #1F2041;
@@ -65,9 +63,9 @@ html, body {
 }
 
 .datepicker-field__title{
-    font-family: 'Montserrat', 'OpenSans';
+    font-family: 'Montserrat-Bold', 'OpenSans-Bold';
     font-style: normal;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
@@ -87,9 +85,9 @@ html, body {
 
 .find-apartments__subtitle{
     width: 43px;
-    font-family: 'Montserrat', 'OpenSans';
+    font-family: 'Montserrat-Bold', 'OpenSans-Bold';
     font-style: normal;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
@@ -143,7 +141,7 @@ html, body {
 
 .account__text{
     width: 186px;
-    font-family: 'Montserrat', 'OpenSans', 'sans-serif';
+    font-family: 'Montserrat-Regular', 'OpenSans-Regular', 'sans-serif';
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -163,14 +161,14 @@ html, body {
     display: inline-block;
     position: relative;
     top: 2px;
-    font-family: 'Montserrat', 'OpenSans', 'sans-serif';
+    font-family: 'Montserrat-Bold', 'OpenSans-Bold', 'sans-serif';
     color: #bc9cff;
     border-radius: 22px;
     border: none;
     text-transform: uppercase;
     font-size: 0.75rem;
     line-height: 30px;
-    font-weight: bold;
+    font-weight: bolder;
     cursor: pointer;
     user-select: none;
     background-color: #fff;

@@ -10,6 +10,6 @@ import '../../blocks/form-elements/buttons/buttons.scss'
 import '../../blocks/cards/find-apartments-card/find-apartments-card'
 import '../../blocks/headers-footers/footer/footer'
 import '../../blocks/headers-footers/footer/footer.scss'
-import '../../scss/fonts.scss'
+import '../../assets/scss/fonts.scss'
 
 console.log('in landing.js')

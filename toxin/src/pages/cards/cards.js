@@ -13,6 +13,6 @@ import '../../blocks/cards/enter-card/enter-card.scss'
 import '../../blocks/form-elements/rate-btn/rate-btn.scss'
 import '../../blocks/cards/booking/booking.scss'
 import '../../blocks/cards/gallery/gallery.scss'
-import '../../scss/fonts.scss'
+import '../../assets/scss/fonts.scss'
 
 console.log('in cards.js')
