@@ -25,4 +25,4 @@
 
 [Toxin](https://makysheva.github.io/toxin/build/index.html)
 
-[Пример использования объекта LocalStorage](https://makysheva.github.io/toxin/build/examples/order-form/order-form.html)
+[Пример использования объекта LocalStorage](https://makysheva.github.io/examples/order-form/order-form.html)
