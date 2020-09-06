@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="order-form.css">
+
+</head>
+<body>
+    <h2 class="title">Форма оформления заказа</h2>
+    <form action="#" class="form">
+        <label for="name" class="label">Ваше имя:</label>
+        <input type="text" id="name" class="field" placeholder="Введите ваше имя">
+
+        <label for="surname" class="label">Ваша фамилия:</label>
+        <input type="text" class="field" id="surname" placeholder="Введите вашу фамилию">
+
+        <div class="male-wrapper">
+            <label for="male-men" class="label">Мужской</label>
+            <input type="radio" id="male-men" class="field male-field" name="male">
+
+            <label for="male-women" class="label">Женский</label>
+            <input type="radio" id="male-women" class="field male-field" name="male">
+        </div>
+
+        <label for="email" class="label">Ваша почта:</label>
+        <input type="email" id="email" class="field" placeholder="Введите вашу почту">
+
+        <label for="sities" class="label">Ваш город:</label>
+        <select name="sities" class="sities" id="sities">
+            <option value="moscow">Москва</option>
+            <option value="astana">Астана</option>
+            <option value="pavlodar">Павлодар</option>
+            <option value="paris">Париж</option>
+        </select>
+
+        <label for="text" class="label">Примечания:</label>
+        <textarea name="text" id="text" cols="30" rows="10" placeholder="Ваша заметка"></textarea>
+
+        <button class="btn" id="btn">Заказать</button>
+    </form>
+
+
+    <script src="order-form.js"></script>
+</body>
+</html>
