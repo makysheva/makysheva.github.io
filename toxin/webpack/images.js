@@ -11,7 +11,7 @@ module.exports = function(env){
                     options: {
                         name: '[name].[ext]',
                         outputPath: '/assets/images/',
-                        publicPath: isDev ? '/assets/images/' : '/toxin/build/assets/images/'
+                        publicPath: isDev ? 'src/assets/images/' : '/toxin/build/assets/images/'
                     },
                 },
             ]
