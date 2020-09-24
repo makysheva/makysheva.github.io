@@ -40,26 +40,26 @@
     }
 })();
 
-// Закрытие меню при клике на пункт меню
-(function () {
-    const menuItems = document.querySelectorAll('.menu-item')
-    const menuWrap = document.querySelectorAll('.menu-wrap')
-
-    menuItems.forEach((menuItem) => {
-        menuItem.addEventListener('click', () => {
-            menuWrap.forEach((wrap) => {
-
-                // if(wrap)
-                // wrap.style.display = "none"
-
-            })
-        })
-    })
-})();
+const mobileMenu = document.querySelector('.mobile-menu')
+const menuWrap = document.querySelector('.menu-wrap')
 
 // Показать меню при клике на иконку
 $('.mobile-menu').on('click', function(event) {
     event.preventDefault();
     $('.menu-wrap').toggleClass('menu-active')
     $('.menu-btn').toggleClass('menu-active')
+    body.toggleClass('lock')
+})
+
+$('.menu-wrap').on('click', function(event) {
+    event.preventDefault();
+    $('.menu-wrap').toggleClass('menu-active')
+    $('.menu-btn').toggleClass('menu-active')
+    body.toggleClass('lock')
+})
+
+mobileMenu.addEventListener('click', () => {
+    menu.classList.toggle('active')
+    menuBurger.classList.toggle('active')
+    document.body.classList.toggle('lock')
 })
