@@ -5,6 +5,7 @@ waxom/package-lock.json
 tinyone/package-lock.json
 toxin/node_modules/
 toxin/package-lock.json
+freehand/node_modules/
 .vscode
 node_modules/
 # Windows thumbnail cache files
