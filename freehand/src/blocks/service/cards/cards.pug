@@ -1,0 +1,11 @@
+include ../../banner/description/description
+
+mixin cards(image, title, text, link)
+    .card__container
+        .image__wrapper
+            img(class="image__card" src=require(`assets/img/${image}`).default, alt=`${image}`)
+        .card__views
+            h3(class="card__title") #{title}
+            p(class="card__excerpt") #{text}
+            .card__btn
+                a(class="card__link" href="#") #{link}

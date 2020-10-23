@@ -1,0 +1,18 @@
+extends ../../base
+include ../../blocks/header/header/header
+include ../../blocks/banner/banner/banner
+include ../../blocks/service/service/service
+include ../../blocks/features/features/features
+include ../../blocks/proposal/proposal
+include ../../blocks/footer/footer/footer
+
+block title
+    | Freehand Landing Page
+
+block index-page
+    +header()
+    +banner()
+    +service()
+    +features()
+    +proposal()
+    +footer()

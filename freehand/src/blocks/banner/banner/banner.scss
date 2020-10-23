@@ -1,0 +1,12 @@
+.banner{
+    &__wrapper{
+        margin-top: 54px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1181px;
+        width: 100%;
+        margin: auto;
+    }
+}

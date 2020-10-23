@@ -1,0 +1,20 @@
+.menu{
+    &__list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__container{
+        max-width: 361px;
+        width: 100%;
+    }
+
+    &__link{
+        font-style: 'Roboto-Medium';
+        font-weight: 500;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 16px;
+    }
+}

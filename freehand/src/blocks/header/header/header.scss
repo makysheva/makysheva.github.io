@@ -1,0 +1,22 @@
+.header{
+    &__wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #EFEEF3;
+        padding-bottom: 29px;
+        max-width: 1155px;
+        width: 100%;
+        margin: 32px auto 54px;
+    }
+
+    &__buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 256px;
+        width: 100%;
+    }
+}

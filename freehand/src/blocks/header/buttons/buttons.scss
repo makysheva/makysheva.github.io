@@ -1,0 +1,19 @@
+$borderBtn: 2px solid #16133D;
+
+.buttons{
+    width: 119px;
+    height: 48px;
+    border: $borderBtn;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 42px;
+}
+
+.button__link{
+    font-style: 'Roboto-Medium';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 18px;
+}

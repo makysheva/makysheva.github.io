@@ -1,0 +1,65 @@
+@import "./roboto.scss";
+@import "./nunito-sans.scss";
+@import "./font-awesome.scss";
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin, pading */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li{
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  margin: 0;
+  font-style: sans-serif;
+}
+
+.container{
+  margin: auto;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:active,
+a:hover,
+a {
+  text-decoration: none;
+  color: #16133D;
+  ;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}

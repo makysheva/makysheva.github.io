@@ -1,0 +1,11 @@
+include ../description/description
+include ../slider/slider
+include ../../header/buttons/buttons
+
+mixin banner()
+    section.banner__wrapper
+        .description__container
+            +description('Freehand your brand with a beautiful website', 'Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .')
+            +descriptionBtnBanner('View Projects', 'Learn more')
+        .slider__container
+            +slider()

@@ -1,0 +1,14 @@
+.service{
+    &__wrapper{
+        max-width: 1158px;
+        width: 100%;
+        margin: 120px auto 10px;
+    }
+
+    &__cards{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 61px;
+    }
+}

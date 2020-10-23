@@ -1,0 +1,22 @@
+include ../logo/logo
+include ../menu/menu
+include ../buttons/buttons
+
+mixin header()
+    section.header__wrapper
+        .menu__container
+            nav.menu
+                ul.menu__list
+                    -
+                        let menuList = [
+                            {title: "Home", link: "#"},
+                            {title: "Portfolio", link: "#"},
+                            {title: "Pages", link: "#"},
+                            {title: "Blog", link: "#"},
+                        ]
+
+                    each element in menuList
+                        +elementMenu(element)
+        .header__buttons
+            +buttons('Sign in')
+            +buttons('Login')
