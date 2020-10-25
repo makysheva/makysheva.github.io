@@ -1,2 +1,2 @@
-# temlate-webpack
-шаблон конфигурации вебпака
+# Freehand Landing
+Учебный макет 2020
