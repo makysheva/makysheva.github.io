@@ -1,0 +1,34 @@
+.price{
+    &__wrapper{
+        max-width: 1140px;
+        width: 100%;
+        margin: 201px auto 0 auto;
+    }
+
+    &__caption{
+        font-style: 'Nunito Sans';
+        font-weight: 600;
+        font-style: normal;
+        font-size: 40px;
+        line-height: 52px;
+        color: #16133D;
+        letter-spacing: 0.2px;
+    }
+
+    &__descr{
+        font-family: 'Roboto-Regular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: #5A7184;
+        margin-top: 7px;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 84px;
+    }
+}

@@ -8,6 +8,13 @@ $borderBtn: 2px solid #16133D;
     border-radius: 8px;
     text-align: center;
     line-height: 42px;
+    cursor: pointer;
+    color: #16133D;
+
+    &:hover{
+        background-color: #16133D;
+        color: #fff;
+    }
 }
 
 .button__link{
@@ -16,4 +23,11 @@ $borderBtn: 2px solid #16133D;
     font-style: normal;
     font-size: 16px;
     line-height: 18px;
+    padding: 12px 34px 15px 35px;
+    border-radius: 5px;
+
+    &:hover{
+        color: #fff;
+        background-color: #16133D;
+    }
 }

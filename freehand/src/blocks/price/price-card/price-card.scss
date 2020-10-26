@@ -1,0 +1,100 @@
+.price{
+    &__item{
+        text-align: center;
+        max-width: 360px;
+        width: 100%;
+
+        &--blue{
+            border-top: 3px solid #007FFC;
+        }
+
+        &--green{
+            border-top: 3px solid #52C29D;
+        }
+
+        &--red{
+            border-top: 3px solid #F04D5D;
+        }
+
+        &:hover{
+            background-color: #eee;
+            cursor: pointer;
+        }
+    }
+
+    &__title{
+        font-family: 'Roboto-Regular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        color: #16133D;
+        margin-top: 50px;
+    }
+
+    &__name{
+        font-family: 'Roboto-Bold';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 52px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        margin-top: 32px;
+
+        &--blue{
+            color: #007FFC;
+        }
+
+        &--green{
+            color: #52C29D;
+        }
+
+        &--red{
+            color: #F04D5D;
+        }
+    }
+
+    &__period{
+        font-family: 'Roboto-Regular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #5A7184;
+        margin-top: 5px;
+    }
+
+    &__text{
+        font-family: 'Roboto-Regular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+        color: #7690A8;
+        max-width: 287px;
+        width: 100%;
+        margin: 35px auto 0 auto 0;
+    }
+
+    &__button{
+        padding: 8px;
+        border: 2px solid #16133D;
+        box-sizing: border-box;
+        border-radius: 50px;
+        max-width: 171px;
+        width: 100%;
+        margin: 54px auto;
+        display: block;
+        cursor: pointer;
+
+        &:hover{
+            background-color: #16133D;
+            color: #fff;
+        }
+    }
+}

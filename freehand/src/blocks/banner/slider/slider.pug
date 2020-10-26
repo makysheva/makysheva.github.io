@@ -1,4 +1,6 @@
 mixin slider()
-    i(class="fas fa-caret-square-left")
+    .arrow__wrapper.arrow__left
+        img(src=require("../../assets/img/arrow-left.png").default alt="arrow__left")
     img(class="slider__img" src=require("../../assets/img/slider.png").default alt="slider")
-    i(class="fas fa-caret-square-right")
+    .arrow__wrapper.arrow__right
+        img(src=require("../../assets/img/arrow-right.png").default alt="arrow__right")

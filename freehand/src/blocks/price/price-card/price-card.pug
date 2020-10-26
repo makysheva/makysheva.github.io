@@ -1,0 +1,22 @@
+mixin priceCard(title, name, color, period, text, btn)
+    if color === 'blue'
+        .price__item.price__item--blue
+            h3.price__title #{title}
+            p.price__name.price__name--blue #{name}
+            p.price__period #{period}
+            p.price__text #{text}
+            a.price__button #{btn}
+    else if color === 'green'
+        .price__item.price__item--green
+            h3.price__title #{title}
+            p.price__name.price__name--green #{name}
+            p.price__period #{period}
+            p.price__text #{text}
+            a.price__button #{btn}
+    else if color === 'red'
+        .price__item.price__item--red
+            h3.price__title #{title}
+            p.price__name.price__name--red #{name}
+            p.price__period #{period}
+            p.price__text #{text}
+            a.price__button #{btn}

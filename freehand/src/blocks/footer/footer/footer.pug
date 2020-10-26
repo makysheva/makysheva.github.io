@@ -1,22 +1,22 @@
 include ../../header/logo/logo
+include ../navigation/navigation
 
 mixin footer()
-    section.footer__wrapper
-        .footer__sidebar
-            +logo()
-            .sidebar__text We're brand strategy and digital design agency, building brands that matter in culture.
-            .sidebar__social
-                a(href="#")
-                    i(class="fab fa-instagram-square" aria-hidden='true')
-                a(href="#")
-                    i(class="fab fa-facebook-square" aria-hidden='true')
-                a(href="#")
-                    i(class="fab fa-github-square" aria-hidden='true')
-                a(href="#")
-                    i(class="fab fa-dribbble-square" aria-hidden='true')
-                a(href="#")
-                    i(class="fab fa-twitter-square" aria-hidden='true')
-        .footer__navigation
+    .footer__container
+        section.footer__wrapper
+            .footer__sidebar
+                +logo()
+                .sidebar__text We're brand strategy and digital design agency, building brands that matter in culture.
+                .sidebar__social
+                    i(class="fab fa-2x fa-instagram-square social__item")
+                    i(class="fab fa-2x fa-facebook-square social__item")
+                    i(class="fab fa-2x fa-github-square social__item")
+                    i(class="fab fa-2x fa-dribbble-square social__item")
+                    i(class="fab fa-2x fa-twitter-square social__item")
+            .footer__navigation
+                +navigation('Services', 'Blog', 'Partner with freehand', 'Apps & Plugins', 'FAQ', 'UI Kit')
+                +navigation('Company', 'About', 'Terms', 'Privacy Policy', 'Careers')
+                +navigationImg('Contact us', 'We’re Always Happy to Help', 'mail@freehand.io', 'footer-image.png', 'footer-img.png')
 
-    section.copyright
-        p.copyright__text Copyright © 2020. Crafted with love.
+        section.copyright
+            p.copyright__text Copyright © 2020. Crafted with love.

@@ -1,8 +1,12 @@
 mixin description(title, text)
-    h1.description__title #{title}
+    h1.description__caption #{title}
     p.description__text #{text}
 
 mixin descriptionCards(titleOne, titleTwo, text)
     h4(class="card__subtitle") #{titleOne}
     h3(class="card__caption") #{titleTwo}
     p(class="card__text") #{text}
+
+mixin descriptionPrice(title, text)
+    h3(class="price__caption") #{title}
+    p(class="price__descr") #{text}

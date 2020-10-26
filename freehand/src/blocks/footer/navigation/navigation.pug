@@ -1,0 +1,15 @@
+mixin navigation(title, ...links)
+    ul.navigation__list
+        li.navigation__title #{title}
+        each link in links
+            li.navigation__links
+                a.link__item(href="#") #{link}
+
+mixin navigationImg(title, text, email, imageFirst, imageSecond)
+    .navigation__list
+        .navigation__title #{title}
+        .navigation__text #{text}
+        .navigation__email #{email}
+        .navigation__images
+            img(class="footer__img" src=require(`assets/img/${imageFirst}`).default alt="footer-img")
+            img(class="footer__star" src=require(`assets/img/${imageSecond}`).default alt="footer-image")

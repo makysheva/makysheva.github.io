@@ -34,7 +34,7 @@ const cssLoaders = extra => {
             loader: MiniCssExtractPlugin.loader,
             options: {
                 hmr: isDev,
-                reloadAll: true
+                reloadAll: true,
             },
         },
         'css-loader'
@@ -52,7 +52,7 @@ const jsLoaders = () => {
         options: {
             presets: [
                 '@babel/preset-env'
-            ]
+            ],
         }
     }]
     if(isDev){
@@ -72,7 +72,6 @@ module.exports = {
         path: path.resolve(__dirname, 'build')
     },
     resolve: {
-        extensions: ['.js', '.jpg'],
         alias: {
             "@": path.resolve(__dirname, "src"),
             assets: path.resolve(__dirname, 'src/assets')
@@ -92,14 +91,13 @@ module.exports = {
             minify: {
                 collapseWhitespace: isProd
             },
-            template: './pages/index/index.pug'
         }),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [
                {
-                    from: path.resolve(__dirname, 'src/assets/favicons/favicon.ico'),
-                    to: path.resolve(__dirname, 'build')
+                    from: path.resolve(__dirname, 'src/assets/favicons/'),
+                    to: path.resolve(__dirname, 'build/assets/favicons')
                },
             ],
         }),
