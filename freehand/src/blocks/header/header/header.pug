@@ -4,7 +4,7 @@ include ../buttons/buttons
 
 mixin header()
     section.header__wrapper
-        +logo()
+        +logo('')
         .menu__container
             nav.menu
                 ul.menu__list
@@ -19,5 +19,5 @@ mixin header()
                     each element in menuList
                         +elementMenu(element)
         .header__buttons
-            +buttons('Sign in')
-            +buttons('Login')
+            +buttons('Sign in', 'white')
+            +buttons('Login', 'blue')

@@ -8,11 +8,11 @@
         letter-spacing: 2px;
         text-transform: uppercase;
         color: #EFEEF3;
-        margin-bottom: 38px;
+        margin-bottom: 32px;
     }
 
     &__links{
-        margin-bottom: 20px;
+        margin-bottom: 15px;
 
         &:last-child{
             margin-bottom: 0px;
@@ -35,11 +35,12 @@
         font-size: 25px;
         line-height: 29px;
         color: #FFFFFF;
-        margin-top: 19px;
+        margin-top: 27px;
+        margin-left: 4px;
     }
 
     &__images{
-        margin-top: 28px;
+        margin-top: 20px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -61,11 +62,15 @@
 }
 
 .footer__img{
-    max-width: 81px;
     width: 100%;
+    position: relative;
+    top: 9px;
+    left: 3px;
 }
 
 .footer__star{
-    max-width: 87px;
     width: 100%;
+    position: relative;
+    left: 24px;
+    top: 9px;
 }

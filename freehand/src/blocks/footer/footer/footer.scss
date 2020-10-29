@@ -1,8 +1,6 @@
 .footer{
     &__container{
-        max-width: 100%;
         width: 100%;
-        height: 573px;
         background: #16133D;
         margin-top: 200px;
         color: #fff;
@@ -11,20 +9,26 @@
     &__navigation{
         display: flex;
         flex-direction: row;
-        max-width: 616px;
+        max-width: 669px;
         width: 100%;
+        justify-content: space-around;
+        margin-right: 172px;
         margin-top: 89px;
-        justify-content: inherit;
     }
 
     &__wrapper{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     &__sidebar{
         margin-top: 93px;
+    }
+
+    &__logo{
+        margin-left: 159px;
+        margin-top: 89px;
     }
 }
 
@@ -43,13 +47,23 @@
     }
 
     &__social{
-        margin-top: 67px;
+        margin-top: 58px;
+        margin-left: 3px;
+        display: flex;
+        width: 38px;
+        height: 38px;
+        background-color: #efeef3;
+        border-radius: 3px;
     }
 }
 
 .social__item{
     margin-right: 8px;
     cursor: pointer;
+    width: 38px;
+    padding: 9px;
+    background-color: #eee;
+    border-radius: 5px;
 
     &:hover{
         color: #65637f;
@@ -58,5 +72,13 @@
 
 .copyright{
     text-align: center;
-    margin-top: 143px;
+    margin-top: 144px;
+    margin-left: 5px;
+    letter-spacing: 0.5px;
+    padding-bottom: 70px;
+
+    &__text{
+        font-family: system-ui;
+        font-size: 15px;
+    }
 }

@@ -11,12 +11,12 @@ mixin priceCard(title, name, color, period, text, btn)
             h3.price__title #{title}
             p.price__name.price__name--green #{name}
             p.price__period #{period}
-            p.price__text #{text}
+            p.price__text.price__text--small #{text}
             a.price__button #{btn}
     else if color === 'red'
         .price__item.price__item--red
             h3.price__title #{title}
             p.price__name.price__name--red #{name}
             p.price__period #{period}
-            p.price__text #{text}
+            p.price__text.price__text--small #{text}
             a.price__button #{btn}

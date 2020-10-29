@@ -1,18 +1,19 @@
 .price{
+    margin-left: 10px;
+
     &__wrapper{
         max-width: 1140px;
         width: 100%;
-        margin: 201px auto 0 auto;
+        margin: auto;
     }
 
     &__caption{
-        font-style: 'Nunito Sans';
+        font-family: system-ui;
         font-weight: 600;
         font-style: normal;
         font-size: 40px;
         line-height: 52px;
         color: #16133D;
-        letter-spacing: 0.2px;
     }
 
     &__descr{
@@ -29,6 +30,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 84px;
+        margin-top: 83px;
     }
 }

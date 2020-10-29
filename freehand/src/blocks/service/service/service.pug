@@ -3,9 +3,10 @@ include ../cards/cards
 
 mixin service()
     section.service__wrapper
-        .description__cards
-            +descriptionCards('our services', 'We build experience', 'Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .')
-        .service__cards
-            +cards('design.png', 'Design', 'Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .', 'Learn more')
-            +cards('ecommerce.png', 'Ecommerce', 'Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .', 'Learn more')
-            +cards('application.png', 'Application', 'Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .', 'Learn more')
+        .service
+            .description__cards
+                +descriptionCards('our services', 'We build experience', 'Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .')
+            .service__cards
+                +cards('design.png', 'Design', 'Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .', 'Learn more')
+                +cards('ecommerce.png', 'Ecommerce', 'Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .', 'Learn more')
+                +cards('application.png', 'Application', 'Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .', 'Learn more')

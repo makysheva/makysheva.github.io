@@ -1,27 +1,27 @@
 $borderBtn: 2px solid #007FFC;
 
-.container{
-    max-width: 1181px;
-    width: 100%;
-    margin-top: 54px;
-}
-
 .description{
     &__wrapper{
         max-width: 477px;
         width: 100%;
     }
 
+    &__container{
+        padding-left: 31px;
+        padding-top: 5px;
+    }
+
     &__caption{
-        font-family: 'Nunito Sans';
+        font-family: system-ui;
         font-weight: 600;
         font-style: normal;
         font-size: 56px;
-        line-height: 68px;
         color: #16133D;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
         max-width: 477px;
         width: 100%;
+        line-height: 69px;
+        letter-spacing: -0.2px;
     }
 
     &__text{
@@ -31,9 +31,13 @@ $borderBtn: 2px solid #007FFC;
         font-size: 19px;
         line-height: 36px;
         color: #183B56;
-        margin-bottom: 31px;
+        margin-bottom: 47px;
         max-width: 477px;
         width: 100%;
+    }
+
+    &__buttons{
+        padding-bottom: 61px;
     }
 
     &__link {
@@ -42,9 +46,6 @@ $borderBtn: 2px solid #007FFC;
         font-style: normal;
         font-size: 16px;
         line-height: 19px;
-        color: #fff;
-        background-color:#007FFC;
-        padding: 14px 40px 15px 40px;
         border-radius: 8px;
         border: $borderBtn;
         margin-right: 20px;
@@ -53,11 +54,30 @@ $borderBtn: 2px solid #007FFC;
             margin-right: 0;
         }
 
-        &:hover{
-            background-color: #fff;
+        &--blue{
+            color: #fff;
+            background-color:#007FFC;
+            padding: 14px 39px 9px 40px;
+
+            &:hover{
+                background-color: #fff;
+                color: #007FFC;
+                border-color: #007FFC;
+                border: $borderBtn;
+            }
+        }
+
+        &--white{
             color: #007FFC;
-            border-color: #007FFC;
-            border: $borderBtn;
+            background-color:#fff;
+            padding: 14px 47px 9px 44px;
+
+            &:hover{
+                background-color: #007FFC;
+                color: #fff;
+                border-color: #007FFC;
+                border: $borderBtn;
+            }
         }
     }
 

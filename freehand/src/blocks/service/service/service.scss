@@ -1,8 +1,10 @@
 .service{
+    margin-left: 17px;
+
     &__wrapper{
         max-width: 1158px;
         width: 100%;
-        margin: 120px auto 10px;
+        margin: 64px auto 10px auto;
     }
 
     &__cards{

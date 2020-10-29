@@ -1,8 +1,13 @@
-mixin buttons(name)
-    .buttons
-        a(class="button__link" href="#") #{name}
+mixin buttons(name, color)
+    if(color ==='white')
+        .buttons.buttons--white
+            a(class="button__link button__link--white" href="#") #{name}
+    else if(color ==='blue')
+        .buttons.buttons--blue
+            a(class="button__link button__link--blue" href="#") #{name}
 
-mixin descriptionBtnBanner(nameFirst, nameSecond)
-    .description__buttons
-        a(class="description__link" href="#") #{nameFirst}
-        a(class="description__link" href="#") #{nameSecond}
+mixin descriptionBtnBanner(nameFirst, nameSecond, colorBlue, colorWhite)
+    if(colorBlue ==='blue')
+        .description__buttons
+            a(class=`description__link description__link--${colorBlue}` href="#") #{nameFirst}
+            a(class=`description__link description__link--${colorWhite}` href="#") #{nameSecond}

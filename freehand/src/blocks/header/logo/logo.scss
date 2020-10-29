@@ -1,12 +1,11 @@
 .logo{
-    padding-right: 14px;
-
     &__container{
         display: flex;
         flex-direction: row;
         align-items: center;
         max-width: 197px;
         width: 100%;
+        margin-left: 32px;
     }
     &__text{
         font-family: 'Quicksand';
@@ -14,5 +13,6 @@
         font-style: normal;
         font-size: 35px;
         line-height: 35px;
+        letter-spacing: 3px;
     }
 }

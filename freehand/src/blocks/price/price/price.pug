@@ -4,9 +4,10 @@ include ../price-card/price-card
 
 mixin price()
     section.price__wrapper
-        .description__price
-            +descriptionPrice('Choose the plan that’s right for your business', 'Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .')
-        .price__container
-            +priceCard('Started plan', 'free', 'blue', 'per month', 'Lorem ipsum dolor sit amet, coectetur adipiscing elit.', 'Get Started')
-            +priceCard('Enterprise plan', '$20.00', 'green', 'per month', 'Lorem ipsum dolor sit amet, coectetur adipiscing elit.', 'Get Started')
-            +priceCard('Enterprise plan', '$50.00', 'red', 'per month', 'Lorem ipsum dolor sit amet, coectetur adipiscing elit.', 'Get Started')
+        .price
+            .description__price
+                +descriptionPrice('Choose the plan that’s right for your business', 'Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .')
+            .price__container
+                +priceCard('Started plan', 'Free', 'blue', 'per month', 'Lorem ipsum dolor sit amet, coectetur adipiscing elit.', 'Get Started')
+                +priceCard('Enterprise plan', '$20.00', 'green', 'per month', 'Lorem ipsum dolor sit amet, coectetur adipiscing elit.', 'Get Started')
+                +priceCard('Enterprise plan', '$50.00', 'red', 'per month', 'Lorem ipsum dolor sit amet, coectetur adipiscing elit.', 'Get Started')

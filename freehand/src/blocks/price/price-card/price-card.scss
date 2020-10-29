@@ -78,17 +78,22 @@
         color: #7690A8;
         max-width: 287px;
         width: 100%;
-        margin: 35px auto 0 auto 0;
+        margin: 35px auto 0px 35px;
+
+        &--small{
+            max-width: 256px;
+            margin: 34px auto;
+        }
     }
 
     &__button{
-        padding: 8px;
+        padding: 9px;
         border: 2px solid #16133D;
         box-sizing: border-box;
         border-radius: 50px;
         max-width: 171px;
         width: 100%;
-        margin: 54px auto;
+        margin: 54px auto 0 auto;
         display: block;
         cursor: pointer;
 
