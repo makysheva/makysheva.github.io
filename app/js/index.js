@@ -40,26 +40,66 @@
     }
 })();
 
-const mobileMenu = document.querySelector('.mobile-menu')
-const menuWrap = document.querySelector('.menu-wrap')
+// const mobileMenu = document.querySelector('.mobile-menu')
+// const menuWrap = document.querySelector('.menu-wrap')
 
-// Показать меню при клике на иконку
-$('.mobile-menu').on('click', function(event) {
-    event.preventDefault();
-    $('.menu-wrap').toggleClass('menu-active')
-    $('.menu-btn').toggleClass('menu-active')
-    body.toggleClass('lock')
-})
+// // Показать меню при клике на иконку
+// $('.mobile-menu').on('click', function(event) {
+//     event.preventDefault();
+//     $('.menu-wrap').toggleClass('menu-active')
+//     $('.menu-btn').toggleClass('menu-active')
+//     $('body').toggleClass('lock')
+// })
 
-$('.menu-wrap').on('click', function(event) {
-    event.preventDefault();
-    $('.menu-wrap').toggleClass('menu-active')
-    $('.menu-btn').toggleClass('menu-active')
-    body.toggleClass('lock')
-})
+// $('.menu-wrap').on('click', function(event) {
+//     event.preventDefault();
+//     $('.menu-wrap').toggleClass('menu-active')
+//     $('.menu-btn').toggleClass('menu-active')
+//     $('body').toggleClass('lock')
+// })
 
-mobileMenu.addEventListener('click', () => {
+// mobileMenu.addEventListener('click', () => {
+//     //menu.classList.toggle('active')
+//     menuBurger.classList.toggle('active')
+//     document.body.classList.toggle('lock')
+// })
+
+//-открытие/закрытие меню-гамбургера
+const menuBurger = document.querySelector('.menu__burger')
+const menu = document.querySelector('.menu__wrapper')
+const menuList = document.querySelector('.site-nav-menu__list')
+
+menuBurger.addEventListener('click', () => {
     menu.classList.toggle('active')
     menuBurger.classList.toggle('active')
+    menuList.classList.toggle('active')
     document.body.classList.toggle('lock')
+})
+
+menuList.addEventListener('click', () => {
+    menu.classList.toggle('active')
+    menuBurger.classList.toggle('active')
+    menuList.classList.toggle('active')
+    document.body.classList.toggle('lock')
+})
+
+//-анимация плавного переходя по якорным ссылкам меню
+$(function(){
+    $('a[href^="#"]').on('click', function(event) {
+        // отменяем стандартное действие
+        event.preventDefault();
+
+        var sc = $(this).attr("href"),
+            dn = $(sc).offset().top;
+        /*
+        * sc - в переменную заносим информацию о том, к какому блоку надо перейти
+        * dn - определяем положение блока на странице
+        */
+
+        $('html, body').animate({scrollTop: dn}, 1000);
+
+        /*
+        * 1000 скорость перехода в миллисекундах
+        */
+    });
 })
